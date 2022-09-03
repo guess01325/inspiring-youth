@@ -40,3 +40,17 @@ Inspiring Youth is a app for a non profit that runs evens for the kids in the co
 - I will set up a donation page, and include the activitys and what donations we want for the pages.
 - we will do authentication for users of the site 
 <br>
+
+### Libraries and Dependencies
+
+
+
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|      React       | a free open-source front-end JavaScript library for builidnbg user interfaces or UI components |
+|   React Router   | Router enbables the navigation amongst screen components in React, allows chaning the browser URL, and keeps the UI in sync with the URL. |
+|     Ruby on Rails      | A open source framework for Web development in Ruby, and object-oriented programming language similar to python  |
+|  JWT  | for token base authentication_ |
+| bcrypt           | used for Password encryption.|
+<br>
+
