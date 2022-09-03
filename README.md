@@ -26,7 +26,7 @@ inspiring youth website
 
 ## Overview
 
-**Quad-Pack** 
-Quad Pack is a app that allows you to orgainize your things when you are a professional Athlete on the road, customizing to your likings depending on location and trip. 
+**Inspiring Youth** 
+Inspiring Youth is a app for a non profit that runs evens for the kids in the community of New London area, it allows them to sign up for events, and to enjoy what Inpiring Youth has to offer to it's community. 
 
 <br>
