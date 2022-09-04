@@ -41,7 +41,7 @@ Inspiring Youth is a app for a non profit that runs evens for the kids in the co
 - we will do authentication for users of the site 
 <br>
 
-### Libraries and Dependencies
+## Libraries and Dependencies
 
 
 
@@ -53,4 +53,6 @@ Inspiring Youth is a app for a non profit that runs evens for the kids in the co
 |  JWT  | for token base authentication_ |
 | bcrypt           | used for Password encryption.|
 <br>
+
+
 
