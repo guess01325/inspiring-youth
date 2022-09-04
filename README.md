@@ -30,6 +30,8 @@ inspiring youth website
 Inspiring Youth is a app for a non profit that runs evens for the kids in the community of New London area, it allows them to sign up for events, and to enjoy what Inpiring Youth has to offer to it's community. 
 
 <br>
+## MVP
+
 
 ### Goals
 
@@ -53,6 +55,10 @@ Inspiring Youth is a app for a non profit that runs evens for the kids in the co
 |  JWT  | for token base authentication_ |
 | bcrypt           | used for Password encryption.|
 <br>
+
+
+## MVP
+
 
 
 
