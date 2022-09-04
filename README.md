@@ -64,6 +64,55 @@ Inspiring Youth is a app for a non profit that runs evens for the kids in the co
 
 ![alt text](https://res.cloudinary.com/otisg/image/upload/v1662225391/Inspiring_Youth_Component_Herarchy_photo_zt6tik.png)
 
+<br>
+
+
+``` structure
+
+client
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public   
+│   └── index.html
+└── src
+    ├── assets
+        ├── inspiring youth photos
+        ├── scss
+        ├── fonts
+    ├── screens
+        ├── Home.jsx
+        ├── SignUp.jsx
+        ├── SignIn.jsx
+        ├── About us.jsx
+        ├── Register.jsx
+        ├── Volunteer.jsx
+        ├── Events.jsx
+        ├── Community_Level_Up.jsx
+        ├── Donate.jsx 
+        ├── Wishlist.jsx
+     ├── services
+        ├── auth.jsx
+        ├── config.jsx
+        ├──Events.jsx
+        ├──User.jsx
+        ├──Volunteer.jsx
+        ├──Student.jsx
+    ├── components
+        ├── Layout.jsx
+        ├── NavBar.jsx
+        ├── Footer.jsx
+    ├── Containers
+        ├── Main Container.jsx
+        ├── Event Container.jsx
+    ├── App.jsx
+    ├── App.css
+    ├── index.js
+    ├── index.css
+    
+
+```
 
 
 
