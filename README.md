@@ -55,10 +55,14 @@ Inspiring Youth is a app for a non profit that runs evens for the kids in the co
 |     Ruby on Rails      | A open source framework for Web development in Ruby, and object-oriented programming language similar to python  |
 |  JWT  | for token base authentication_ |
 | bcrypt           | used for Password encryption.|
+
 <br>
 
 
-## MVP
+## Component Tree 
+
+
+![alt text](https://res.cloudinary.com/otisg/image/upload/v1662225391/Inspiring_Youth_Component_Herarchy_photo_zt6tik.png)
 
 
 
