@@ -1,5 +1,7 @@
 class VolunteersController < ApplicationController
   before_action :set_volunteer, only: %i[ show update destroy ]
+  before_action :authorize_request, only: [:update, :destroy]
+  before_action :authorize_request, except: [:create]
 
   # GET /volunteers
   def index
