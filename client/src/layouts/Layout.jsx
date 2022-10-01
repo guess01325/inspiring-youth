@@ -6,7 +6,9 @@ import "../assets/Layout.css"
 export default function Layout(props) {
     return(
         <div>
-            <Header/>
+            <Header
+            currentUser = {props.currentUser}
+            handleLogout = {props.handleLogout}/>
             {props.children}
             <Footer/>
         </div>
