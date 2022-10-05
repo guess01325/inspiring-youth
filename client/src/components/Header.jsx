@@ -17,9 +17,13 @@ function Header(props) {
               <Link to="/">
                 <h1>Home</h1>
               </Link>
-              <Link to="/events">
-                Events
-              </Link>
+              <Link to="/volunteer/details">Volunteers</Link>
+              <Link to="/events/details">Events</Link>
+              <Link to="/level-up">Level Up</Link>
+              <Link to="/donate">Donations</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/wish-list/info">Wish List</Link>
+
               <button onClick={handleLogout}>Logout</button>
             </div>
           ) : (
@@ -27,11 +31,14 @@ function Header(props) {
               <Link to="/">
                 <h1>Home</h1>
               </Link>
-
-              <Link className="header-links" to="/sign-in">
-                Sign In
-              </Link>
-              <Link></Link>
+              <Link to="/volunteer">Volunteer</Link>
+              <Link to="/register">Register</Link>
+              <Link to="/events">Events</Link>
+              <Link to="level-up">Level Up</Link>
+              <Link to="/donate">Donate</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/wish-list">Wish List</Link>
+              <Link to="/sign-in">Sign In</Link>
             </div>
           )}
         </nav>
