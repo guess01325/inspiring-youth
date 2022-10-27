@@ -4,7 +4,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
-import Events from "./screens/Events"
+import ControlEvents from "./screens/ControlEvents"
 import Volunteers from "./screens/Volunteers"
 import Students from "./screens/Students"
 
@@ -54,7 +54,7 @@ function App() {
             path="/sign-in"
             element={<SignIn handleLogin={handleLogin} />}
           />
-           <Route path="/events" element = {<Events/>} />
+           <Route path="/events" element = {<ControlEvents/>} />
            <Route path="/volunteer" element = {<Volunteers/>} />
            <Route path="/students" element = {<Students/>} />
         </Routes>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Events from "../screens/Events";
+import Events from "../screens/ControlEvents";
 import { Route, Routes } from "react-router-dom";
 import {getAllEvents} from "../services/event.js";
 

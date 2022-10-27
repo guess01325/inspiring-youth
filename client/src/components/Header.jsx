@@ -17,8 +17,7 @@ function Header(props) {
               <Link to="/">
                 <h1>Home</h1>
               </Link>
-              <Link to="/volunteer/details">Volunteers</Link>
-              <Link to="/events/details">Events</Link>
+               <Link to="create/events">ControlEvents</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/donate">Donations</Link>
               <Link to="/about">About Us</Link>
@@ -31,6 +30,7 @@ function Header(props) {
               <Link to="/">
                 <h1>Home</h1>
               </Link>
+              <Link to="/events">Events</Link>
               <Link to="/volunteer">Volunteer</Link>
               <Link to="/register">Register</Link>
               <Link to="level-up">Level Up</Link>

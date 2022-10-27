@@ -8788,3 +8788,81 @@ Filter chain halted as :authorize_request rendered or redirected
 Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 189)
 
 
+Started GET "/events" for ::1 at 2022-10-27 06:28:24 -0400
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-10-27 06:28:24 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | Allocations: 198)
+
+
+Started GET "/auth/verify" for ::1 at 2022-10-27 06:28:24 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | Allocations: 262)
+
+
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 13.4ms | Allocations: 5918)
+
+
+Started GET "/events" for ::1 at 2022-10-27 06:28:24 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-10-27 06:29:07 -0400
+Started GET "/auth/verify" for ::1 at 2022-10-27 06:29:07 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 198)
+
+
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.7ms | Allocations: 1474)
+
+
+Started GET "/events" for ::1 at 2022-10-27 06:30:59 -0400
+Started GET "/auth/verify" for ::1 at 2022-10-27 06:30:59 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 198)
+
+
+  [1m[36mEvent Load (3.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.3ms | Allocations: 1433)
+
+
+Started GET "/events" for ::1 at 2022-10-27 06:31:22 -0400
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-10-27 06:31:22 -0400
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 987)
+
+
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 212)
+
+
+Started GET "/events" for ::1 at 2022-10-27 06:31:22 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 903)
+
+
+Started GET "/auth/verify" for ::1 at 2022-10-27 06:31:22 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 189)
+
+
