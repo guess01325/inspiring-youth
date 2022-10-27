@@ -4,7 +4,7 @@
 
 
 
-export default function Donate (props){
+export default function Volunteer (props){
     return(
         <div>
             <div>

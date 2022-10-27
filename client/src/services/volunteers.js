@@ -1,3 +1,6 @@
+import api from "./api-config";
+
+
 export const getAllVolunteers = async () => {
     const resp = await api.get("/volunteers");
     return resp.data;

@@ -1,5 +1,11 @@
-export default function LevelUP(props){
-    import { link } from "react-router-dom";
+import { link } from "react-router-dom";
+
+
+
+
+
+
+export default function LevelUp(props){
 
 
 

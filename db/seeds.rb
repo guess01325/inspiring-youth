@@ -12,11 +12,11 @@ Student.destroy_all
 
  @user1 = User.create!(username: "guess01325", name: "Otis Guess", email: "guess01325@gmail.com", password: "Gu145012")
 
- @event1 = Event.create!(name:"Robocop", place: "library", date: 1081986, time: 500, user: @user1 )
+ @event1 = Event.create!(name:"Robocop", place: "library", date: "10/81/1986", time: "5:00pm", user: @user1 )
 
  @volunteer1 = Volunteer.create!(First_Name:"Otis", Last_Name: "guess", Email:"guess01325@yahoo.com", Message:"Looking to volunteer sometimes", user: @user1, event: @event1)
 
- Student.create!(name: "otis guess", address: "195 Garfield ave", contact: 860303, user: @user1, event: @event1, volunteer: @volunteer1)
+ Student.create!(name: "Otis Guess", address: "195 Garfield ave", contact: "860-303-0187", user: @user1, event: @event1, volunteer: @volunteer1)
 
 
 

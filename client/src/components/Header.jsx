@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Header.css";
+
 
 function Header(props) {
   const { currentUser, handleLogout } = props;
@@ -33,7 +33,6 @@ function Header(props) {
               </Link>
               <Link to="/volunteer">Volunteer</Link>
               <Link to="/register">Register</Link>
-              <Link to="/events">Events</Link>
               <Link to="level-up">Level Up</Link>
               <Link to="/donate">Donate</Link>
               <Link to="/about">About Us</Link>
@@ -49,8 +48,4 @@ function Header(props) {
 
 export default Header;
 
-{
-  /* <Link className="header-links" to="/sign-up">
-                Sign Up
-              </Link> */
-}
+
