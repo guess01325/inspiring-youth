@@ -17,11 +17,11 @@ function Header(props) {
               <Link to="/">
                 <h1>Home</h1>
               </Link>
-               <Link to="create/events">ControlEvents</Link>
+               <Link to="/events/id">Edit Events</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/donate">Donations</Link>
               <Link to="/about">About Us</Link>
-              <Link to="/wish-list/info">Wish List</Link>
+              <Link to="/wish-list">Wish List</Link>
 
               <button onClick={handleLogout}>Logout</button>
             </div>
