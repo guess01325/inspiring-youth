@@ -32,7 +32,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    navigate("/editEvents");
+    navigate("/eventsDetails");
   };
 
   // const handleRegister = async (registerData) => {
