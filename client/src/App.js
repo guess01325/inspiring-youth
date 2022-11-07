@@ -8,7 +8,7 @@ import EditEvents from "./screens/EditEvents";
 import Volunteers from "./screens/Volunteers";
 import Students from "./screens/Students";
 import Events from "./screens/Events";
-
+import Home from "./screens/Home";
 
 import {
   loginUser,
@@ -32,7 +32,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    navigate("/events");
+    navigate("/editEvents");
   };
 
   // const handleRegister = async (registerData) => {
@@ -52,17 +52,16 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Routes>
-          <Route path="/" element={<MainContainer />} />
-
+          <Route path="/" element={<MainContainer />}></Route>
           <Route
             path="/sign-in"
             element={<SignIn handleLogin={handleLogin} />}
-          /><Route/>
-          <Route exact path="/events" element= {<Events/>}/>
-          <Route path="/events/id" element={<EditEvents/>}> </Route>
-          <Route path="/volunteer" element={<Volunteers />}></Route>
-          <Route path="/students" element={<Students/>}></Route>
+          />
+          <Route />
+          <Route path="/volunteer" element={<Volunteers />} />
+          <Route path="/students" element={<Students />} />
         </Routes>
+        <MainContainer />
       </Layout>
     </div>
   );

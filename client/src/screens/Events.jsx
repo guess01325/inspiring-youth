@@ -1,17 +1,20 @@
-
-
-
-
-
-
-
-export default function Events() {
- 
+export default function Events(props) {
   
-
+  
+  
+  
+  
+  
   return (
     <div>
-     <p>otis</p>
+      {props.events.map((event) => (
+        <div className="events" key={event.id}>
+          <p> {event.name}</p>
+          <p>{event.place}</p>
+          <p> {event.date}</p>
+          <p>{event.time}</p>
+        </div>
+      ))}
     </div>
   );
-}   
+}

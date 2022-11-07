@@ -11223,3 +11223,1289 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 758)
 
 
+Started POST "/auth/login" for ::1 at 2022-11-03 12:44:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 230ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 25217)
+
+
+Started GET "/events" for ::1 at 2022-11-03 12:44:04 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 1.9ms | Allocations: 8015)
+
+
+Started GET "/events" for ::1 at 2022-11-03 12:44:04 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:57:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 233ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 24985)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:57:34 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 237ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 663)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:57:34 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/auth/login" for ::1 at 2022-11-03 12:57:35 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 228ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 4789)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:57:35 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 215ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 5317)
+
+
+Completed 401 Unauthorized in 190ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1017)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:57:44 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 223ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 896)
+
+
+Started GET "/events" for ::1 at 2022-11-03 12:57:44 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 2.6ms | Allocations: 7997)
+
+
+Started GET "/events" for ::1 at 2022-11-03 12:57:44 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 778)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:59:01 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 227ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 12:59:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 221ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 813)
+
+
+Started GET "/events" for ::1 at 2022-11-03 12:59:07 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 759)
+
+
+Started GET "/events" for ::1 at 2022-11-03 12:59:07 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 757)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-03 13:26:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 10.7ms | Allocations: 3816)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-03 13:26:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 731)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 13:26:39 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 233ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 650)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-03 13:26:59 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 216ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-03 13:30:26 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-03 13:30:26 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/events" for ::1 at 2022-11-03 13:30:26 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 244ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 24985)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:05 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 234ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 663)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:06 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 229ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 667)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:06 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 229ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 663)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:13 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 233ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 663)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:15 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 225ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:15 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 208ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 240ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:21 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 229ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:22 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 235ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 649)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:22 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 224ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:21:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 227ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:22:46 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 234ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:22:46 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 230ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:22:51 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 237ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 646)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:24:48 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 233ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 877)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:25:59 -0400
+Started GET "/events" for ::1 at 2022-11-04 15:25:59 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1760)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:25:59 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1279)
+
+
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 8.2ms | ActiveRecord: 4.3ms | Allocations: 10625)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:25:59 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:26:06 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 219ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:26:08 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 248ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 645)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:26:14 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 235ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 813)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:26:15 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 759)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:26:15 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.9ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:26:27 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:26:27 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:27:40 -0400
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:27:40 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.4ms | Allocations: 2082)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:27:40 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 868)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 18.6ms | Allocations: 6429)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:27:40 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 731)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:27:44 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 240ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 818)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:27:44 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:27:44 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:27:52 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:27:52 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:28:59 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:28:59 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:34:20 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 12.9ms | Allocations: 3670)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:34:20 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:34:46 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:34:46 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:02 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:37:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 234ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 847)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:08 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:08 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:12 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.8ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:12 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:21 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:37:21 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.2ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:38:23 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 241ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 814)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:40:15 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 734)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:40:15 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:43:59 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 732)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:43:59 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:45:08 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:45:08 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:45:17 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 225ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 813)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:45:18 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:45:18 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:45:35 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:45:35 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:46:11 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 224ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 813)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:46:13 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:46:13 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-04 15:46:18 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 228ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 813)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-04 15:47:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 732)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:47:23 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:47:23 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:47:27 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-04 15:47:27 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 12:07:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 6.3ms | ActiveRecord: 4.6ms | Allocations: 25018)
+
+
+Started GET "/events" for ::1 at 2022-11-07 12:07:17 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 15:51:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 6.4ms | ActiveRecord: 3.1ms | Allocations: 25018)
+
+
+Started GET "/events" for ::1 at 2022-11-07 15:51:39 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 15:55:51 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 777)
+
+
+Started GET "/events" for ::1 at 2022-11-07 15:55:51 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 15:56:00 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 241ms (Views: 0.2ms | ActiveRecord: 5.9ms | Allocations: 8219)
+
+
+Started GET "/events" for ::1 at 2022-11-07 15:58:38 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 15:58:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 7.7ms | ActiveRecord: 2.7ms | Allocations: 32648)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Started GET "/events" for ::1 at 2022-11-07 15:58:38 -0500
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 15.3ms | Allocations: 36727)
+
+
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-11-07 15:58:38 -0500
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 1194)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1277)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:00:41 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 750)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:00:45 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 750)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:00:45 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:01:29 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 750)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:01:46 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 731)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:01:46 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 731)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:02:47 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:02:47 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 847)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/events" for ::1 at 2022-11-07 16:02:47 -0500
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1104)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:02:47 -0500
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 1416)
+
+
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.7ms | Allocations: 1216)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:02:56 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:02:56 -0500
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1833)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:02:56 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:02:56 -0500
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 1161)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 1683)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:03:00 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 211ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 922)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:03:24 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:03:24 -0500
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 1175)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1683)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:03:24 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:03:24 -0500
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1429)
+
+
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 1161)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:04:01 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 206ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 818)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:06:36 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:06:36 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 809)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/events" for ::1 at 2022-11-07 16:06:36 -0500
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 1108)
+
+
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:06:36 -0500
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 977)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:06:36 -0500
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms | Allocations: 971)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1688)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:06:36 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:06:52 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 731)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:12:16 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:12:16 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:14:33 -0500
+Started GET "/events" for ::1 at 2022-11-07 16:14:33 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 788)
+
+
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:14:33 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 2.0ms | Allocations: 2171)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:14:33 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 868)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:14:33 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1057)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:14:33 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 37ms (Views: 0.4ms | ActiveRecord: 21.6ms | Allocations: 8908)
+
+
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 2.0ms | Allocations: 1688)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:14:40 -0500
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:14:40 -0500
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.9ms | Allocations: 1140)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/events" for ::1 at 2022-11-07 16:14:40 -0500
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 1108)
+
+
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:14:40 -0500
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1071)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/events" for ::1 at 2022-11-07 16:14:40 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1516)
+
+
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.0ms | Allocations: 1674)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:14:40 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.0ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:15:53 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:15:56 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 215ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 817)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:16:30 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 219ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 814)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:18:02 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:18:02 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 825)
+
+
+Processing by AuthenticationController#verify as HTML
+Started GET "/events" for ::1 at 2022-11-07 16:18:02 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 1585)
+
+
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.9ms | Allocations: 1421)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:18:02 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:18:07 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 225ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 813)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:18:48 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 218ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 813)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:18:51 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 209ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:18:54 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 203ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 813)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:19:02 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 758)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:19:02 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:19:03 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 224ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 813)
+
+
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:20:04 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 732)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:20:13 -0500
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:20:13 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 803)
+
+
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2022-11-07 16:20:13 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 1399)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1863)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:20:13 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:20:17 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 224ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 814)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:20:19 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:20:19 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:26:45 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 9.8ms | Allocations: 3696)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:26:45 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:26:45 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:26:45 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:28:51 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:28:51 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:29:02 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started GET "/events" for ::1 at 2022-11-07 16:29:02 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 757)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-07 16:29:10 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 220ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 846)
+
+
