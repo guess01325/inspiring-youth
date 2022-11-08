@@ -16,7 +16,11 @@ export default function EventDetails (props){
             <p>{event.place}</p>
             <p> {event.date}</p>
             <p>{event.time}</p>
-            <Link to= {`/editEvent${event.id}`}/>
+            <div>
+            <Link to= {`/editEvent${event.id}`}>Update</Link>
+            <Link to={`/createEvent`}>New</Link>
+
+            </div>
             <Link to={`/volunteers${event.id}/volunteers`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
             </div>
