@@ -4,10 +4,10 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
-import EditEvents from "./screens/EditEvents";
+import EditEvents from "./screens/MainPageEvents";
 import Volunteers from "./screens/Volunteers";
 import Students from "./screens/Students";
-import Events from "./screens/Events";
+import MainEvents from "./screens/MainEvents";
 import Home from "./screens/Home";
 
 import {
