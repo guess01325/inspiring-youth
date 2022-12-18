@@ -13,10 +13,7 @@ function Header(props) {
         <nav>
           {currentUser ? (
             <div>
-              <p>{props.currentUser.username}</p>
-              <Link to="/">
-                <h1>Home</h1>
-              </Link>
+              <p>{props.currentUser.username}</p> 
                <Link to="/eventsDetails"> Events</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/donate">Donations</Link>

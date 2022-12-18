@@ -4,11 +4,8 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
-import EditEvents from "./screens/MainPageEvents";
 import Volunteers from "./screens/Volunteers";
 import Students from "./screens/Students";
-import MainEvents from "./screens/MainEvents";
-import Home from "./screens/Home";
 
 import {
   loginUser,
@@ -19,7 +16,7 @@ import {
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const navigate = useNavigate();
+  const history = useNavigate();
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -32,7 +29,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    navigate("/eventsDetails");
+    history("/eventsDetails");
   };
 
   // const handleRegister = async (registerData) => {
@@ -45,23 +42,23 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem("authToken");
     removeToken();
-    navigate("/sign-in");
+    history("/sign-in");
   };
 
   return (
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Routes>
-          <Route path="/" element={<MainContainer />}></Route>
+          <Route path="/*" element={<MainContainer />} />
+
+          <Route path="/students" element={<Students />} />
+
+          <Route path="/volunteer" element={<Volunteers />} />
           <Route
             path="/sign-in"
             element={<SignIn handleLogin={handleLogin} />}
           />
-          <Route />
-          <Route path="/volunteer" element={<Volunteers />} />
-          <Route path="/students" element={<Students />} />
         </Routes>
-        <MainContainer />
       </Layout>
     </div>
   );
