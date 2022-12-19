@@ -8,11 +8,10 @@ import { getAllEvents, getOneEvent, postEvent, putEvent, getUserEvent } from "..
 
 export default function MainContainer(props) {
   const [events, setEvents] = useState([]);
-  const [event, setEvent] = useState(null)
   const params = useParams
   const {id} = params
   const history = useNavigate()
- 
+  
 
 
   useEffect(() => {
@@ -22,7 +21,28 @@ export default function MainContainer(props) {
     };
     fetchEvents();
   }, []);
-
+  
+  console.log(events)
+ 
+// useEffect(() => {
+//     const event = events.find((eventItem) => eventItem.id === Number(id));
+//     setEvent(event);
+//   }, [event, id]);
+                  
+  
+    
+  // const handleUpdateEvent = async (id, formData) => {
+  //   const eventItem = await putEvent(id, formData);
+  //   setEvent((prevState) =>
+  //     prevState.map((event) => {
+  //       return event.id === Number(id) ? eventItem : event;
+  //     })
+  //     );
+  //     history.push(`/event/${event.id}`);
+  //   };
+    
+  
+  
   
   // const handleCreateEvent = async (formData) => {
   //   const eventItem = await postEvent(events.id, formData);
@@ -49,12 +69,11 @@ export default function MainContainer(props) {
   // };
 
 
-
   return (
     <div>
       <Routes>
         <Route path= "events" element={<MainEvents events={events} />} />
-        <Route path= "editEvent/:id" element={<EditEvent events={events} />} />
+        <Route path= "editEvent/:id" element={<EditEvent events={events}  />} />
         <Route
           path= "eventsDetails"
           element={<EventDetials events={events} />}

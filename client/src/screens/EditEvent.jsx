@@ -1,26 +1,40 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getAllEvents, getOneEvent, postEvent, putEvent, getUserEvent } from "../services/event.js";
+import { putEvent } from "../services/event";
 
 export default function EditEvent(props) {
-  const [event, setEvent] = useState(null);
-  const params = useParams;
+  const params = useParams();
   const { id } = params;
   const history = useNavigate;
-  
+  const [event, setEvent] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
-    amount: 0,
     place: "",
     date: "",
     time: "",
   });
-  
+
   useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(id));
-    setEvent(event);
+    const preFillFormData = () => {
+      const singleEvent = props.events.find(
+        eventItem => eventItem.id === Number(id)
+      );                  
+    
+      setFormData({
+        name: singleEvent.name,
+        place: singleEvent.place,
+        date: singleEvent.date,
+        time: singleEvent.time,
+      });
+    };
+
+    if (props.events.length) {
+      preFillFormData();
+    }
   }, [props.events, id]);
-  console.log(event)
+
+  
+  
   
   const handleUpdateEvent = async (id, formData) => {
     const eventItem = await putEvent(id, formData);
@@ -28,24 +42,14 @@ export default function EditEvent(props) {
       prevState.map((event) => {
         return event.id === Number(id) ? eventItem : event;
       })
-    );
-    history.push(`/event/${event.id}`);
-  };
-
-  useEffect(() => {
-    const preFillFormData = () => {
-      const event = props.events.find(
-        (eventItem) => eventItem.id === Number(id)
       );
-      setFormData(event);
+      history.push(`/event/${event.id}`);
     };
 
-    if (props.events.length) {
-      preFillFormData();
-    }
-  }, [event, id]);
 
-  const handleChange = (e) => {
+  
+  
+    const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -65,16 +69,34 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="name"
-            value={formData.name}
+              value={formData.name}
             onChange={handleChange}
           />
         </label>
         <label>
-          Amount
+          Place
           <input
-            type="number"
-            name="amount"
-            value={formData.amount}
+            type="text"
+            name="place"
+            value={formData.place}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Date
+          <input
+            type="text"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Time
+          <input
+            type="text"
+            name="time"
+            value={formData.time}
             onChange={handleChange}
           />
         </label>
