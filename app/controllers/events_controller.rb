@@ -1,4 +1,4 @@
- class EventsController < ApplicationController
+class EventsController < ApplicationController
   before_action :set_event, only: %i[ show update destroy ]
   before_action :authorize_request, only: [:create,:update, :destroy]
   # GET /events
@@ -49,4 +49,6 @@
     def event_params
       params.require(:event).permit(:name, :place, :date, :time, :user_id)
     end
+  
 end
+

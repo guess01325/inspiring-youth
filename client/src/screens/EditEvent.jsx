@@ -17,9 +17,9 @@ export default function EditEvent(props) {
   useEffect(() => {
     const preFillFormData = () => {
       const singleEvent = props.events.find(
-        eventItem => eventItem.id === Number(id)
-      );                  
-    
+        (eventItem) => eventItem.id === Number(id)
+      );
+
       setFormData({
         name: singleEvent.name,
         place: singleEvent.place,
@@ -33,23 +33,7 @@ export default function EditEvent(props) {
     }
   }, [props.events, id]);
 
-  
-  
-  
-  const handleUpdateEvent = async (id, formData) => {
-    const eventItem = await putEvent(id, formData);
-    setEvent((prevState) =>
-      prevState.map((event) => {
-        return event.id === Number(id) ? eventItem : event;
-      })
-      );
-      history.push(`/event/${event.id}`);
-    };
-
-
-  
-  
-    const handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -58,7 +42,7 @@ export default function EditEvent(props) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleUpdateEvent(id, formData);
+    props.handleUpdateEvent(id, formData);
   };
 
   return (
@@ -69,7 +53,7 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="name"
-              value={formData.name}
+            value={formData.name}
             onChange={handleChange}
           />
         </label>
