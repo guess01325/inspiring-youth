@@ -24,3 +24,9 @@ export const putEvent = async (id, eventData) => {
 export const getUserEvent = async () => {
     const respt = await api.get("/users/events")
 }
+
+
+export const deleteEvent = async (id) => {
+    const resp = await api.delete(`/events/${id}`);
+    return resp
+  };

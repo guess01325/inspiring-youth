@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function EventDetails (props){
     return(
-        <div>
+        <div>   
                  <div>
         {props.events.map((event) => (
             <div className="events" key={event.id}>
@@ -23,6 +23,7 @@ export default function EventDetails (props){
             </div>
             <Link to={`/volunteers${event.id}/volunteers`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
+            <button onClick={() => props.handleDeleteEvent(event.id)}>Delete</button>
             </div>
         ))}
       </div>
