@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
+import StudentContainer from "./containers/StudentContainer";
+import VolunteerContainer from "./containers/VolunteerContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
 import Volunteers from "./screens/Volunteers";
@@ -51,13 +53,18 @@ function App() {
         <Routes>
           <Route path="/*" element={<MainContainer />} />
 
-          <Route path="/students" element={<Students />} />
-
-          <Route path="/volunteer" element={<Volunteers />} />
           <Route
             path="/sign-in"
             element={<SignIn handleLogin={handleLogin} />}
           />
+           {/* <Route
+          path="/event/:id/student"
+          element={<StudentContainer/>}
+        />
+        <Route
+          path="/event/:id/volunteer/*"
+          element={<VolunteerContainer/>}
+        /> */}
         </Routes>
       </Layout>
     </div>

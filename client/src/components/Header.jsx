@@ -14,6 +14,9 @@ function Header(props) {
           {currentUser ? (
             <div>
               <p>{props.currentUser.username}</p> 
+              <Link to="/">
+                <h1>Home</h1>
+              </Link>
                <Link to="/eventsDetails"> Events</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/donate">Donations</Link>

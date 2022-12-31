@@ -14,7 +14,7 @@ Student.destroy_all
 
  @event1 = Event.create!(name:"Robocop", place: "library", date: "10/81/1986", time: "5:00pm", user: @user1 )
 
- @volunteer1 = Volunteer.create!(First_Name:"Otis", Last_Name: "guess", Email:"guess01325@yahoo.com", Message:"Looking to volunteer sometimes", user: @user1, event: @event1)
+ @volunteer1 = Volunteer.create!(first_name:"Otis", last_name: "guess", email:"guess01325@yahoo.com", message:"Looking to volunteer sometimes", user: @user1, event: @event1)
 
  Student.create!(name: "Otis Guess", address: "195 Garfield ave", contact: "860-303-0187", user: @user1, event: @event1, volunteer: @volunteer1)
 

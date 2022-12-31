@@ -48,6 +48,6 @@ class VolunteersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def volunteer_params
-      params.require(:volunteer).permit(:First_Name, :Last_Name, :Email, :Message, :user_id, :event_id)
+      params.require(:volunteer).permit(:first_name, :last_name, :email, :message, :user_id, :event_id)
     end
 end

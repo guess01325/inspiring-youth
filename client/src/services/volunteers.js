@@ -7,7 +7,7 @@ export const getAllVolunteers = async (eventID) => {
   };
 
 
-  export const getOneVonlunteer = async (id) => {
+  export const getOneVolunteer = async (id) => {
     const resp = await api.get(`/volunteers/${id}`);
     return resp.data
 }
@@ -27,6 +27,3 @@ export const deleteVolunteer = async (id) => {
     return resp;
   };
 
-export const getUserEvent = async () => {
-    const respt = await api.get("/users/events")
-}
