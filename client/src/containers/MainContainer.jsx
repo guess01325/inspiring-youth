@@ -5,6 +5,9 @@ import VolunteerContainer from "./VolunteerContainer";
 import EventDetials from "../screens/EventDetails";
 import EditEvent from "../screens/EditEvent";
 import CreateEvent from "../screens/CreateEvent";
+import EditVolunteer from "../screens/EditVolunteer";
+import Volunteers from "../screens/Volunteers";
+import CreateVolunteer from "../screens/CreateVolunteer";
 // import CreateEvent from "../screens/CreateEvent";
 import MainEvents from "../screens/EditEvent";
 import {
@@ -24,10 +27,10 @@ export default function MainContainer(props) {
   const { id } = params;
   const history = useNavigate();
 
-  // useEffect(() => {
-  //   const event = events.find((eventItem) => eventItem.id === Number(id));
-  //   setEvent(event);
-  // }, [events, id]);
+  useEffect(() => {
+    const event = events.find((eventItem) => eventItem.id === Number(id));
+    setEvent(event);
+  }, [events, id]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -105,12 +108,15 @@ export default function MainContainer(props) {
           element={<StudentContainer events={events} />}
         />
         <Route
-          path="/event/:id/volunteer/*"
+          path="/event/:id/volunteer/"
           element={<VolunteerContainer events={events} />}
-        />
-        <Route path="/" element={<Home/>}/>
+        >
+          <Route path="all" element={<Volunteers />} />
+          <Route path=":id/update" element={<EditVolunteer />} />
+          <Route path="create" element={<CreateVolunteer />} />
+        </Route>
+        <Route path="/" element={<Home />} />
       </Routes>
-     
     </div>
   );
 }
