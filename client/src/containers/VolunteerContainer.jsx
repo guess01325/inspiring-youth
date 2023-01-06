@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Routes, Route,Outlet } from "react-router-dom";
+import {
+  useNavigate,
+  useParams,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import Volunteers from "../screens/Volunteers";
 import CreateVolunteer from "../screens/CreateVolunteer";
 import EditVolunteer from "../screens/EditVolunteer";
@@ -13,29 +19,33 @@ import {
 } from "../services/volunteers";
 
 export default function VolunteerContainer(props) {
-  const [event, setEvent] = useState([]);
   const [volunteer, setVolunteer] = useState([]);
   const history = useNavigate();
   const params = useParams();
   const { id } = params;
 
-  useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(id));
-    setEvent(event);
-  }, [props.events, id]);
+  
+//  useEffect(() => {
+//     const event = props.events.find((eventItem) => eventItem.id === Number(id));
+//     setEvent(event);
 
+//    }, [props.events, id]);
+  
   useEffect(() => {
     const fetchVolunteers = async () => {
-      const volunteerList = await getAllVolunteers(event.id);
+      const volunteerList = await getAllVolunteers(id);
       setVolunteer(volunteerList);
+      console.log(id)
+
     };
-    if (event) {
+    // if (event) {
       fetchVolunteers();
-    }
-  }, [event]);
+    // }
+  }, [id]);
+
 
   const handelCreateVolunteer = async (formData) => {
-    const volunteer = await postVolunteer(event.id, formData);
+    const volunteer = await postVolunteer(id, formData);
     setVolunteer((prevState) => [...prevState, volunteer]);
     history(`events/event`);
   };
@@ -67,7 +77,7 @@ export default function VolunteerContainer(props) {
               handelCreateVolunteer={handelCreateVolunteer}
             />
           }
-        />
+        />  
         <Route
           path="event/:id/volunteer/:id/update"
           element={
@@ -90,13 +100,16 @@ export default function VolunteerContainer(props) {
 
           }
         />
-      </Routes> */}
+      </Routes>  */}
+   
       <Outlet
-      event={event}
-       volunteer={volunteer}
-       handelCreateVolunteer={handelCreateVolunteer}  handleUpdateVolunteer={handleUpdateVolunteer}    getAllVolunteers={getAllVolunteers}
-       handleDeleteVolunteer={handleDeleteVolunteer}
-       getOneVolunteer={getOneVolunteer}
+        volunteer={volunteer}
+        handelCreateVolunteer={handelCreateVolunteer}
+        handleUpdateVolunteer={handleUpdateVolunteer}
+        getAllVolunteers={getAllVolunteers}
+        handleDeleteVolunteer={handleDeleteVolunteer}
+        getOneVolunteer={getOneVolunteer}
+       
       />
     </div>
   );
