@@ -10,6 +10,7 @@ export const getAllVolunteers = async (eventID) => {
   export const getOneVolunteer = async (id) => {
     const resp = await api.get(`/volunteers/${id}`);
     return resp.data
+    console.log(resp.data)
 }
 
 export const postVolunteer = async (eventID, volunteerData) => {

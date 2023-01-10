@@ -19,98 +19,70 @@ import {
 } from "../services/volunteers";
 
 export default function VolunteerContainer(props) {
-  const [volunteer, setVolunteer] = useState([]);
   const history = useNavigate();
   const params = useParams();
   const { id } = params;
+  const [volunteers, setVolunteers] = useState([]);
+  const [event, setEvent] = useState([]);
+console.log(volunteers)
+  // useEffect(() => {
+  //   const event = props.events.find((eventItem) => eventItem.id === Number(id));
+  //   setEvent(event);
+  // }, [props.events, id]);
 
-  
-//  useEffect(() => {
-//     const event = props.events.find((eventItem) => eventItem.id === Number(id));
-//     setEvent(event);
-
-//    }, [props.events, id]);
-  
   useEffect(() => {
     const fetchVolunteers = async () => {
       const volunteerList = await getAllVolunteers(id);
-      setVolunteer(volunteerList);
-      console.log(id)
-
+      setVolunteers(volunteerList);
+    
+    
     };
     // if (event) {
       fetchVolunteers();
     // }
   }, [id]);
 
-
   const handelCreateVolunteer = async (formData) => {
     const volunteer = await postVolunteer(id, formData);
-    setVolunteer((prevState) => [...prevState, volunteer]);
+    setVolunteers((prevState) => [...prevState, volunteer]);
     history(`events/event`);
   };
 
   const handleUpdateVolunteer = async (id, formData) => {
-    const volunteer = await putVolunteer(id, formData);
-    setVolunteer((prevState) =>
+    const volunteerItem = await putVolunteer(id, formData);
+    setVolunteers((prevState) =>
       prevState.map((volunteer) => {
-        return volunteer.id === Number(id) ? volunteer : volunteer;
+        return volunteer.id === Number(id) ? volunteerItem : volunteer;
       })
     );
   };
 
   const handleDeleteVolunteer = async (id) => {
     await deleteVolunteer();
-    setVolunteer((prevState) =>
+    setVolunteers((prevState) =>
       prevState.filter((volunteer) => volunteer.id !== id)
     );
   };
 
   return (
     <div>
-      {/* <Routes>
+      <Routes>
         <Route
-          path="event/:id/volunteer/create"
-          element={
-            <CreateVolunteer
-              volunteer={volunteer}
-              handelCreateVolunteer={handelCreateVolunteer}
-            />
-          }
-        />  
+          path="volunteer/all"
+          element={<Volunteers volunteers={volunteers} />}
+        />
         <Route
-          path="event/:id/volunteer/:id/update"
+          path="volunteer/:id/update"
           element={
             <EditVolunteer
-              Volunteer={volunteer}
+              volunteers={volunteers}
               handleUpdateVolunteer={handleUpdateVolunteer}
             />
           }
         />
-        <Route
-          path="event/:id/volunteer/all"
-          element={
-            <Volunteers
-              event={event}
-              volunteer={volunteer}
-              getAllVolunteers={getAllVolunteers}
-              handleDeleteVolunteer={handleDeleteVolunteer}
-              getOneVolunteer={getOneVolunteer}
-            />
-
-          }
-        />
-      </Routes>  */}
-   
-      <Outlet
-        volunteer={volunteer}
-        handelCreateVolunteer={handelCreateVolunteer}
-        handleUpdateVolunteer={handleUpdateVolunteer}
-        getAllVolunteers={getAllVolunteers}
-        handleDeleteVolunteer={handleDeleteVolunteer}
-        getOneVolunteer={getOneVolunteer}
-       
-      />
+        <Route path="volunteer/create" element={<CreateVolunteer />} />
+      </Routes>
+      {/* <Outlet /> */}
     </div>
   );
 }

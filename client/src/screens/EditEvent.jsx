@@ -6,7 +6,7 @@ export default function EditEvent(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate;
-  const [event, setEvent] = useState(null);
+  // const [event, setEvent] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     place: "",
