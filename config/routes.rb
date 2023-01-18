@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   get 'auth/verify', to: 'authentication#verify'
   
   resources :users, only: :create
-  resources :students
-  resources :volunteers
+  # resources :students
+  # resources :volunteers
   resources :events do
     resources :volunteers, shallow: true do
-      resources :students, shallow: true
+    end
+    resources :students, shallow: true do
+      
     end
   end
 

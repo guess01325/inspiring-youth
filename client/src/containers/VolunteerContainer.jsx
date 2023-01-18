@@ -21,15 +21,17 @@ import {
 export default function VolunteerContainer(props) {
   const history = useNavigate();
   const params = useParams();
+  const [event, setEvent] = useState([]);
   const { id } = params;
   const [volunteers, setVolunteers] = useState([]);
-  const [event, setEvent] = useState([]);
-console.log(volunteers)
-  // useEffect(() => {
-  //   const event = props.events.find((eventItem) => eventItem.id === Number(id));
-  //   setEvent(event);
-  // }, [props.events, id]);
+ 
 
+  useEffect(() => {
+    const event = props.events.find((eventItem) => eventItem.id === Number(id));
+  }, [props.events, id]);
+
+  
+  console.log("eventid", event.id)
   useEffect(() => {
     const fetchVolunteers = async () => {
       const volunteerList = await getAllVolunteers(id);
@@ -40,7 +42,7 @@ console.log(volunteers)
     // if (event) {
       fetchVolunteers();
     // }
-  }, [id]);
+  }, [event]);
 
   const handelCreateVolunteer = async (formData) => {
     const volunteer = await postVolunteer(id, formData);

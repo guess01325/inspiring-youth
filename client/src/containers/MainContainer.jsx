@@ -35,10 +35,7 @@ export default function MainContainer(props) {
   const { id } = params;
   const history = useNavigate();
 
-  // useEffect(() => {
-  //   const event = events.find((eventItem) => eventItem.id === Number(id));
-  //   setEvent(event);
-  // }, [events, id]);
+console.log(events)
 
   useEffect(() => {
     const fetchEvents = async () => {

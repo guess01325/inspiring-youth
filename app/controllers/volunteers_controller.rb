@@ -1,18 +1,24 @@
 class VolunteersController < ApplicationController
   before_action :set_volunteer, only: %i[ show update destroy ]
-  before_action :authorize_request, only: [:update, :destroy]
-  before_action :authorize_request, except: [:create]
-
-  # GET /volunteers
+  before_action :authorize_request, except: [:show]
+  before_action :set_event, only: %i[index]
+  
+  # GET events/event_id/volunteers
   def index
-    @volunteers = Volunteer.all
-
+    @volunteers = Volunteer.where(event: @event)
     render json: @volunteers
+   
+
+    
   end
 
   # GET /volunteers/1
   def show
-    render json: @volunteer
+    @message = "Show: #{params[:id]}"
+    
+    render json: @message
+
+    # render json: @volunteer
   end
 
   # POST /volunteers
@@ -42,12 +48,16 @@ class VolunteersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_event
+      @event = Event.find(params[:event_id])
+    end
+    
     def set_volunteer
       @volunteer = Volunteer.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def volunteer_params
-      params.require(:volunteer).permit(:first_name, :last_name, :email, :message, :user_id, :event_id)
+      params.require(:volunteer).permit(:first_name, :last_name, :email, :message)
     end
 end

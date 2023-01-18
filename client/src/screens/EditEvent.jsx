@@ -11,9 +11,9 @@ export default function EditEvent(props) {
     name: "",
     place: "",
     date: "",
-    time: "",
+    time: "", 
   });
-
+console.log(props.events)
   useEffect(() => {
     const preFillFormData = () => {
       const singleEvent = props.events.find(
