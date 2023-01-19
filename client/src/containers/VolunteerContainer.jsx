@@ -31,7 +31,7 @@ export default function VolunteerContainer(props) {
   }, [props.events, id]);
 
   
-  console.log("eventid", event.id)
+                    
   useEffect(() => {
     const fetchVolunteers = async () => {
       const volunteerList = await getAllVolunteers(id);

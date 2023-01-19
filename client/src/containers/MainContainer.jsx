@@ -35,7 +35,7 @@ export default function MainContainer(props) {
   const { id } = params;
   const history = useNavigate();
 
-console.log(events)
+
 
   useEffect(() => {
     const fetchEvents = async () => {
