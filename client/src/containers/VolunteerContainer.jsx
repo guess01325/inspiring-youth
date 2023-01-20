@@ -25,7 +25,7 @@ export default function VolunteerContainer(props) {
   const { id } = params;
   const [volunteers, setVolunteers] = useState([]);
  
-
+console.log(id)
   useEffect(() => {
     const event = props.events.find((eventItem) => eventItem.id === Number(id));
   }, [props.events, id]);
@@ -57,6 +57,7 @@ export default function VolunteerContainer(props) {
         return volunteer.id === Number(id) ? volunteerItem : volunteer;
       })
     );
+    history("/event/:id/volunteer/all")
   };
 
   const handleDeleteVolunteer = async (id) => {
@@ -82,9 +83,8 @@ export default function VolunteerContainer(props) {
             />
           }
         />
-        <Route path="volunteer/create" element={<CreateVolunteer />} />
+        {/* <Route path="volunteer/create" element={<CreateVolunteer />} /> */}
       </Routes>
-      {/* <Outlet /> */}
     </div>
   );
 }

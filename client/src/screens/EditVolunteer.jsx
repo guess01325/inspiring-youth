@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-export default function CreateVolunteer(props) {
+export default function EditVolunteer(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate;
@@ -13,7 +13,7 @@ export default function CreateVolunteer(props) {
     message: "",
   });
 
-
+console.log(id)
   useEffect(() => {
     const preFillFormData = () => {
       const singleVolunteer = props.volunteers.find(
