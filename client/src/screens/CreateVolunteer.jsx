@@ -60,7 +60,7 @@ export default function CreateVolunteer(props) {
             <label>
               <input
                 type="text"
-                name="messsage"
+                name="message"
                 placeholder="message"
                 value={formData.message}
                 onChange={handleChange}

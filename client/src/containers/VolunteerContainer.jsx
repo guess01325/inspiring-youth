@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+  import { useState, useEffect } from "react";
 import {
   useNavigate,
   useParams,
@@ -24,30 +24,27 @@ export default function VolunteerContainer(props) {
   const [event, setEvent] = useState([]);
   const { id } = params;
   const [volunteers, setVolunteers] = useState([]);
- 
-console.log(id)
+  console.log(volunteers)
   useEffect(() => {
     const event = props.events.find((eventItem) => eventItem.id === Number(id));
+    setEvent(event);
   }, [props.events, id]);
-
   
-                    
   useEffect(() => {
     const fetchVolunteers = async () => {
-      const volunteerList = await getAllVolunteers(id);
+      const volunteerList = await getAllVolunteers(event.id);
       setVolunteers(volunteerList);
-    
-    
+  
     };
-    // if (event) {
+    if (event) {
       fetchVolunteers();
-    // }
-  }, [event]);
+    }
+  }, [event]);    
 
-  const handelCreateVolunteer = async (formData) => {
-    const volunteer = await postVolunteer(id, formData);
+  const handleCreateVolunteer = async (formData) => {
+    const volunteer = await postVolunteer(event.id, formData);
     setVolunteers((prevState) => [...prevState, volunteer]);
-    history(`events/event`);
+    history(`events/${event.id}/volunteer/all`);
   };
 
   const handleUpdateVolunteer = async (id, formData) => {
@@ -57,8 +54,8 @@ console.log(id)
         return volunteer.id === Number(id) ? volunteerItem : volunteer;
       })
     );
-    history("/event/:id/volunteer/all")
-  };
+    history(`/event/${id}/volunteer/all`);
+    };
 
   const handleDeleteVolunteer = async (id) => {
     await deleteVolunteer();
@@ -75,7 +72,7 @@ console.log(id)
           element={<Volunteers volunteers={volunteers} />}
         />
         <Route
-          path="volunteer/:id/update"
+          path="volunteer/:volunteerId/update"
           element={
             <EditVolunteer
               volunteers={volunteers}
@@ -83,7 +80,12 @@ console.log(id)
             />
           }
         />
-        {/* <Route path="volunteer/create" element={<CreateVolunteer />} /> */}
+        <Route
+          path="volunteer/create"
+          element={
+            <CreateVolunteer handleCreateVolunteer={handleCreateVolunteer} />
+          }
+        />
       </Routes>
     </div>
   );

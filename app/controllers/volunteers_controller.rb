@@ -1,29 +1,29 @@
 class VolunteersController < ApplicationController
   before_action :set_volunteer, only: %i[ show update destroy ]
-  before_action :authorize_request, except: [:show]
-  before_action :set_event, only: %i[index]
+  before_action :authorize_request, except: [:show]  
+  before_action :set_event, only: %i[index create]
   
   # GET events/event_id/volunteers
   def index
-    @volunteers = Volunteer.where(event: @event)
-    render json: @volunteers
+    @volunteer = Volunteer.where(user: @current_user).where(event: @event)
+    render json: @volunteer
    
-
-    
   end
 
   # GET /volunteers/1
   def show
-    @message = "Show: #{params[:id]}"
+   
     
-    render json: @message
+    render json: @volunteer
 
-    # render json: @volunteer
+   
   end
 
   # POST /volunteers
   def create
     @volunteer = Volunteer.new(volunteer_params)
+    @volunteer.user = current_user
+    @volunteer.event = @event
 
     if @volunteer.save
       render json: @volunteer, status: :created, location: @volunteer

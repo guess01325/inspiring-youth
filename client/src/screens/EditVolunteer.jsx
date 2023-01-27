@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 
 export default function EditVolunteer(props) {
   const params = useParams();
-  const { id } = params;
+  const { volunteerId } = params;
   const history = useNavigate;
 
   const [formData, setFormData] = useState({
@@ -13,11 +13,11 @@ export default function EditVolunteer(props) {
     message: "",
   });
 
-console.log(id)
+
   useEffect(() => {
     const preFillFormData = () => {
       const singleVolunteer = props.volunteers.find(
-        (volunteerItem) => volunteerItem.id === Number(id)
+        (volunteerItem) => volunteerItem.id === Number(volunteerId)
       );
       setFormData({
         first_name: singleVolunteer.first_name,
@@ -30,7 +30,7 @@ console.log(id)
     if (props.volunteers.length) {
       preFillFormData();
     }
-  }, [props.volunteers, id]);
+  }, [props.volunteers, volunteerId]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,8 +42,8 @@ console.log(id)
 
   const handleSubmit = (e) => {
     e.preventDefualt();
-    props.handleUpdateVolunteer(id, formData)
-  }
+    props.handleUpdateVolunteer(volunteerId, formData);
+  };
 
   return (
     <div className="add-pg">

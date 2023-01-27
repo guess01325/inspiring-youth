@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams, Routes, Route, Link } from "react-router-dom";
 
 export default function Volunteers(props) {
-  console.log(props.volunteers);
+const params = useParams()
+const {id} = params
+  
   return (
     <div>
       <div>
@@ -17,11 +19,11 @@ export default function Volunteers(props) {
                 {/* <div>
             </div> */}
                 <Link
-                  to={`/event/${volunteerItem.event_id}/volunteer/${volunteerItem.id}/update`}
+                  to={`/event/${id}/volunteer/${volunteerItem.id}/update`}
                 >
                   Update
                 </Link>
-                {/* <Link to={`/event/${event.id}/create`}>New</Link> */}
+                <Link to={`/event/${id}/volunteer/create`}>New</Link>
                 {/* <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
             <button onClick={() => props.handleDeleteEvent(event.id)}>

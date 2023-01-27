@@ -10,13 +10,13 @@ import Volunteers from "../screens/Volunteers";
 import CreateVolunteer from "../screens/CreateVolunteer";
 // import CreateEvent from "../screens/CreateEvent";
 import MainEvents from "../screens/EditEvent";
-// import {
-//   deleteVolunteer,
-//   getAllVolunteers,
-//   getOneVolunteer,
-//   postVolunteer,
-//   putVolunteer,
-// } from "../services/volunteers";
+import {
+  deleteVolunteer,
+  getAllVolunteers,
+  getOneVolunteer,
+  postVolunteer,
+  putVolunteer,
+} from "../services/volunteers";
 import {
   getAllEvents,
   getOneEvent,
@@ -28,14 +28,11 @@ import {
 import Home from "../screens/Home";
 
 export default function MainContainer(props) {
-  const [volunteers, setVolunteers] = useState([]);
   const [event, setEvent] = useState([]);
   const [events, setEvents] = useState([]);
   const params = useParams;
   const { id } = params;
   const history = useNavigate();
-
-
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -60,16 +57,6 @@ export default function MainContainer(props) {
     setEvents((prevState) => [...prevState, eventItem]);
     history(`/eventsDetails`);
   };
-
-  // const handleUpdateLuggage = async (id, formData) => {
-  //   const luggageItem = await putLuggage(id, formData);
-  //   setLuggage((prevState) =>
-  //     prevState.map((luggage) => {
-  //       return luggage.id === Number(id) ? luggageItem : luggage;
-  //     })
-  //   );
-  //   history.push(`/events/${event.id}/luggages`);
-  // };
 
   const handleDeleteEvent = async (id) => {
     await deleteEvent(id);
@@ -114,13 +101,7 @@ export default function MainContainer(props) {
         />
         <Route
           path="/event/:id/*"
-          element={
-            <VolunteerContainer
-              events={events}
-              volunteers={volunteers}
-              setVolunteers={setVolunteers}
-            />
-          }
+          element={<VolunteerContainer events={events} />}
         />
         <Route path="/" element={<Home />} />
       </Routes>
