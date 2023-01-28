@@ -13,7 +13,7 @@ export default function EditEvent(props) {
     date: "",
     time: "", 
   });
-console.log(props.events)
+
   useEffect(() => {
     const preFillFormData = () => {
       const singleEvent = props.events.find(

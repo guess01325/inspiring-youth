@@ -24,15 +24,14 @@ export default function VolunteerContainer(props) {
   const [event, setEvent] = useState([]);
   const { id } = params;
   const [volunteers, setVolunteers] = useState([]);
-  console.log(volunteers)
-  useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(id));
-    setEvent(event);
-  }, [props.events, id]);
+  // useEffect(() => {
+  //   const event = props.events.find((eventItem) => eventItem.id === Number(id));
+  //   setEvent(event);
+  // }, [props.events, id]);
   
   useEffect(() => {
     const fetchVolunteers = async () => {
-      const volunteerList = await getAllVolunteers(event.id);
+      const volunteerList = await getAllVolunteers(id);
       setVolunteers(volunteerList);
   
     };
@@ -42,9 +41,9 @@ export default function VolunteerContainer(props) {
   }, [event]);    
 
   const handleCreateVolunteer = async (formData) => {
-    const volunteer = await postVolunteer(event.id, formData);
+    const volunteer = await postVolunteer(id, formData);
     setVolunteers((prevState) => [...prevState, volunteer]);
-    history(`events/${event.id}/volunteer/all`);
+    history(`volunteer/all`);
   };
 
   const handleUpdateVolunteer = async (id, formData) => {
@@ -54,7 +53,7 @@ export default function VolunteerContainer(props) {
         return volunteer.id === Number(id) ? volunteerItem : volunteer;
       })
     );
-    history(`/event/${id}/volunteer/all`);
+    // history(`volunteer/all`);
     };
 
   const handleDeleteVolunteer = async (id) => {

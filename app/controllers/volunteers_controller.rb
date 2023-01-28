@@ -5,7 +5,7 @@ class VolunteersController < ApplicationController
   
   # GET events/event_id/volunteers
   def index
-    @volunteer = Volunteer.where(user: @current_user).where(event: @event)
+    @volunteer = Volunteer.where(event: @event)
     render json: @volunteer
    
   end
@@ -22,7 +22,7 @@ class VolunteersController < ApplicationController
   # POST /volunteers
   def create
     @volunteer = Volunteer.new(volunteer_params)
-    @volunteer.user = current_user
+    @volunteer.user = @current_user
     @volunteer.event = @event
 
     if @volunteer.save
