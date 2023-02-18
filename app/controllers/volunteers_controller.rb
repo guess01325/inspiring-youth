@@ -5,7 +5,7 @@ class VolunteersController < ApplicationController
   
   # GET events/event_id/volunteers
   def index
-    @volunteer = Volunteer.where(event: @event)
+    @volunteer = Volunteer.where(event: @event).where(user: @current_user)
     render json: @volunteer
    
   end
@@ -34,7 +34,7 @@ class VolunteersController < ApplicationController
 
   # PATCH/PUT /volunteers/1
   def update
-    if @volunteer.update(volunteer_params)
+    if @volunteer.update(volunteer_params).where(user: @current_user).where(event: @event)
       render json: @volunteer
     else
       render json: @volunteer.errors, status: :unprocessable_entity

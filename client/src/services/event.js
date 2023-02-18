@@ -1,7 +1,7 @@
 import api from "./api-config";
 
 
-export const getAllEvents = async (id) => {
+export const getAllEvents = async () => {
     const resp = await api.get("/events")
     return resp.data; 
 }

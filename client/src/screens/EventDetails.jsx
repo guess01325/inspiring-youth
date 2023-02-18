@@ -22,7 +22,7 @@ export default function EventDetails (props){
             <Link to={`/event/${event.id}/create`}>New</Link>
 
             </div>
-            <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
+            <Link to={`/volunteer/${event.id}/all`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
             <button onClick={() => props.handleDeleteEvent(event.id)}>Delete</button>
             </div>

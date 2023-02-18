@@ -5,18 +5,11 @@ import VolunteerContainer from "./VolunteerContainer";
 import EventDetials from "../screens/EventDetails";
 import EditEvent from "../screens/EditEvent";
 import CreateEvent from "../screens/CreateEvent";
-import EditVolunteer from "../screens/EditVolunteer";
+import MainEvents from "../screens/EditEvent";
 import Volunteers from "../screens/Volunteers";
 import CreateVolunteer from "../screens/CreateVolunteer";
-// import CreateEvent from "../screens/CreateEvent";
-import MainEvents from "../screens/EditEvent";
-import {
-  deleteVolunteer,
-  getAllVolunteers,
-  getOneVolunteer,
-  postVolunteer,
-  putVolunteer,
-} from "../services/volunteers";
+import EditVolunteer from "../screens/EditVolunteer";
+
 import {
   getAllEvents,
   getOneEvent,
@@ -49,13 +42,13 @@ export default function MainContainer(props) {
         return event.id === Number(id) ? eventItem : event;
       })
     );
-    history(`/eventsDetails`);
+    history(`/event/eventsDetails`);
   };
 
   const handleCreateEvent = async (formData) => {
     const eventItem = await postEvent(formData);
     setEvents((prevState) => [...prevState, eventItem]);
-    history(`/eventsDetails`);
+    history(`event/eventsDetails`);
   };
 
   const handleDeleteEvent = async (id) => {
@@ -66,44 +59,76 @@ export default function MainContainer(props) {
   return (
     <div>
       <Routes>
+        <Route path="event">
+          <Route
+            path="eventsDetails"
+            element={
+              <EventDetials
+                events={events}
+                handleDeleteEvent={handleDeleteEvent}
+              />
+            }
+          />
+          <Route
+            path=":id/edit"
+            element={
+              <EditEvent
+                events={events}
+                handleUpdateEvent={handleUpdateEvent}
+              />
+            }
+          />
+
+          <Route
+            path=":id/create"
+            element={
+              <CreateEvent
+                events={events}
+                handleCreateEvent={handleCreateEvent}
+              />
+            }
+          />
+        </Route>
+
         <Route path="events" element={<MainEvents events={events} />} />
+
         <Route
-          path="/event/:id/edit"
-          element={
-            <EditEvent
-              // setEventss={setEvents}
-              events={events}
-              handleUpdateEvent={handleUpdateEvent}
-            />
-          }
-        />
-        <Route
-          path="/eventsDetails"
-          element={
-            <EventDetials
-              events={events}
-              handleDeleteEvent={handleDeleteEvent}
-            />
-          }
-        />
-        <Route
-          path="/event/:id/create"
-          element={
-            <CreateEvent
-              events={events}
-              handleCreateEvent={handleCreateEvent}
-            />
-          }
-        />
-        <Route
-          path="/event/:id/student"
+          path="/event/:id/stude"
           element={<StudentContainer events={events} />}
         />
+        
+        
+        
         <Route
-          path="/event/:id/*"
+          path="volunteer"
           element={<VolunteerContainer events={events} />}
-        />
-        <Route path="/" element={<Home />} />
+        >
+          <Route
+            path=":id/all"
+            element={<Volunteers 
+              // volunteers={volunteers}
+               />}
+          />
+
+          <Route
+            path=":volunteerId/update"
+            element={
+              <EditVolunteer
+                // volunteers={volunteers}
+                // handleUpdateVolunteer={handleUpdateVolunteer}
+              />
+            }
+          />
+
+          <Route
+            path="create"
+            element={
+              <CreateVolunteer 
+              // handleCreateVolunteer={handleCreateVolunteer}
+               />
+            }
+          />
+        </Route>
       </Routes>
     </div>
   );

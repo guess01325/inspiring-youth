@@ -1,16 +1,21 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Routes, Route, Link } from "react-router-dom";
+import { useNavigate, useParams, Routes, Route, Link, useLocation, useOutletContext } from "react-router-dom";
 
 export default function Volunteers(props) {
 const params = useParams()
+const location = useLocation
+const volunteers = useOutletContext()
 const {id} = params
-  
+
+console.log(volunteers)
+
+
   return (
     <div>
       <div>
-        {props.volunteers.length ? (
+        {volunteers.length ? (
           <div>
-            {props.volunteers.map((volunteerItem) => (
+            {volunteers.map((volunteerItem) => (
               <div className="events" key={volunteerItem.id}>
                 <p> {volunteerItem.first_name}</p>
                 <p>{volunteerItem.last_name}</p>
@@ -19,11 +24,11 @@ const {id} = params
                 {/* <div>
             </div> */}
                 <Link
-                  to={`/event/${id}/volunteer/${volunteerItem.id}/update`}
+                  to={`/volunteer/${volunteerItem.id}/update`}
                 >
                   Update
                 </Link>
-                <Link to={`/event/${id}/volunteer/create`}>New</Link>
+                <Link to={`/volunteer/${id}/volunteer/create`}>New</Link>
                 {/* <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
             <button onClick={() => props.handleDeleteEvent(event.id)}>

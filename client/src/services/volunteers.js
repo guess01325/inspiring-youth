@@ -4,7 +4,7 @@ import api from "./api-config";
 export const getAllVolunteers = async (eventID) => {
     const resp = await api.get(`/events/${eventID}/volunteers`);
     return resp.data;
-  };
+  };  
 
 
   export const getOneVolunteer = async (id) => {
@@ -20,6 +20,7 @@ export const postVolunteer = async (eventID, volunteerData) => {
 export const putVolunteer = async (id, volunteerData) => {
     const resp = await api.put(`/volunteers/${id}`, {volunteer: volunteerData});
     return resp.data
+  
 }
 
 export const deleteVolunteer = async (id) => {
