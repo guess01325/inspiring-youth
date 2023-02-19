@@ -1,12 +1,13 @@
 class VolunteersController < ApplicationController
-  before_action :set_volunteer, only: %i[ show update destroy ]
-  before_action :authorize_request, except: [:show]  
-  before_action :set_event, only: %i[index create]
+  before_action :set_volunteer, only: %i[show update destroy]
+  before_action :authorize_request, only: %i[ index show update destroy]  
+  before_action :set_event, only: [:index, :create]
   
   # GET events/event_id/volunteers
   def index
-    @volunteer = Volunteer.where(event: @event).where(user: @current_user)
-    render json: @volunteer
+    @volunteers = Volunteer.where(event: @event)
+    .where(user: @current_user)
+    render json: @volunteers
    
   end
 
@@ -34,7 +35,7 @@ class VolunteersController < ApplicationController
 
   # PATCH/PUT /volunteers/1
   def update
-    if @volunteer.update(volunteer_params).where(user: @current_user).where(event: @event)
+    if @volunteer.update(volunteer_params)
       render json: @volunteer
     else
       render json: @volunteer.errors, status: :unprocessable_entity
