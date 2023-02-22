@@ -39,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.19.1",
-    "babel-loader": "^8.2.5"
+    "@babel/core": "^7.21.0",
+    "babel-loader": "^7.1.5"
   }
 }

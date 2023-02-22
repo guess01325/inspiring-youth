@@ -92,10 +92,10 @@ export default function MainContainer(props) {
 
         <Route path="events" element={<MainEvents events={events} />} />
 
-        <Route
+        {/* <Route
           path="/event/:id/stude"
           element={<StudentContainer events={events} />}
-        />
+        /> */}
         
         
         
@@ -111,7 +111,7 @@ export default function MainContainer(props) {
           />
 
           <Route
-            path=":volunteerId/update"
+            path=":id/update"
             element={
               <EditVolunteer
                 // volunteers={volunteers}

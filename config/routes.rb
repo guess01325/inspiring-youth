@@ -6,14 +6,14 @@ Rails.application.routes.draw do
   # resources :students
   # resources :volunteers
   resources :events do
-    resources :volunteers, shallow: true do
-      resources :students, shallow: true do
+    resources :volunteers, shallow: true 
+      resources :students, shallow: true 
       
-      end
+
     end
 
    
-  end
+  
 
     
  

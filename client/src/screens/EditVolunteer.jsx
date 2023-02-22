@@ -1,23 +1,25 @@
 import { useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate, useOutletContext } from "react-router-dom";
 
 export default function EditVolunteer(props) {
   const params = useParams();
-  const { volunteerId } = params;
+  const { id}  = params;
   const history = useNavigate;
-  
+  const [volunteers, handleUpdateVolunteer] = useOutletContext()
+
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
-    message: "",
+    message: ""
   });
 
+  
 
   useEffect(() => {
     const preFillFormData = () => {
-      const singleVolunteer = props.volunteers.find(
-        (volunteerItem) => volunteerItem.id === Number(volunteerId)
+      const singleVolunteer = volunteers.find(
+        (volunteerItem) => volunteerItem.id === Number(id)
       );
       setFormData({
         first_name: singleVolunteer.first_name,
@@ -27,10 +29,10 @@ export default function EditVolunteer(props) {
       });
     };
 
-    if (props.volunteers.length) {
+    if (volunteers.length) {
       preFillFormData();
     }
-  }, [props.volunteers, volunteerId]);
+  }, [volunteers, id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,7 +44,7 @@ export default function EditVolunteer(props) {
 
   const handleSubmit = (e) => {
     e.preventDefualt();
-    props.handleUpdateVolunteer(volunteerId, formData);
+    // handleUpdateVolunteer(id, formData);
   };
 
   return (
@@ -89,7 +91,7 @@ export default function EditVolunteer(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
+          <br />  
           <button>Submit</button>
         </div>
       </form>

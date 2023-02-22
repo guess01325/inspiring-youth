@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Routes, Route, Outlet } from "react-router-dom";
-import Volunteers from "../screens/Volunteers";
-import CreateVolunteer from "../screens/CreateVolunteer";
-import EditVolunteer from "../screens/EditVolunteer";
+import {
+  useNavigate,
+  useParams,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
+// import Volunteers from "../screens/Volunteers";
+// import CreateVolunteer from "../screens/CreateVolunteer";
+// import EditVolunteer from "../screens/EditVolunteer";
 
 import {
   deleteVolunteer,
@@ -16,17 +22,15 @@ export default function VolunteerContainer(props) {
   const history = useNavigate();
   const params = useParams();
   const [event, setEvent] = useState(null);
-  const { id } = params
+  const { id } = params;
   const [volunteers, setVolunteers] = useState([]);
-
 
   useEffect(() => {
     const event = props.events.find((eventItem) => eventItem.id === Number(id));
     setEvent(event);
   }, [props.events, id]);
 
-  
-useEffect(() => {
+  useEffect(() => {
     const fetchVolunteers = async () => {
       const volunteerList = await getAllVolunteers(event.id);
       setVolunteers(volunteerList);
@@ -49,7 +53,7 @@ useEffect(() => {
         return volunteer.id === Number(id) ? volunteerItem : volunteer;
       })
     );
-    history(`volunteer/all`);
+    history(`volunteer/id/all`);
   };
 
   const handleDeleteVolunteer = async (id) => {
@@ -58,16 +62,16 @@ useEffect(() => {
       prevState.filter((volunteer) => volunteer.id !== id)
     );
   };
- 
+
   return (
     <div>
-
-      <Outlet 
-      context= {volunteers}
-      />
+      <Outlet context={[volunteers, handleUpdateVolunteer]} />
       {/* <Routes>
         <Route path="">
+          
           <Route path="all" element={<Volunteers volunteers={volunteers} />} />
+          
+          
           <Route
             path=":volunteerId/update"
             element={
