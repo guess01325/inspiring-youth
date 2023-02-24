@@ -11,7 +11,7 @@ export default function EditEvent(props) {
     name: "",
     place: "",
     date: "",
-    time: "", 
+    time: ""
   });
 
   useEffect(() => {
@@ -40,6 +40,8 @@ export default function EditEvent(props) {
       [name]: value,
     }));
   };
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     props.handleUpdateEvent(id, formData);

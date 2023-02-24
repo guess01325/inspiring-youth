@@ -2,7 +2,7 @@ import { Route, Routes, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import StudentContainer from "./StudentContainer";
 import VolunteerContainer from "./VolunteerContainer";
-import EventDetials from "../screens/EventDetails";
+import EventDetails from "../screens/EventDetails";
 import EditEvent from "../screens/EditEvent";
 import CreateEvent from "../screens/CreateEvent";
 import MainEvents from "../screens/EditEvent";
@@ -63,7 +63,7 @@ export default function MainContainer(props) {
           <Route
             path="eventsDetails"
             element={
-              <EventDetials
+              <EventDetails
                 events={events}
                 handleDeleteEvent={handleDeleteEvent}
               />

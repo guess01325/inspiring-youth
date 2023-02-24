@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react";
-
+import {
+  Link,
+  useParams,
+  useNavigate,
+  useOutletContext,
+} from "react-router-dom";
 
 export default function CreateVolunteer(props) {
+
+  const [volunteers, handleUpdateVolunteer, handleCreateVolunteer] = useOutletContext();
+
+
+
     const [formData, setFormData] = useState({
       first_name: "",
       last_name: "",
@@ -16,14 +26,16 @@ export default function CreateVolunteer(props) {
         [name]: value,
       }));
     };
+
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      handleCreateVolunteer(formData)
+    }
   
     return (
       <div className="add-pg">
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            props.handleCreateVolunteer(formData);
-          }}
+          onSubmit={handleSubmit}
         >
           {/* <h1 id="add-gift-hOne">Add Gift</h1> */}
           <div className="add-form">

@@ -27,7 +27,7 @@ const {id} = params
                 >
                   Update
                 </Link>
-                <Link to={`/volunteer/${id}/volunteer/create`}>New</Link>
+                <Link to={`/volunteer/create`}>New</Link>
                 {/* <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
             <button onClick={() => props.handleDeleteEvent(event.id)}>
