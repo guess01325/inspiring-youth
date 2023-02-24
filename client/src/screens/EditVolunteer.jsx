@@ -46,7 +46,7 @@ export default function EditVolunteer(props) {
   };
 
   const handleSubmit = (e) => {
-    e.preventdefault()
+    e.preventDefault()
     handleUpdateVolunteer(id, formData);
   };
 
