@@ -5,8 +5,8 @@ export default function Volunteers(props) {
 const params = useParams()
 const location = useLocation
 const [volunteers, handleUpdateVolunteer] = useOutletContext()
+const {eventId} = params
 const {id} = params
-
 
 
   return (
@@ -23,11 +23,11 @@ const {id} = params
                 {/* <div>
             </div> */}
                 <Link
-                  to={`/volunteer/${volunteerItem.id}/update`}
+                  to={`/event/${eventId}/volunteer/${volunteerItem.id}/update`}
                 >
                   Update
                 </Link>
-                <Link to={`/volunteer/create`}>New</Link>
+                <Link to={`/event/${eventId}/volunteer/:id/create`}>New</Link>
                 {/* <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
             <Link to={`/events/edit${event.id}/students`}>Students</Link>
             <button onClick={() => props.handleDeleteEvent(event.id)}>

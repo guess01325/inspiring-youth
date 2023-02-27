@@ -18,13 +18,13 @@ export default function EventDetails (props){
             <p> {event.date}</p>
             <p>{event.time}</p>
             <div>
-            <Link to= {`/event/${event.id}/edit`}>Update</Link>
-            <Link to={`/event/${event.id}/create`}>New</Link>
+            <Link to= {`/events/${event.id}/volunteer/edit`}>Update</Link>
+            <Link to={`/events/${event.id}/volunteer/create`}>New</Link>
 
             </div>
-            <Link to={`/volunteer/${event.id}/all`}>Volunteers</Link>
-            <Link to={`/events/edit${event.id}/students`}>Students</Link>
-            <button onClick={() => props.handleDeleteEvent(event.id)}>Delete</button>
+            <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
+            {/* <Link to={`/events/edit${event.id}/students`}>Students</Link> */}
+            {/* <button onClick={() => props.handleDeleteEvent(event.id)}>Delete</button> */}
             </div>
         ))}
       </div>

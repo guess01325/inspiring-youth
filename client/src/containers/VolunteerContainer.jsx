@@ -22,15 +22,15 @@ export default function VolunteerContainer(props) {
   const history = useNavigate();
   const params = useParams();
   const [event, setEvent] = useState(null);
-  const { id } = params;
+  const { eventId } = params;
   const [volunteers, setVolunteers] = useState([]);
 
-  console.log(id) 
+  console.log(event) 
 
   useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(id));
+    const event = props.events.find((eventItem) => eventItem.id === Number(eventId));
     setEvent(event);
-  }, [props.events, id]);
+  }, [props.events, eventId]);
 
   useEffect(() => {
     const fetchVolunteers = async () => {
@@ -56,7 +56,7 @@ export default function VolunteerContainer(props) {
         return volunteer.id === Number(id) ? volunteerItem : volunteer;
       })
     );
-    history(`${id}/all`);
+    history(`all`);
   };
 
   const handleDeleteVolunteer = async (id) => {
