@@ -68,7 +68,7 @@ export default function VolunteerContainer(props) {
 
   return (
     <div>
-      <Outlet context={[volunteers, handleUpdateVolunteer, handleCreateVolunteer]} />
+      <Outlet context={[volunteers, handleUpdateVolunteer, handleCreateVolunteer, handleDeleteVolunteer]} />
       {/* <Routes>
         <Route path="">
           

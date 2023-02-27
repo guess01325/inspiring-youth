@@ -4,7 +4,7 @@ import { useNavigate, useParams, Routes, Route, Link, useLocation, useOutletCont
 export default function Volunteers(props) {
 const params = useParams()
 const location = useLocation
-const [volunteers, handleUpdateVolunteer] = useOutletContext()
+const [volunteers, handleUpdateVolunteer, handleDeleteVolunteer] = useOutletContext()
 const {eventId} = params
 const {id} = params
 
@@ -28,11 +28,9 @@ const {id} = params
                   Update
                 </Link>
                 <Link to={`/event/${eventId}/volunteer/:id/create`}>New</Link>
-                {/* <Link to={`/event/${event.id}/volunteer/all`}>Volunteers</Link>
-            <Link to={`/events/edit${event.id}/students`}>Students</Link>
-            <button onClick={() => props.handleDeleteEvent(event.id)}>
+            <button onClick={() => handleDeleteVolunteer(volunteerItem.id)}>
             Delete
-          </button> */}
+          </button>
               </div>
             ))}
           </div>
