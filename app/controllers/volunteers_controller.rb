@@ -1,6 +1,6 @@
 class VolunteersController < ApplicationController
   before_action :set_volunteer, only: %i[show update destroy]
-  before_action :authorize_request, only: %i[ index show update destroy]  
+  before_action :authorize_request, only: %i[ index show create update destroy]  
   before_action :set_event, only: [:index, :create]
   
   # GET events/event_id/volunteers
