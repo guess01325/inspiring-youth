@@ -42,13 +42,13 @@ export default function MainContainer(props) {
         return event.id === Number(id) ? eventItem : event;
       })
     );
-    history(`/event/eventsDetails`);
+    history(`/events/eventsDetails`);
   };
 
   const handleCreateEvent = async (formData) => {
     const eventItem = await postEvent(formData);
     setEvents((prevState) => [...prevState, eventItem]);
-    history(`event/eventsDetails`);
+    history(`events/eventsDetails`);
   };
 
   const handleDeleteEvent = async (id) => {

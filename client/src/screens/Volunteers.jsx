@@ -4,7 +4,7 @@ import { useNavigate, useParams, Routes, Route, Link, useLocation, useOutletCont
 export default function Volunteers(props) {
 const params = useParams()
 const location = useLocation
-const [volunteers, handleUpdateVolunteer, handleDeleteVolunteer] = useOutletContext()
+const [volunteers, handleUpdateVolunteer, handleCreateVolunteer, handleDeleteVolunteer] = useOutletContext()
 const {eventId} = params
 const {id} = params
 

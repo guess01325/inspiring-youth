@@ -60,7 +60,7 @@ export default function VolunteerContainer(props) {
   };
 
   const handleDeleteVolunteer = async (id) => {
-    await deleteVolunteer();
+    await deleteVolunteer(id);
     setVolunteers((prevState) =>
       prevState.filter((volunteer) => volunteer.id !== id)
     );
