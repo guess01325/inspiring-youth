@@ -9,6 +9,10 @@ import MainEvents from "../screens/EditEvent";
 import Volunteers from "../screens/Volunteers";
 import CreateVolunteer from "../screens/CreateVolunteer";
 import EditVolunteer from "../screens/EditVolunteer";
+import Student from "../screens/Students";
+import StudentEdit from "../screens/StudentEdit";
+import StudentCreate from "../screens/StudentCreate";
+import Home from "../screens/Home";
 
 import {
   getAllEvents,
@@ -18,7 +22,6 @@ import {
   getUserEvent,
   deleteEvent,
 } from "../services/event.js";
-import Home from "../screens/Home";
 
 export default function MainContainer(props) {
   const [event, setEvent] = useState([]);
@@ -92,45 +95,25 @@ export default function MainContainer(props) {
 
         <Route path="events" element={<MainEvents events={events} />} />
 
-        {/* <Route
-          path="/event/:id/stude"
-          element={<StudentContainer events={events} />}
-        /> */}
-        
-        
-        
         <Route
           path="event/:eventId/volunteer"
           element={<VolunteerContainer events={events} />}
         >
-          <Route
-            path="all"
-            element={<Volunteers 
-              // volunteers={volunteers}
-               />}
-          />
+          <Route path="all" element={<Volunteers />} />
 
-          <Route
-            path=":id/update"
-            element={
-              <EditVolunteer
-                // volunteers={volunteers}
-                // handleUpdateVolunteer={handleUpdateVolunteer}
-              />
-            }
-          />
+          <Route path=":id/update" element={<EditVolunteer />} />
 
-          <Route
-            path=":id/create"
-            element={
-              <CreateVolunteer 
-              // handleCreateVolunteer={handleCreateVolunteer}
-               />
-            }
-          />
+          <Route path=":id/create" element={<CreateVolunteer />} />
         </Route>
-        <Route path="student/:eventID/student" element={<StudentContainer events = {events}/>}>
-
+        
+        
+        <Route
+          path="event/:eventID/student"
+          element={<StudentContainer events={events} />}
+        >
+          <Route path="all" element={<Student />} />
+          <Route path=":id/update" element={<StudentEdit />} />
+          <Route path=":id/create" element={<StudentCreate />} />
         </Route>
       </Routes>
     </div>

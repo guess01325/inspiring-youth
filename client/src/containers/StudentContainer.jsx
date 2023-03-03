@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Routes, Route } from "react-router-dom";
+import { useNavigate, useParams, Routes, Route, Outlet } from "react-router-dom";
 import Student from "../screens/Students"
 import StudentEdit from "../screens/StudentEdit"
 import StudentCreate from "../screens/StudentCreate"
@@ -12,7 +12,7 @@ import {
 } from "../services/students";
 
 export default function StudentContainer(props) {
-  const [student, setStudent] = useState([]);
+  const [students, setStudents] = useState([]);
   const [event, setEvent] = useState([]);
   const history = useNavigate()
   const params = useParams()
@@ -27,21 +27,21 @@ export default function StudentContainer(props) {
   useEffect(() => {
     const fetchStudents = async () => {
       const studentList = await getAllStudents(event.id);
-      setStudent(studentList);
+      setStudents(studentList);
     };
     fetchStudents();
   }, []);
 
   const handleCreateStudent = async (formData) => {
     const student = await postStudent(event.id, formData);
-    setStudent((prevState) => [...prevState, student]);
+    setStudents((prevState) => [...prevState, student]);
     history(`/events/${event.id}/students`);
   };
 
 
   const handleUpdateStudent = async (id, formData) => {
     const student = await putStudent(id, formData);
-    setStudent((prevState) =>
+    setStudents((prevState) =>
       prevState.map((student) => {
         return student.id === Number(id) ? student : student;
       })
@@ -51,7 +51,7 @@ export default function StudentContainer(props) {
 
   const handleDeleteStudent = async (id) => {
     await deleteStudent(id);
-    setStudent((prevState) => prevState.filter((student) => student.id !== id) )
+    setStudents((prevState) => prevState.filter((student) => student.id !== id) )
 
   }
 
@@ -63,6 +63,7 @@ export default function StudentContainer(props) {
 
   return(
     <div>
+      <Outlet context={[students,handleUpdateStudent,handleCreateStudent,handleDeleteStudent]}/>
 
     </div>
   );

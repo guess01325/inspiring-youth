@@ -25,10 +25,12 @@ export default function VolunteerContainer(props) {
   const { eventId } = params;
   const [volunteers, setVolunteers] = useState([]);
 
-  console.log(event) 
+  console.log(event);
 
   useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(eventId));
+    const event = props.events.find(
+      (eventItem) => eventItem.id === Number(eventId)
+    );
     setEvent(event);
   }, [props.events, eventId]);
 
@@ -45,8 +47,7 @@ export default function VolunteerContainer(props) {
   const handleCreateVolunteer = async (formData) => {
     const volunteer = await postVolunteer(event.id, formData);
     setVolunteers((prevState) => [...prevState, volunteer]);
-    history(`all`)
-   
+    history(`all`);
   };
 
   const handleUpdateVolunteer = async (id, formData) => {
@@ -68,30 +69,14 @@ export default function VolunteerContainer(props) {
 
   return (
     <div>
-      <Outlet context={[volunteers, handleUpdateVolunteer, handleCreateVolunteer, handleDeleteVolunteer]} />
-      {/* <Routes>
-        <Route path="">
-          
-          <Route path="all" element={<Volunteers volunteers={volunteers} />} />
-          
-          
-          <Route
-            path=":volunteerId/update"
-            element={
-              <EditVolunteer
-                volunteers={volunteers}
-                handleUpdateVolunteer={handleUpdateVolunteer}
-              />
-            }
-          />
-          <Route
-            path="create"
-            element={
-              <CreateVolunteer handleCreateVolunteer={handleCreateVolunteer} />
-            }
-          />
-        </Route>
-      </Routes> */}
+      <Outlet
+        context={[
+          volunteers,
+          handleUpdateVolunteer,
+          handleCreateVolunteer,
+          handleDeleteVolunteer,
+        ]}
+      />
     </div>
   );
 }
