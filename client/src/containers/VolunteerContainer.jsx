@@ -45,7 +45,7 @@ export default function VolunteerContainer(props) {
   const handleCreateVolunteer = async (formData) => {
     const volunteer = await postVolunteer(event.id, formData);
     setVolunteers((prevState) => [...prevState, volunteer]);
-    history.push(`volunteer/${event.id}/all`)
+    history(`all`)
    
   };
 
