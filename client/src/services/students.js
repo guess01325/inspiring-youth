@@ -4,7 +4,7 @@ import api from "./api-config";
 
 
 export const getAllStudents = async (eventID) => {
-    const resp = await api.get(`volunteers/${eventID}/students`);
+    const resp = await api.get(`events/${eventID}/students`);
     return resp.data;
   };
 

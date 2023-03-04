@@ -16,21 +16,24 @@ export default function StudentContainer(props) {
   const [event, setEvent] = useState([]);
   const history = useNavigate()
   const params = useParams()
-  const {id} = params; 
+  const {eventId} = params; 
 
 
   useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(id));
+    const event = props.events.find((eventItem) => eventItem.id === Number(eventId));
     setEvent(event);
-  }, [props.events, id]);
+  }, [props.events, eventId]);
 
   useEffect(() => {
     const fetchStudents = async () => {
-      const studentList = await getAllStudents(event.id);
+      const studentList = await getAllStudents(eventId);
       setStudents(studentList);
     };
-    fetchStudents();
-  }, []);
+    if (event){
+
+      fetchStudents();
+    }
+  }, [event]);
 
   const handleCreateStudent = async (formData) => {
     const student = await postStudent(event.id, formData);
