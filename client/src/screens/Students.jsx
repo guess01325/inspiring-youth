@@ -20,7 +20,7 @@ export default function Students(props) {
   ] = useOutletContext();
   const { eventId } = params;
   const { id } = params;
-  console.log(eventId)
+  console.log(students)
 
   return (
     <div>
