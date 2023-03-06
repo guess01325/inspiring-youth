@@ -38,7 +38,7 @@ export default function Students(props) {
                 >
                   Update
                 </Link>
-                <Link to={`/event/${eventId}/volunteer/:id/create`}>New</Link>
+                <Link to={`/event/${eventId}/student/${studentItem.id}/create`}>New</Link>
                 <button onClick={() => handleDeleteStudent(studentItem.id)}>
                   Delete
                 </button>

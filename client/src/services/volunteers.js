@@ -1,8 +1,8 @@
 import api from "./api-config";
 
 
-export const getAllVolunteers = async (eventID) => {
-    const resp = await api.get(`/events/${eventID}/volunteers`);
+export const getAllVolunteers = async (eventId) => {
+    const resp = await api.get(`/events/${eventId}/volunteers`);
     return resp.data;
   };  
 
@@ -12,8 +12,8 @@ export const getAllVolunteers = async (eventID) => {
     return resp.data
   }
 
-export const postVolunteer = async (eventID, volunteerData) => {
-    const resp = await api.post(`events/${eventID}/volunteers`, {volunteer: volunteerData});
+export const postVolunteer = async (eventId, volunteerData) => {
+    const resp = await api.post(`events/${eventId}/volunteers`, {volunteer: volunteerData});
     return resp.data;
 }
 

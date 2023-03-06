@@ -38,18 +38,18 @@ export default function StudentContainer(props) {
   const handleCreateStudent = async (formData) => {
     const student = await postStudent(event.id, formData);
     setStudents((prevState) => [...prevState, student]);
-    history(`/events/${event.id}/students`);
+    history(`all`);
   };
 
 
   const handleUpdateStudent = async (id, formData) => {
-    const student = await putStudent(id, formData);
+    const studentItem = await putStudent(id, formData);
     setStudents((prevState) =>
       prevState.map((student) => {
-        return student.id === Number(id) ? student : student;
+        return student.id === Number(id) ? studentItem : student;
       })
     );
-    history.push(`/events/${event.id}/student`);
+    history(`all`);
   };
 
   const handleDeleteStudent = async (id) => {

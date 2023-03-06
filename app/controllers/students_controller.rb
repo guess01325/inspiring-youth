@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[ show update destroy ]
-  before_action :authorize_request, only: [:update, :destroy]
+  before_action :authorize_request, only: %i[index show create update destroy]
+  before_action :set_event, only: %i[index create]
 
   # GET /students
   def index
@@ -17,6 +18,9 @@ class StudentsController < ApplicationController
   # POST /students
   def create
     @student = Student.new(student_params)
+    @student.user = @current_user
+    @student.event = @event
+
 
     if @student.save
       render json: @student, status: :created, location: @student
@@ -41,12 +45,15 @@ class StudentsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_event
+      @event = Event.find(params[:event_id])
+    end
     def set_student
       @student = Student.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def student_params
-      params.require(:student).permit(:name, :address, :contact, :user_id, :event_id, :volunteer_id)
+      params.require(:student).permit(:name, :address, :contact)
     end
 end

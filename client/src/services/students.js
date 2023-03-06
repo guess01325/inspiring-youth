@@ -14,18 +14,18 @@ export const getAllStudents = async (eventID) => {
     return resp.data
 }
 
-export const postStudent = async (studentData) => {
-    const resp = await api.post(`/students`, {event: studentData});
+export const postStudent = async (eventId ,studentData) => {
+    const resp = await api.post(`/events/${eventId}/students`, {student: studentData});
     return resp.data;
 }
 
-export const putStudent = async (id, eventData) => {
-    const resp = await api.put(`/students/${id}`, {event: eventData});
+export const putStudent = async (id, studentData) => {
+    const resp = await api.put(`/students/${id}`, {student: studentData});
     return resp.data
 }
 
 export const getUserEvent = async () => {
-    const respt = await api.get("/users/events")
+    const resp = await api.get("/users/events")
 }
 
 export const deleteStudent = async(id)=>{
