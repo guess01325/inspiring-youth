@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
   before_action :set_student, only: %i[ show update destroy ]
   before_action :authorize_request, only: %i[index show create update destroy]
   before_action :set_event, only: %i[ index create ]
-  before_action :set_volunteer, only: %i[index create]
+  # before_action :set_volunteer, only: %i[index create]
   
 
   # GET /students
@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     @student.user = @current_user
     @student.event = @event
-    @student.volunteer = @volunteer
+    
 
 
     if @student.save
@@ -48,9 +48,9 @@ class StudentsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_volunteer
-      @volunteer = Volunteer.find(params[:volunteer_id])
-    end
+    # def set_volunteer
+    #   @volunteer = Volunteer.find(params[:volunteer_id])
+    # end
       def set_event
         @event = Event.find(params[:event_id])
       end

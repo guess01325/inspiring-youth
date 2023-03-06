@@ -16,7 +16,7 @@ Student.destroy_all
 
  @volunteer1 = Volunteer.create!(first_name:"Otis", last_name: "guess", email:"guess01325@yahoo.com", message:"Looking to volunteer sometimes", user: @user1, event: @event1)
 
- Student.create!(name: "Otis Guess", address: "195 Garfield ave", contact: "860-303-0187", user: @user1, event: @event1, volunteer: @volunteer1)
+ Student.create!(name: "Otis Guess", address: "195 Garfield ave", contact: "860-303-0187", user: @user1, event: @event1)
 
 
 

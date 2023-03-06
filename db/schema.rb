@@ -1,4 +1,4 @@
- # This file is auto-generated from the current state of the database. Instead
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_31_000316) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_214447) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,12 +31,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_31_000316) do
     t.string "contact"
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
-    t.bigint "volunteer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_students_on_event_id"
     t.index ["user_id"], name: "index_students_on_user_id"
-    t.index ["volunteer_id"], name: "index_students_on_volunteer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,7 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_31_000316) do
   add_foreign_key "events", "users"
   add_foreign_key "students", "events"
   add_foreign_key "students", "users"
-  add_foreign_key "students", "volunteers"
   add_foreign_key "volunteers", "events"
   add_foreign_key "volunteers", "users"
 end
