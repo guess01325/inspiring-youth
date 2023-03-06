@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+  import { useState, useEffect } from "react";
 import {
   Link,
   useParams,
@@ -9,7 +9,7 @@ import {
 export default function EditVolunteer(props) {
   const params = useParams();
   const { id } = params;
-  const history = useNavigate;
+  const history = useNavigate()
   const [volunteers, handleUpdateVolunteer] = useOutletContext();
 
   const [formData, setFormData] = useState({

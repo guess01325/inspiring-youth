@@ -108,7 +108,7 @@ export default function MainContainer(props) {
         
         
         <Route
-          path="event/:eventID/student"
+          path="event/:eventId/student"
           element={<StudentContainer events={events} />}
         >
           <Route path="all" element={<Student />} />

@@ -10,7 +10,6 @@ import {
 } from "react-router-dom";
 
 export default function Volunteers(props) {
-  const params = useParams();
   const location = useLocation;
   const [
     volunteers,
@@ -18,6 +17,7 @@ export default function Volunteers(props) {
     handleCreateVolunteer,
     handleDeleteVolunteer,
   ] = useOutletContext();
+  const params = useParams();
   const { eventId } = params;
   const { id } = params;
 

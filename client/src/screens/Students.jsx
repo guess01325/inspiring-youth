@@ -20,6 +20,7 @@ export default function Students(props) {
   ] = useOutletContext();
   const { eventId } = params;
   const { id } = params;
+  console.log(eventId)
 
   return (
     <div>
@@ -33,7 +34,7 @@ export default function Students(props) {
                 <p> {studentItem.contact}</p>
 
                 <Link
-                  to={`/event/${eventId}/volunteer/${studentItem}/update`}
+                  to={`/event/${eventId}/student/${studentItem.id}/update`}
                 >
                   Update
                 </Link>
