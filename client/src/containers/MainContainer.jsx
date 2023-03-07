@@ -5,7 +5,7 @@ import VolunteerContainer from "./VolunteerContainer";
 import EventDetails from "../screens/EventDetails";
 import EditEvent from "../screens/EditEvent";
 import CreateEvent from "../screens/CreateEvent";
-import MainEvents from "../screens/EditEvent";
+import EventDisplay from "../screens/EventDisplay";
 import Volunteers from "../screens/Volunteers";
 import CreateVolunteer from "../screens/CreateVolunteer";
 import EditVolunteer from "../screens/EditVolunteer";
@@ -91,9 +91,11 @@ export default function MainContainer(props) {
               />
             }
           />
+          <Route
+          path="displayEvents"
+          element= {<EventDisplay
+          events={events}/>}/>
         </Route>
-
-        <Route path="events" element={<MainEvents events={events} />} />
 
         <Route
           path="event/:eventId/volunteer"
