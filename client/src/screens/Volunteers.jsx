@@ -19,7 +19,7 @@ export default function Volunteers(props) {
   ] = useOutletContext();
   const params = useParams();
   const { eventId } = params;
-  const { id } = params;
+
 
   return (
     <div>

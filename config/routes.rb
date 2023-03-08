@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources :events do
     resources :volunteers, shallow: true 
       resources :students, shallow: true 
-      
+      end
 
-    end
+      resources :registrations, shallow: true
 
    
   

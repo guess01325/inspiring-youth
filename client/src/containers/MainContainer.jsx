@@ -24,11 +24,12 @@ import {
 } from "../services/event.js";
 
 export default function MainContainer(props) {
-  const [event, setEvent] = useState([]);
-  const [events, setEvents] = useState([]);
+  const {event, setEvent} = props;
+  const [events, setEvents] = useState()
   const params = useParams;
   const { id } = params;
   const history = useNavigate();
+  
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -99,7 +100,7 @@ export default function MainContainer(props) {
 
         <Route
           path="event/:eventId/volunteer"
-          element={<VolunteerContainer events={events} />}
+          element={<VolunteerContainer events={events} event={event} setEvent={setEvent} />}
         >
           <Route path="all" element={<Volunteers />} />
 

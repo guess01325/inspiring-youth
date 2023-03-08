@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import {useState, useEffect} from "react";
 
 function Header(props) {
-  const { currentUser, handleLogout } = props;
+  const { currentUser, handleLogout, event, setEvent } = props;
+  const params = useParams()
+  const {eventId} = params
+  const {id} = params
+ 
+  
 
   return (
     <div className="header">
@@ -29,7 +35,7 @@ function Header(props) {
               <Link to="/about">About Us</Link>
               <Link to="/events/displayEvents">Events</Link>
               <Link to="/signUp">Register</Link>
-              <Link to="/volunteer">Volunteer</Link>
+              <Link to={ `/event/${eventId}/volunteer/:id/create`}>Volunteer</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/wish-list">Wish List</Link>
               <Link to="/donate">Donations</Link>

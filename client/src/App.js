@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
@@ -14,8 +14,11 @@ import {
 } from "./services/auth";
 
 function App() {
+  const params = useParams()
+  const eventId = params
   const [currentUser, setCurrentUser] = useState(null);
   const history = useNavigate();
+  const [event, setEvent] = useState(null);
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -46,9 +49,9 @@ function App() {
 
   return (
     <div className="App">
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      <Layout currentUser={currentUser} setEvent={setEvent} handleLogout={handleLogout} event={event} >
         <Routes>
-          <Route path="*" element={<MainContainer />}> 
+          <Route path="*" element={<MainContainer event={event} setEvent={setEvent} />}> 
           
           
           

@@ -8,7 +8,7 @@ export default function Layout(props) {
         <div>
             <Header
             currentUser = {props.currentUser}
-            handleLogout = {props.handleLogout}/>
+            handleLogout = {props.handleLogout} setEvent ={props.setEvent} event={props.event}/>
             {props.children}
             <Footer/>
         </div>

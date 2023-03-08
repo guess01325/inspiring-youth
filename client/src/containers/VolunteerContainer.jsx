@@ -21,11 +21,11 @@ import {
 export default function VolunteerContainer(props) {
   const history = useNavigate();
   const params = useParams();
-  const [event, setEvent] = useState(null);
+  const {event, setEvent} = props;
   const { eventId } = params;
   const [volunteers, setVolunteers] = useState([]);
 
-  console.log(event);
+  console.log(eventId);
 
   useEffect(() => {
     const event = props.events.find(
