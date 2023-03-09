@@ -4,7 +4,8 @@ import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
-import Registration from "./screens/Registration"
+import Registrations from "./screens/Registrations"
+import CreateRegistration from "./screens/CreateRegistration"
 import Home from "./screens/Home";
 
 import {
@@ -15,11 +16,14 @@ import {
 } from "./services/auth";
 
 function App() {
+  const [reg, setReg] = useState();
   const params = useParams()
   const eventId = params
   const [currentUser, setCurrentUser] = useState(null);
   const history = useNavigate();
   const [event, setEvent] = useState(null);
+
+  console.log(reg)
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -58,8 +62,9 @@ function App() {
           
           
           
-          <Route path="/registrations" element={<Registration/>}/>
-
+          <Route path="/registrations/create" element={<CreateRegistration  setReg={setReg}/>}/>
+          <Route path="registrations" element={<Registrations setReg={setReg} reg={reg} />}/>
+        
           <Route
             path="/sign-in"
             element={<SignIn handleLogin={handleLogin} />}

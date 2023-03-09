@@ -3,23 +3,27 @@ class RegistrationsController < ApplicationController
     def index
         @registrations = Registration.all
 
-        render json: @users
+        render json: @registrations
     end
     
     # PATCH/PUT /registrations/1
     def create 
-        @Registration = Registration.new(Registration_params)
+        @registration = Registration.new(registration_params)
 
-        if @Registration.save
-            render json: @Registration, status: :created, location: @Registration
+        if @registration.save
+            render json: @registration, status: :created, location: @registration
         else
-            render json: @Registration.errors, status:
+            render json: @registration.errors, status:
             :unprocessable_entity
         end
 
     end
 
-    def Registration_params
+
+    private
+
+    def registration_params
         params.require(:registration).permit(:first_name, :last_name, :email, :how_often)
     end
+
 end
