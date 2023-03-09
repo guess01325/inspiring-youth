@@ -5,4 +5,8 @@ export const getAllRegistrations = async () => {
     return resp.data
 }
 
-export const postReg = async 
+export const postReg = async (regData) => {
+    const resp = await api.post('registrations', {registration: regData});
+    return resp.data
+}
+

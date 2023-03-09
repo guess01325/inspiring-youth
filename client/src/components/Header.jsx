@@ -34,7 +34,7 @@ function Header(props) {
               </Link>
               <Link to="/about">About Us</Link>
               <Link to="/events/displayEvents">Events</Link>
-              <Link to="/signUp">Register</Link>
+              <Link to="registrations">Register</Link>
               <Link to={ `/event/${eventId}/volunteer/:id/create`}>Volunteer</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/wish-list">Wish List</Link>

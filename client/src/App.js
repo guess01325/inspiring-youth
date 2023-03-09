@@ -4,6 +4,7 @@ import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
+import Registration from "./screens/Registration"
 import Home from "./screens/Home";
 
 import {
@@ -52,10 +53,12 @@ function App() {
       <Layout currentUser={currentUser} setEvent={setEvent} handleLogout={handleLogout} event={event} >
         <Routes>
           <Route path="*" element={<MainContainer event={event} setEvent={setEvent} />}> 
-          
-          
-          
+
           </Route>
+          
+          
+          
+          <Route path="/registrations" element={<Registration/>}/>
 
           <Route
             path="/sign-in"
