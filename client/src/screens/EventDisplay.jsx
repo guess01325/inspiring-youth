@@ -5,6 +5,7 @@ export default function EventDisplay(props) {
   
   
   
+  
   return (
     <div>
       {props.events.map((event) => (

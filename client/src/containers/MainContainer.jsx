@@ -63,7 +63,7 @@ export default function MainContainer(props) {
   return (
     <div>
       <Routes>
-        <Route path="events">
+        <Route path="/events">
           <Route
             path="eventsDetails"
             element={
@@ -99,7 +99,7 @@ export default function MainContainer(props) {
         </Route>
 
         <Route
-          path="event/:eventId/volunteer"
+          path="/event/:eventId/volunteer"
           element={<VolunteerContainer events={events} event={event} setEvent={setEvent} />}
         >
           <Route path="all" element={<Volunteers />} />
@@ -111,7 +111,7 @@ export default function MainContainer(props) {
         
         
         <Route
-          path="event/:eventId/student"
+          path="/event/:eventId/student"
           element={<StudentContainer events={events} />}
         >
           <Route path="all" element={<Student />} />
