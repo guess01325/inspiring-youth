@@ -1,8 +1,9 @@
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate, useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { putEvent } from "../services/event";
 
 export default function EditEvent(props) {
+  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext()
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
@@ -16,7 +17,7 @@ export default function EditEvent(props) {
 
   useEffect(() => {
     const preFillFormData = () => {
-      const singleEvent = props.events.find(
+      const singleEvent = events.find(
         (eventItem) => eventItem.id === Number(id)
       );
 
@@ -28,10 +29,10 @@ export default function EditEvent(props) {
       });
     };
 
-    if (props.events.length) {
+    if (events.length) {
       preFillFormData();
     }
-  }, [props.events, id]);
+  }, [events, id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +45,7 @@ export default function EditEvent(props) {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.handleUpdateEvent(id, formData);
+    handleUpdateEvent(id, formData);
   };
 
   return (

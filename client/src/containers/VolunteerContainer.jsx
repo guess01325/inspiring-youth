@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
   Outlet,
+  useOutletContext
 } from "react-router-dom";
 // import Volunteers from "../screens/Volunteers";
 // import CreateVolunteer from "../screens/CreateVolunteer";
@@ -19,24 +20,25 @@ import {
 } from "../services/volunteers";
 
 export default function VolunteerContainer(props) {
+  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext();
   const history = useNavigate();
   const params = useParams();
-  const {event, setEvent} = props;
+  const [event, setEvent] = useState([])
   const { eventId } = params;
   const [volunteers, setVolunteers] = useState([]);
 
-  console.log(eventId);
+  console.log(event);
 
   useEffect(() => {
-    const event = props.events.find(
+    const event = events.find(
       (eventItem) => eventItem.id === Number(eventId)
     );
     setEvent(event);
-  }, [props.events, eventId]);
+  }, [events, eventId]);
 
   useEffect(() => {
     const fetchVolunteers = async () => {
-      const volunteerList = await getAllVolunteers(event.id);
+      const volunteerList = await getAllVolunteers(eventId);
       setVolunteers(volunteerList);
     };
     if (event) {

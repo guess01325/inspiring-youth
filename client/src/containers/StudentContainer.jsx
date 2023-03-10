@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Routes, Route, Outlet } from "react-router-dom";
+import { useNavigate, useParams, Routes, Route, Outlet, useOutletContext } from "react-router-dom";
 import Student from "../screens/Students"
 import StudentEdit from "../screens/StudentEdit"
 import StudentCreate from "../screens/StudentCreate"
@@ -12,6 +12,7 @@ import {
 } from "../services/students";
 
 export default function StudentContainer(props) {
+  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext();
   const [students, setStudents] = useState([]);
   const [event, setEvent] = useState([]);
   const history = useNavigate()
@@ -20,9 +21,9 @@ export default function StudentContainer(props) {
 
 
   useEffect(() => {
-    const event = props.events.find((eventItem) => eventItem.id === Number(eventId));
+    const event = events.find((eventItem) => eventItem.id === Number(eventId));
     setEvent(event);
-  }, [props.events, eventId]);
+  }, [events, eventId]);
 
   useEffect(() => {
     const fetchStudents = async () => {

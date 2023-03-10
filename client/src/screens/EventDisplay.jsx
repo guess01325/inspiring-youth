@@ -1,5 +1,6 @@
+import { Outlet, useOutletContext } from "react-router-dom";
 export default function EventDisplay(props) {
-  
+  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent] = useOutletContext();
   
   
   
@@ -8,7 +9,7 @@ export default function EventDisplay(props) {
   
   return (
     <div>
-      {props.events.map((event) => (
+      {events.map((event) => (
         <div className="events" key={event.id}>
           <p> {event.name}</p>
           <p>{event.place}</p>

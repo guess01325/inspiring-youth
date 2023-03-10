@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 export default function CreateEvent(props) {
+  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext()
   const [formData, setFormData] = useState({
     name: "",
     place: "",
@@ -21,7 +23,7 @@ export default function CreateEvent(props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          props.handleCreateEvent(formData);
+          handleCreateEvent(formData);
         }}
       >
         {/* <h1 id="add-gift-hOne">Add Gift</h1> */}
