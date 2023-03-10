@@ -1,36 +1,32 @@
-import {useState, useEffect} from "react";
-import { useNavigate } from "react-router-dom";
-import { getAllRegistrations } from "../services/registration";
+import { useState, useEffect } from "react";
+import {
+  useNavigate,
+  useParams,
+  Routes,
+  Route,
+  useOutletContext,
+} from "react-router-dom";
 
+export default function Registration(props) {
+  const [reg, handleCreateReg, handleDeleteRegistration] = useOutletContext();
 
-
-export default function Registration (props){
-   
-   
-   
-    useEffect(() => {
-        const fetchRegis = async () => {
-          const regList = await getAllRegistrations();
-          props.setReg(regList);
-        };
-        fetchRegis();
-      }, []);
-
-    console.log(props.reg)
-    return(
-        <div>
-            <div>
-                {props.reg.map((reg) =>(
-                <div>
-                    <p> {reg.first_name}</p>
-                    <p> {reg.last_name}</p>
-                    <p> {reg.email}</p>
-                    <p> {reg.how_often}</p>
-                    </div>
-                
-                ))}
-            </div>
-        </div>
-    
-    )
+  console.log(reg);
+  return (
+    <div>
+      <div>
+        {reg.map((reg) => (
+          <div key={reg.id}>
+            <p> {reg.first_name}</p>
+            <p> {reg.last_name}</p>
+            <p> {reg.email}</p>
+            <p> {reg.how_often}</p>
+            
+            <button onClick={() => handleDeleteRegistration(reg.id)}>
+                Delete
+                </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

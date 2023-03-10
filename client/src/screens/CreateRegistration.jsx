@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import {  postReg } from "../services/registration";
+import {
+  Link,
+  useParams,
+  useNavigate,
+  useOutletContext,
+} from "react-router-dom";
 
 export default function CreateRegistration(props) {
+  const [reg, handleCreateReg] = useOutletContext();
   const history = useNavigate();
   const [formData, setFormData] = useState({
     first_name: "",
@@ -13,11 +18,6 @@ export default function CreateRegistration(props) {
 
 
   
-  const handleCreateReg = async (formData) => {
-    const regItem = await postReg(formData);
-    props.setReg((prevState) => [...prevState, regItem]);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({

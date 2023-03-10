@@ -22,7 +22,7 @@ function Header(props) {
               <Link to="/">
                 <h1>Home</h1>
               </Link>
-              <Link to="registrations" >Registrations</Link>
+              <Link to="registrations/all" >Registrations</Link>
               <Link to="/events/eventsDetails"> Events</Link>
               <Link to="/wish-list">Wish List</Link>
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import MainContainer from "./containers/MainContainer";
+import RegistrationContainer from "./containers/RegistrationContainer";
 import Layout from "./layouts/Layout";
 import SignIn from "./screens/SignIn";
 import Registrations from "./screens/Registrations"
@@ -16,14 +17,13 @@ import {
 } from "./services/auth";
 
 function App() {
-  const [reg, setReg] = useState();
   const params = useParams()
   const eventId = params
   const [currentUser, setCurrentUser] = useState(null);
   const history = useNavigate();
   const [event, setEvent] = useState(null);
 
-  console.log(reg)
+  
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -61,9 +61,12 @@ function App() {
           </Route>
           
           
+          <Route path="registrations" element={<RegistrationContainer/>}>
+            <Route path="all" element={<Registrations/>}/>
           
-          <Route path="/registrations/create" element={<CreateRegistration  setReg={setReg}/>}/>
-          <Route path="registrations" element={<Registrations setReg={setReg} reg={reg} />}/>
+          <Route path="create" element={<CreateRegistration />}/>
+            
+          </Route>
         
           <Route
             path="/sign-in"

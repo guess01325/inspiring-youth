@@ -10,3 +10,8 @@ export const postReg = async (regData) => {
     return resp.data
 }
 
+export const deleteReg = async (id) => {
+    const resp = await api.delete(`registrations/${id}`)
+}
+
+ 
