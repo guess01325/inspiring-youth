@@ -19,8 +19,11 @@ import StudentCreate from "./screens/StudentCreate";
 import RegistrationContainer from "./containers/RegistrationContainer";
 import Registrations from "./screens/Registrations";
 import CreateRegistration from "./screens/CreateRegistration";
+import Donate from "./screens/Donate"
 import About from "./screens/About";
+import WishList from "./screens/WishList";
 import Home from "./screens/Home";
+import VolunteerInfo from "./screens/VolunteerInfo";
 
 import {
   loginUser,
@@ -72,21 +75,24 @@ function App() {
         event={event}
       >
         <Routes>
+          <Route path="/" element={<Home/>}/>
           
           <Route
             path="/"
-            element={<MainContainer />}
+            element={<MainContainer/>}
           > 
-            <Route path="events">
+              <Route/>
+
+            
               <Route
-                path="eventsDetails"
+                path="/events/eventsDetails"
                 element={
                   <EventDetails
                   />
                 }
                 />
               <Route
-                path=":id/edit"
+                path="/events/:id/edit"
                 element={
                   <EditEvent
                   />
@@ -94,16 +100,16 @@ function App() {
                 />
 
               <Route
-                path=":id/create"
+                path="events/:id/create"
                 element={
                   <CreateEvent/>
                 }
                 />
               <Route
-                path="displayEvents"
+                path="events/displayEvents"
                 element={<EventDisplay />}
                 />
-            </Route>
+            
 
             <Route
               path="event/:eventId/volunteer"
@@ -128,7 +134,6 @@ function App() {
               <Route path=":id/create" element={<StudentCreate />} />
             </Route>
           </Route>
-          <Route/>
           <Route path="/about" element={<About/>} />
 
           <Route path="registrations" element={<RegistrationContainer />}>
@@ -136,6 +141,10 @@ function App() {
 
             <Route path="create" element={<CreateRegistration />} />
           </Route>
+            <Route path="/donate" element={<Donate/>}/>
+            <Route path="wish-list" element={<WishList/>}/>
+            <Route path="volunteer-info" element={<VolunteerInfo/>}/>
+
 
           <Route
             path="/sign-in"

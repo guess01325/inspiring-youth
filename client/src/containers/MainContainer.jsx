@@ -1,4 +1,11 @@
-import { Route, Routes, useParams, useNavigate, Outlet } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  useParams,
+  useNavigate,
+  Outlet,
+  Link,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 import StudentContainer from "./StudentContainer";
 import VolunteerContainer from "./VolunteerContainer";
@@ -24,11 +31,10 @@ import {
 } from "../services/event.js";
 
 export default function MainContainer(props) {
-  const [events, setEvents] = useState([])
+  const [events, setEvents] = useState([]);
   const params = useParams;
   const { id } = params;
   const history = useNavigate();
-  
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -61,7 +67,15 @@ export default function MainContainer(props) {
 
   return (
     <div>
-      <Outlet context={[events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ]} />
+      <Outlet
+        context={[
+          events,
+          setEvents,
+          handleDeleteEvent,
+          handleUpdateEvent,
+          handleCreateEvent,
+        ]}
+      />
     </div>
   );
 }

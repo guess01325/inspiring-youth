@@ -20,7 +20,7 @@ function Header(props) {
             <div>
               <p>{props.currentUser.username}</p>
               <Link to="/">
-                <h1>Home</h1>
+                Home
               </Link>
               <Link to="registrations/all" >Registrations</Link>
               <Link to="/events/eventsDetails"> Events</Link>
@@ -31,15 +31,15 @@ function Header(props) {
           ) : (
             <div className="nav-buttons">
               <Link to="/">
-                <h1>Home</h1>
+                Home
               </Link>
               <Link to="/about">About Us</Link>
               <Link to="/events/displayEvents">Events</Link>
               <Link to="registrations/create">Register</Link>
-              <Link to={ `/event/${eventId}/volunteer/:id/create`}>Volunteer</Link>
+              <Link to= "volunteer-info">Volunteer</Link>
               <Link to="/level-up">Level Up</Link>
               <Link to="/wish-list">Wish List</Link>
-              <Link to="/donate">Donations</Link>
+              <Link to="/donate">Donate</Link>
               <Link to="/sign-in">Sign In</Link>
             </div>
           )}

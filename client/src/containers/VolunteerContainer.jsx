@@ -27,7 +27,7 @@ export default function VolunteerContainer(props) {
   const { eventId } = params;
   const [volunteers, setVolunteers] = useState([]);
 
-  console.log(event);
+  console.log(eventId);
 
   useEffect(() => {
     const event = events.find(
@@ -47,7 +47,7 @@ export default function VolunteerContainer(props) {
   }, [event]);
 
   const handleCreateVolunteer = async (formData) => {
-    const volunteer = await postVolunteer(event.id, formData);
+    const volunteer = await postVolunteer(eventId , formData);
     setVolunteers((prevState) => [...prevState, volunteer]);
     history(`all`);
   };
