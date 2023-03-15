@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Donate(props) {
   return (
+    <>
     <div>
+      <h1>SUPPORT US</h1>
+    </div>
       <div>
         <a
           href="https://www.gofundme.com/f/inspiring-youth-and-mentors?utm_campaign=p_cp+share-sheet&utm_medium=copy_link_all&utm_source=customer"
@@ -12,6 +15,7 @@ export default function Donate(props) {
         </a>
         <Link to="wish-list">Wish List</Link>
       </div>
+      <br></br>
       <div>
         <p>
           Our strength is amplified with collective action, and you can help
@@ -21,12 +25,14 @@ export default function Donate(props) {
           and support our community in making a lasting impact.
         </p>
       </div>
+      <br></br>
       <div>
         <p>
           Below we will provide two options Go Fund Me for monetary donations
           and Wish List for material donations.
         </p>
       </div>
+      <br></br>
 
       <div>
         ​
@@ -38,11 +44,15 @@ export default function Donate(props) {
           program, please leave us a note. or Click the GoFundMe button
         </p>
       </div>
+      <br></br>
       <div>
         <p> Thank you for your donation!</p>
       </div>
-
+      <div>
+<br></br>
 <h1>We Welcome Your Donations</h1>
-    </div>
+      </div>
+
+    </>
   );
 }

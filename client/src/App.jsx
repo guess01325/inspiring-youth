@@ -24,6 +24,10 @@ import About from "./screens/About";
 import WishList from "./screens/WishList";
 import Home from "./screens/Home";
 import VolunteerInfo from "./screens/VolunteerInfo";
+import Sponsor from "./screens/Sponsor"
+import "../node_modules/video-react/dist/video-react.css";
+
+
 
 import {
   loginUser,
@@ -144,6 +148,10 @@ function App() {
             <Route path="/donate" element={<Donate/>}/>
             <Route path="wish-list" element={<WishList/>}/>
             <Route path="volunteer-info" element={<VolunteerInfo/>}/>
+
+            <Route path="/sponsor" element={<Sponsor/>}/>
+            
+
 
 
           <Route

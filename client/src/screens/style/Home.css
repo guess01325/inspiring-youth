@@ -1,0 +1,10 @@
+.video {
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+  display: block;
+  /* align-content: center;
+  justify-content: center; */
+  align-items: center;
+}
+   
