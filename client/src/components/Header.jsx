@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import {useState, useEffect} from "react";
+import "../screens/style/Header.css"
 
 function Header(props) {
   const { currentUser, handleLogout, event, setEvent } = props;

@@ -1,5 +1,6 @@
 .video {
-  margin: 0 auto;
+
+  margin: 20px auto;
   width: 600px;
   height: 300px;
   display: block;
@@ -8,3 +9,11 @@
   align-items: center;
 }
    
+.partners{
+  margin: 40px auto;
+background-color: blue;
+}
+
+.header{
+  
+}
