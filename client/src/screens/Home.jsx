@@ -14,7 +14,7 @@ export default function Home(props) {
 
         <p>
           We increase school success and improve overall well-being using
-          sustainable mentoring practices.{" "}
+          sustainable mentoring practices.
         </p>
 
         <Link to="/about">Learn More</Link>

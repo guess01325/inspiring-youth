@@ -25,6 +25,7 @@ import WishList from "./screens/WishList";
 import Home from "./screens/Home";
 import VolunteerInfo from "./screens/VolunteerInfo";
 import Sponsor from "./screens/Sponsor"
+import LevelUp from "./screens/LevelUp"
 import "../node_modules/video-react/dist/video-react.css";
 
 
@@ -150,6 +151,7 @@ function App() {
             <Route path="volunteer-info" element={<VolunteerInfo/>}/>
 
             <Route path="/sponsor" element={<Sponsor/>}/>
+            <Route path="level-up" element={<LevelUp/>}/>
             
 
 
