@@ -9,7 +9,7 @@ import EditEvent from "./screens/EditEvent";
 import CreateEvent from "./screens/CreateEvent";
 import EventDisplay from "./screens/EventDisplay";
 import VolunteerContainer from "./containers/VolunteerContainer";
-import Volunteers from "./screens/Volunteers";
+import VolunteerDetails from "./screens/VolunteerDetails";
 import EditVolunteer from "./screens/EditVolunteer";
 import CreateVolunteer from "./screens/CreateVolunteer";
 import StudentContainer from "./containers/StudentContainer";
@@ -123,7 +123,7 @@ function App() {
                 />
               }
               >
-              <Route path="all" element={<Volunteers />} />
+              <Route path="all" element={<VolunteerDetails />} />
 
               <Route path=":id/update" element={<EditVolunteer />} />
 

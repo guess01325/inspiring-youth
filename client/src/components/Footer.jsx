@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
+import "../screens/style/Layout.css"
 
 export default function Footer(props) {
     return(
-        <div className="header">
+        <div className="footer">
            <h2>call us</h2>
            <h2>find us</h2>
            <Link to="/registrations/create">Register</Link>

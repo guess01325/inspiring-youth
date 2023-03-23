@@ -21,6 +21,13 @@ export default function LevelUp(props){
         </div>
         <div>
         <img src="https://res.cloudinary.com/otisg/image/upload/v1679237394/clu1_aiiwgk.webp"/>
+
+        <img src="https://res.cloudinary.com/otisg/image/upload/v1679591316/social21_iv8ves.webp"/>
+        <img src="https://res.cloudinary.com/otisg/image/upload/v1679591321/social22_wypiws.webp"/>
+        <img src="https://res.cloudinary.com/otisg/image/upload/v1679591327/social23_uhdd7g.webp"/>
+        <img src="https://res.cloudinary.com/otisg/image/upload/v1679591333/social24_a5jtrt.webp"/>
+        <img src="https://res.cloudinary.com/otisg/image/upload/v1679591340/socail25_umezbc.webp"/>
+
         <img src="https://res.cloudinary.com/otisg/image/upload/v1679237139/CLU_qvowiu.webp"/>
         <a href="https://playpass.com/NLCommunityTrack" target="_blank" >Register for Sports Club</a>
 

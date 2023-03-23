@@ -7,19 +7,7 @@ import {
   Link,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
-import StudentContainer from "./StudentContainer";
-import VolunteerContainer from "./VolunteerContainer";
-import EventDetails from "../screens/EventDetails";
-import EditEvent from "../screens/EditEvent";
-import CreateEvent from "../screens/CreateEvent";
-import EventDisplay from "../screens/EventDisplay";
-import Volunteers from "../screens/Volunteers";
-import CreateVolunteer from "../screens/CreateVolunteer";
-import EditVolunteer from "../screens/EditVolunteer";
-import Student from "../screens/Students";
-import StudentEdit from "../screens/StudentEdit";
-import StudentCreate from "../screens/StudentCreate";
-import Home from "../screens/Home";
+
 
 import {
   getAllEvents,

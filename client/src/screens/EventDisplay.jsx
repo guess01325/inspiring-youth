@@ -1,4 +1,4 @@
-import { Outlet, useOutletContext } from "react-router-dom";
+import { Outlet, useOutletContext,Link } from "react-router-dom";
 export default function EventDisplay(props) {
   const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent] = useOutletContext();
   
@@ -16,7 +16,9 @@ export default function EventDisplay(props) {
           <p> {event.date}</p>
           <p>{event.time}</p>
         </div>
+
       ))}
+      <Link to>RSVP</Link>
     </div>
   );
 }
