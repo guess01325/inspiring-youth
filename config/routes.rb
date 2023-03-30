@@ -10,7 +10,11 @@ Rails.application.routes.draw do
       resources :students, shallow: true 
       end
 
-      resources :registrations, shallow: true
+  resources :registrations
+
+  resources :mentorings
+
+    
 
    
   
