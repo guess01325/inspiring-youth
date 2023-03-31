@@ -24,6 +24,7 @@ export default function MainContainer(props) {
   const { id } = params;
   const history = useNavigate();
 
+
   useEffect(() => {
     const fetchEvents = async () => {
       const eventList = await getAllEvents();

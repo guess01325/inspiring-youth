@@ -10,6 +10,8 @@ export default function MentoringsContainer (props){
    const {id} = params; 
    const history = useNavigate()
 
+   console.log(mentorInfo)
+
    useEffect(() => {
     const fetchMentoring = async () => {
         const mentoringList = await getAllMentorings();
