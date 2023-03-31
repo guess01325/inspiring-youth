@@ -9,6 +9,7 @@ import EditEvent from "./screens/EditEvent";
 import CreateEvent from "./screens/CreateEvent";
 import EventDisplay from "./screens/EventDisplay";
 import VolunteerContainer from "./containers/VolunteerContainer";
+import MentoringsContainer from "./containers/MentoringsContainer";
 import VolunteerDetails from "./screens/VolunteerDetails";
 import EditVolunteer from "./screens/EditVolunteer";
 import CreateVolunteer from "./screens/CreateVolunteer";
@@ -115,6 +116,7 @@ function App() {
             <Route path="create" element={<CreateRegistration />} />
           </Route>
           <Route path="/mentorings" element={<MentoringsContainer/>}>
+            <Route path="all" element/>
             <Route path="create" element/>
           </Route>
 
