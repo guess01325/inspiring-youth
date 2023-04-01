@@ -34,7 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.integer "how_many"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "tags", default: ["In Person", "online", "yes", "no", "one On One", "Creative Foundation", "Video Games and Life Skills", "Facebook", "Instagram", "Word Of Mouth", "Event Invite", "Website"], array: true
+    t.text "tags", default: [], array: true
   end
 
   create_table "registrations", force: :cascade do |t|

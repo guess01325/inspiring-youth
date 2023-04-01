@@ -11,19 +11,31 @@ export default function Mentorings(props) {
   const { id } = params;
   const history = useNavigate();
   const [mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
-    useOutletContext();
-  const firstMentor = mentorInfo[0].tags;
+  useOutletContext();
+  const firstMentoring = mentorInfo[0]
 
-
-
+  console.log(firstMentoring)
+  
+  
+  
+    
+  
+  
+  
   const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    school_district: "",
-    phone: "",
-    how_many: ""
-  });
+      first_name: "",
+      last_name: "",
+      email: "",
+      school_district: "",
+      phone: "",
+      how_many: "", 
+      tags: []
+    });
+
+
+    
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -80,16 +92,17 @@ export default function Mentorings(props) {
             onChange={handleChange}
           />
         </label>
-        {/* <label>
+        <label>
 
-        {firstMentor.map((tags)=>(
+        {mentorInfo.map((tags)=>(
                 <div key={tags.id}>
-                    <p>{tags}</p>
+                    <p>{tags.first_name}</p>
+                    <p>{tags.tags}</p>
                     <input type="checkbox" />
 
                 </div>
             ))}
-        </label> */}
+        </label>
         <br />
         <button>Submit</button>
       </form>
