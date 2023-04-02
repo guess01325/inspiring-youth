@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resources :registrations
 
   resources :mentorings
+  get "tags/data", to: "mentorings#default_values"
+
+
 
     
 

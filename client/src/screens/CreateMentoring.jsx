@@ -10,15 +10,13 @@ export default function Mentorings(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
-  const [mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
+  const [tagData,mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
   useOutletContext();
-  const firstMentoring = mentorInfo[0]
 
-  console.log(firstMentoring)
   
   
   
-    
+    console.log()
   
   
   
@@ -52,6 +50,13 @@ export default function Mentorings(props) {
 
   return (
     <div>
+      {/* {mentorInfo.map((tags) =>(
+        <div key={tags.id}>
+          <p>{tags.tags}</p>
+          
+        </div>
+
+    ))} */}
       <form>
         <label>
           <input
@@ -94,11 +99,10 @@ export default function Mentorings(props) {
         </label>
         <label>
 
-        {mentorInfo.map((tags)=>(
-                <div key={tags.id}>
-                    <p>{tags.first_name}</p>
-                    <p>{tags.tags}</p>
-                    <input type="checkbox" />
+        {tagData.map((tags, i)=>(
+                <div key={i}>
+                    <p>{tags}</p>
+                    < input type="checkbox" />
 
                 </div>
             ))}

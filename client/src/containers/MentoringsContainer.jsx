@@ -2,15 +2,25 @@ import {Route, Routes, useParams, useNavigate, Outlet, Link } from "react-router
 import { useState, useEffect
  } from "react";
 
-import { getAllMentorings, postMentorings, deleteMentorings } from "../services/Mentoring";
+import { getAllMentorings, postMentorings, deleteMentorings, getTagData } from "../services/Mentoring";
 
 export default function MentoringsContainer (props){
    const [mentorInfo, setMentorInfo] = useState([]);
+   const [tagData, setTagData] = useState([]);
    const params = useParams
    const {id} = params; 
    const history = useNavigate()
 
-   console.log(mentorInfo)
+console.log(tagData)
+
+
+useEffect(()=> {
+    const fetchTags = async () => {
+        const mentorTags = await getTagData();
+         setTagData(mentorTags)
+    }
+    fetchTags()
+}, [])
 
    useEffect(() => {
     const fetchMentoring = async () => {
@@ -34,7 +44,7 @@ export default function MentoringsContainer (props){
    return (
     <div>
         <Outlet
-        context={[mentorInfo,handleCreateMentorings, handleDeleteMentorings]}/>
+        context={[tagData,mentorInfo,handleCreateMentorings, handleDeleteMentorings]}/>
     </div>
    )
 }

@@ -13,3 +13,9 @@ export const postMentorings = async (mentoringData) => {
 export const deleteMentorings = async (id) => {
     const resp = await api.delete(`mentorings/${id}`)
 }
+
+
+export const getTagData = async () => {
+    const resp = await api.get("tags/data")
+    return resp.data
+}
