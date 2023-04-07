@@ -16,7 +16,7 @@ export default function Mentorings(props) {
   
   
   
-    console.log()
+    console.log(tagData)
   
   
   
@@ -57,7 +57,7 @@ export default function Mentorings(props) {
         </div>
 
     ))} */}
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <input
             type="text"
@@ -98,11 +98,29 @@ export default function Mentorings(props) {
           />
         </label>
         <label>
+          <input
+            type="integer"
+            name="phone"
+            placeholder="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <input
+            type="text"
+            name="how_many"
+            placeholder="how_many"
+            value={formData.how_many}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
 
         {tagData.map((tags, i)=>(
                 <div key={i}>
                     <p>{tags}</p>
-                    < input type="checkbox" />
+                    < input type="checkbox" name="tags" value={formData.tags} />
 
                 </div>
             ))}

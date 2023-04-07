@@ -11,7 +11,7 @@ export default function MentoringsContainer (props){
    const {id} = params; 
    const history = useNavigate()
 
-console.log(tagData)
+
 
 
 useEffect(()=> {

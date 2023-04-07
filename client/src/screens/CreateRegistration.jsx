@@ -13,9 +13,8 @@ export default function CreateRegistration(props) {
     first_name: "",
     last_name: "",
     email: "",
-    how_often: "",
+    how_often: ""
   });
-
 
   
   const handleChange = (e) => {

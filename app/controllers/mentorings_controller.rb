@@ -10,7 +10,7 @@ class MentoringsController < ApplicationController
     
     # PATCH/PUT /registrations/1
     def create 
-        @mentoring = Mentoring.new(registration_params)
+        @mentoring = Mentoring.new(mentoring_params)
 
         if @mentoring.save
             render json: @mentoring, status: :created, location: @mentoring
