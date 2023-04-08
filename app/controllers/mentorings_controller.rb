@@ -38,7 +38,7 @@ class MentoringsController < ApplicationController
     private
 
     def mentoring_params
-        params.require(:mentoring).permit(:first_name, :last_name, :email, :school_district, :phone, :how_many, :tags [])
+        params.require(:mentoring).permit(:first_name, :last_name, :email, :school_district, :phone, :how_many, tags: [])
     end
 
     def set_mentoring

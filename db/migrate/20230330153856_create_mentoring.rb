@@ -5,7 +5,7 @@ class CreateMentoring < ActiveRecord::Migration[7.0]
       t.string :last_name
       t.string :email
       t.string :school_district
-      t.integer :phone
+      t.string :phone
       t.integer :how_many
 
       t.timestamps

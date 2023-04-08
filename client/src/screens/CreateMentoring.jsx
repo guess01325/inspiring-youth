@@ -10,30 +10,23 @@ export default function Mentorings(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
-  const [tagData,mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
-  useOutletContext();
-
-  
-  
-  
-    console.log(tagData)
-  
-  
-  
-  const [formData, setFormData] = useState({
-      first_name: "",
-      last_name: "",
-      email: "",
-      school_district: "",
-      phone: "",
-      how_many: "", 
-      tags: []
-    });
-
+  const [tagData, mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
+    useOutletContext();
 
     
 
+  console.log(tagData);
 
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    school_district: "",
+    phone: "",
+    how_many: "",
+    tags: [],
+  });
+  const tags = formData.tags;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -115,16 +108,28 @@ export default function Mentorings(props) {
             onChange={handleChange}
           />
         </label>
+
         <label>
+          {formData.map((tags) => (
+            <div key={tags.id}>
+              {tags}
 
-        {tagData.map((tags, i)=>(
-                <div key={i}>
-                    <p>{tags}</p>
-                    < input type="checkbox" name="tags" value={formData.tags} />
-
-                </div>
-            ))}
+              <input
+                type="checkbox"
+                name="tags"
+                value={formData.tags}
+                onChange={handleChange}
+              />
+            </div>
+          ))}
         </label>
+        {/* <label>
+            < input type="checkbox"
+                    name="tags" 
+                    value={formData.tags}
+                    onchange={handleChange}
+                    />
+            </label> */}
         <br />
         <button>Submit</button>
       </form>
