@@ -12,30 +12,79 @@ export default function Mentorings(props) {
   const history = useNavigate();
   const [tagData, mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
     useOutletContext();
-
+    const [isChecked, setIsChecked] = useState(false)
     
-
-  console.log(tagData);
-
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
     school_district: "",
     phone: "",
     how_many: "",
-    tags: [],
+    tags: [
+      // {
+      //   id: 0,
+      //   name: "Angular",
+      // },
+      // {
+      //   id: 1,
+      //   name: "React",
+      // },
+      // {
+      //   id: 2,
+      //   name: "Java",
+      // },
+      // {
+      //   id: 3,
+      //   name: "Angular",
+      // },
+      // {
+      //   id: 4,
+      //   name: "React",
+      // },
+      // {
+      //   id: 5,
+      //   name: "Java",
+      // },
+      // {
+      //   id: 6,
+      //   name: "Angular",
+      // },
+      // {
+      //   id: 7,
+      //   name: "React",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Java",
+      // }, {
+      //   id: 9,
+      //   name: "Angular",
+      // },
+      // {
+      //   id: 10,
+      //   name: "React",
+      // },
+      // {
+      //   id: 11,
+      //   name: "Java",
+      // },
+      
+      
+    ],
   });
-  const tags = formData.tags;
-
+  
+  console.log(tagData)
+  
   const handleChange = (e) => {
+    setIsChecked(!isChecked)
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-  };
-
+  };  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     handleCreateMentorings(formData);
@@ -108,8 +157,25 @@ export default function Mentorings(props) {
             onChange={handleChange}
           />
         </label>
+        {tagData.map((tags, index) => (
+          <div key={index}>
 
-        <label>
+          <label>
+            
+              {tags}
+              <input
+               id={index}
+                type="checkbox"
+                name="tags"
+                checked={isChecked}
+                value={formData.tags}
+                onChange={handleChange}
+              />
+          
+          </label>
+          </div>
+        ))}
+        {/* <label>
           {formData.map((tags) => (
             <div key={tags.id}>
               {tags}
@@ -122,7 +188,7 @@ export default function Mentorings(props) {
               />
             </div>
           ))}
-        </label>
+        </label> */}
         {/* <label>
             < input type="checkbox"
                     name="tags" 

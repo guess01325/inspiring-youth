@@ -27,7 +27,7 @@ class MentoringsController < ApplicationController
 
     def default_values
         
-               @values =  ["In Person", "online", "yes", "no", "one OnOne","Creative Foundation", "Video Games and Life Skills", "Facebook", "Instagram", "Word Of Mouth", "Event Invite", "Website"]
+                @values =  ["In Person", "online", "yes", "no", "one OnOne","Creative Foundation", "Video Games and Life Skills", "Facebook", "Instagram", "Word Of Mouth", "Event Invite", "Website"]
            render json: @values
                
 
