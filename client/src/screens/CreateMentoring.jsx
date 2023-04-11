@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ReactDOM from 'react-dom';
 import {
   Link,
   useParams,
@@ -10,81 +11,46 @@ export default function Mentorings(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
-  const [tagData, mentorInfo, handleCreateMentorings, handleDeleteMentorings] =
-    useOutletContext();
-    const [isChecked, setIsChecked] = useState(false)
-    
-    const [formData, setFormData] = useState({
+  const [
+    tagData,
+    setTagData,
+    mentorInfo,
+    handleCreateMentorings,
+    handleDeleteMentorings,
+  ] = useOutletContext();
+  const data = tagData || []
+  const [isChecked, setIsChecked] = useState( 
+    new Array(data.length).fill(false))
+console.log(data)
+  const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
     school_district: "",
     phone: "",
     how_many: "",
-    tags: [
-      // {
-      //   id: 0,
-      //   name: "Angular",
-      // },
-      // {
-      //   id: 1,
-      //   name: "React",
-      // },
-      // {
-      //   id: 2,
-      //   name: "Java",
-      // },
-      // {
-      //   id: 3,
-      //   name: "Angular",
-      // },
-      // {
-      //   id: 4,
-      //   name: "React",
-      // },
-      // {
-      //   id: 5,
-      //   name: "Java",
-      // },
-      // {
-      //   id: 6,
-      //   name: "Angular",
-      // },
-      // {
-      //   id: 7,
-      //   name: "React",
-      // },
-      // {
-      //   id: 8,
-      //   name: "Java",
-      // }, {
-      //   id: 9,
-      //   name: "Angular",
-      // },
-      // {
-      //   id: 10,
-      //   name: "React",
-      // },
-      // {
-      //   id: 11,
-      //   name: "Java",
-      // },
-      
-      
-    ],
+    tags: [],
   });
+  formData.tags = tagData;
+  // const checks = isChecked || []
+  // console.log(checks)
   
-  console.log(tagData)
+
+const insertData = formData.tags || []
+
+const handleChange = (e, position) => {
   
-  const handleChange = (e) => {
-    setIsChecked(!isChecked)
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };  
+  const updatedCheckedState = isChecked.map((item, index) =>
+  index === position ? !item : item)
+  setIsChecked(updatedCheckedState)
   
+  const { name, value } = e.target;
+  setFormData((prevState) => ({
+    ...prevState,
+    [name]: value,
+  }));
+};
+
   const handleSubmit = (e) => {
     e.preventDefault();
     handleCreateMentorings(formData);
@@ -155,16 +121,42 @@ export default function Mentorings(props) {
             placeholder="how_many"
             value={formData.how_many}
             onChange={handleChange}
-          />
+            />
         </label>
-        {tagData.map((tags, index) => (
-          <div key={index}>
+            {/* {insertData.map((tag)=>{
+            <label>
+              {tag}
+      
+            </label>
+            })} */}
+        {/* <ul className="toppings-list">
+        {tagData.map(( name , index) => {
+          return (
+            <li key={index}>
+              <div className="toppings-list-item">
+              
+                  <input
+                    type="checkbox"
+                    id={`custom-checkbox-${index}`}
+                    name={name}
+                    value={name}
+                    checked={isChecked[index]}
+                    onChange={handleChange(index)}
+                  />
+                  <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                </div>
+            
+              
+            </li>
+          );
+        })}
+      </ul> */}
 
-          <label>
+        {insertData.map((tags, index) => (
+          <div key={index}>
             
               {tags}
               <input
-               id={index}
                 type="checkbox"
                 name="tags"
                 checked={isChecked}
@@ -172,7 +164,6 @@ export default function Mentorings(props) {
                 onChange={handleChange}
               />
           
-          </label>
           </div>
         ))}
         {/* <label>
@@ -196,7 +187,7 @@ export default function Mentorings(props) {
                     onchange={handleChange}
                     />
             </label> */}
-        <br />
+
         <button>Submit</button>
       </form>
     </div>

@@ -6,7 +6,7 @@ import { getAllMentorings, postMentorings, deleteMentorings, getTagData } from "
 
 export default function MentoringsContainer (props){
    const [mentorInfo, setMentorInfo] = useState([]);
-   const [tagData, setTagData] = useState([]);
+   const [tagData, setTagData] = useState();
    const params = useParams
    const {id} = params; 
    const history = useNavigate()
@@ -44,7 +44,7 @@ useEffect(()=> {
    return (
     <div>
         <Outlet
-        context={[tagData,mentorInfo,handleCreateMentorings, handleDeleteMentorings]}/>
+        context={[tagData, setTagData,mentorInfo,handleCreateMentorings, handleDeleteMentorings]}/>
     </div>
    )
-}
+}   
