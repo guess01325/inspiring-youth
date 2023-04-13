@@ -21,7 +21,7 @@ export default function Mentorings(props) {
   const data = tagData || []
   const [isChecked, setIsChecked] = useState( 
     new Array(data.length).fill(false))
-console.log(data)
+console.log(mentorInfo)
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -31,12 +31,12 @@ console.log(data)
     how_many: "",
     tags: [],
   });
-  formData.tags = tagData;
+  
   // const checks = isChecked || []
   // console.log(checks)
   
 
-const insertData = formData.tags || []
+const insertData = tagData || []
 
 const handleChange = (e, position) => {
   
@@ -123,6 +123,7 @@ const handleChange = (e, position) => {
             onChange={handleChange}
             />
         </label>
+        
             {/* {insertData.map((tag)=>{
             <label>
               {tag}
@@ -152,19 +153,19 @@ const handleChange = (e, position) => {
         })}
       </ul> */}
 
-        {insertData.map((tags, index) => (
-          <div key={index}>
+        {insertData.map((data, index,e) => (
+          <li key={index}>
             
-              {tags}
               <input
                 type="checkbox"
+                id={`custom-checkbox-${index}`}
                 name="tags"
-                checked={isChecked}
+                checked={isChecked[index]}
                 value={formData.tags}
-                onChange={handleChange}
+                onChange={() => handleChange(e,index)}
               />
-          
-          </div>
+            <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+          </li>
         ))}
         {/* <label>
           {formData.map((tags) => (
