@@ -82,7 +82,8 @@ export default function Mentorings(props) {
   // console.log(formData.tags)
   
 
-const handleChange = (e,position) => {
+  const handleChange = (e,position) => {
+  const { name, value } = e.target;
 //   const updatedCheckedState = isChecked.map((item, index) =>
 //   index === position ? !item : item)
 
@@ -92,7 +93,7 @@ const handleChange = (e,position) => {
 if(name === "tags"){
   if(formData.tags.includes(value)){
     setFormData((prevState)=>({
-      ...prevState, tags:formData.tags.filter((tag) => tag !== value),
+      ...prevState, tags: formData.tags.filter((tag) => tag !== value),
     }))
 
   }
@@ -100,12 +101,11 @@ if(name === "tags"){
     setFormData((prevState)=>({
       ...prevState,tags:[...formData.tags, value]
     }))
-  }
+  } 
   return
 }
   
   
-  const { name, value } = e.target;
   setFormData((prevState) => ({
     ...prevState,
     [name]: value,
@@ -194,7 +194,7 @@ if(name === "tags"){
                 id={`custom-checkbox-${index}`}
                 name="tags"
                 checked={isChecked[index]}
-                value={formData.tags}
+                value={data}
                 onChange={(e) => handleChange(e,index)}
               />
             <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
