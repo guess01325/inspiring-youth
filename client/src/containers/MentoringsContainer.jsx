@@ -7,9 +7,12 @@ import { getAllMentorings, postMentorings, deleteMentorings, getTagData } from "
 export default function MentoringsContainer (props){
    const [mentorInfo, setMentorInfo] = useState([]);
    const [tagData, setTagData] = useState();
+   const [isLoaded, setLoaded] = useState(false);
+
    const params = useParams
    const {id} = params; 
    const history = useNavigate()
+ 
 
 
 
@@ -18,9 +21,14 @@ useEffect(()=> {
     const fetchTags = async () => {
         const mentorTags = await getTagData();
          setTagData(mentorTags)
+        //  setLoaded(true);
     }
     fetchTags()
-}, [])
+}, [])  
+
+// if (!isLoaded) {
+//     return <h1>Loading...</h1>;
+//   }
 
    useEffect(() => {
     const fetchMentoring = async () => {
@@ -44,7 +52,7 @@ useEffect(()=> {
    return (
     <div>
         <Outlet
-        context={[tagData, setTagData,mentorInfo,handleCreateMentorings, handleDeleteMentorings]}/>
+        context={[isLoaded,tagData,mentorInfo,handleCreateMentorings, handleDeleteMentorings]}/>
     </div>
    )
 }   

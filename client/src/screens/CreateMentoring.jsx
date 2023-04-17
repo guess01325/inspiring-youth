@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
+import { getAllMentorings, postMentorings, deleteMentorings, getTagData } from "../services/Mentoring";
 import {
   Link,
   useParams,
@@ -7,42 +8,102 @@ import {
   useOutletContext,
 } from "react-router-dom";
 
+
+
 export default function Mentorings(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
-  const [
-    tagData,
-    setTagData,
+  const [isLoaded,tagData,
     mentorInfo,
     handleCreateMentorings,
     handleDeleteMentorings,
   ] = useOutletContext();
   const data = tagData || []
   const [isChecked, setIsChecked] = useState( 
-    new Array(data.length).fill(false))
-console.log(mentorInfo)
-  const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    school_district: "",
-    phone: "",
+     new Array(data.length).fill(false))
+    console.log(data)
+    // const [isLoaded, setLoaded] = useState(false);
+    const [formData, setFormData] = useState({
+      first_name: "",
+      last_name: "",
+      email: "",
+      school_district: "",
+      phone: "",
     how_many: "",
-    tags: [],
+    tags: []
   });
+
+
+//   useEffect(()=> {
+//     const fetchTags = async () => {
+//         const mentorTags = await getTagData();
+//          setTagData(mentorTags)
+//          setLoaded(true);
+//     }
+//     fetchTags()
+// }, [])
+
+// if (!isLoaded) {
+//     return <h1>Loading...</h1>;
+//   }
+
+  
+  
+  // if (!isLoaded) {
+  //   return <h1>Loading...</h1>;
+  // }
   
   // const checks = isChecked || []
-  // console.log(checks)
+  
   
 
-const insertData = tagData || []
+// const insertData = tagData || []
 
-const handleChange = (e, position) => {
+
+
+
+// const handleCheckboxChange = (position) =>{
+
+//   const updatedCheckedState = isChecked.map((item, index) =>
+//   index === position ? !item : item)
+
+//   setIsChecked(updatedCheckedState)
+//   formData.tags.concat(
+//     position.target.type === "checkbox"
+//     ? position.target.checked
+//     : [position].target.value
+//     )
   
-  const updatedCheckedState = isChecked.map((item, index) =>
-  index === position ? !item : item)
-  setIsChecked(updatedCheckedState)
+    
+//   }
+  
+  
+  // console.log(formData.tags)
+  
+
+const handleChange = (e,position) => {
+//   const updatedCheckedState = isChecked.map((item, index) =>
+//   index === position ? !item : item)
+
+//   setIsChecked(updatedCheckedState)
+// formData.tags.push(isChecked)
+
+if(name === "tags"){
+  if(formData.tags.includes(value)){
+    setFormData((prevState)=>({
+      ...prevState, tags:formData.tags.filter((tag) => tag !== value),
+    }))
+
+  }
+  else {
+    setFormData((prevState)=>({
+      ...prevState,tags:[...formData.tags, value]
+    }))
+  }
+  return
+}
+  
   
   const { name, value } = e.target;
   setFormData((prevState) => ({
@@ -60,7 +121,7 @@ const handleChange = (e, position) => {
     <div>
       {/* {mentorInfo.map((tags) =>(
         <div key={tags.id}>
-          <p>{tags.tags}</p>
+        <p>{tags.tags}</p>
           
         </div>
 
@@ -123,37 +184,9 @@ const handleChange = (e, position) => {
             onChange={handleChange}
             />
         </label>
-        
-            {/* {insertData.map((tag)=>{
-            <label>
-              {tag}
-      
-            </label>
-            })} */}
-        {/* <ul className="toppings-list">
-        {tagData.map(( name , index) => {
-          return (
-            <li key={index}>
-              <div className="toppings-list-item">
-              
-                  <input
-                    type="checkbox"
-                    id={`custom-checkbox-${index}`}
-                    name={name}
-                    value={name}
-                    checked={isChecked[index]}
-                    onChange={handleChange(index)}
-                  />
-                  <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
-                </div>
-            
-              
-            </li>
-          );
-        })}
-      </ul> */}
+  
 
-        {insertData.map((data, index,e) => (
+        {data.map((data,index) => (
           <li key={index}>
             
               <input
@@ -162,32 +195,12 @@ const handleChange = (e, position) => {
                 name="tags"
                 checked={isChecked[index]}
                 value={formData.tags}
-                onChange={() => handleChange(e,index)}
+                onChange={(e) => handleChange(e,index)}
               />
             <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
           </li>
         ))}
-        {/* <label>
-          {formData.map((tags) => (
-            <div key={tags.id}>
-              {tags}
-
-              <input
-                type="checkbox"
-                name="tags"
-                value={formData.tags}
-                onChange={handleChange}
-              />
-            </div>
-          ))}
-        </label> */}
-        {/* <label>
-            < input type="checkbox"
-                    name="tags" 
-                    value={formData.tags}
-                    onchange={handleChange}
-                    />
-            </label> */}
+    
 
         <button>Submit</button>
       </form>
