@@ -185,8 +185,9 @@ if(name === "tags"){
             />
         </label>
   
-
-        {data.map((data,index) => (
+<div>
+       How will you attend?
+        {data.slice(0, 2).map((data,index) => (
           <li key={index}>
             
               <input
@@ -197,7 +198,70 @@ if(name === "tags"){
                 value={data}
                 onChange={(e) => handleChange(e,index)}
               />
+              
             <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+
+              
+          </li>
+        ))}
+</div>
+        <div>
+    Is this your child's first time being mentored?
+{data.slice(2, 4).map((data,index) => (
+          <li key={index}>
+            
+              <input
+                type="checkbox"
+                id={`custom-checkbox-${index}`}
+                name="tags"
+                checked={isChecked[index]}
+                value={data}
+                onChange={(e) => handleChange(e,index)}
+              />
+              
+            <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+
+              
+          </li>
+        ))}
+
+        </div>
+        <div>
+          Program of interest
+        {data.slice(4, 7).map((data,index) => (
+          <li key={index}>
+            
+              <input
+                type="checkbox"
+                id={`custom-checkbox-${index}`}
+                name="tags"
+                checked={isChecked[index]}
+                value={data}
+                onChange={(e) => handleChange(e,index)}
+              />
+              
+            <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+
+              
+          </li>
+        ))}
+        </div>
+        How did you hear about us?
+        {data.slice(7, 12).map((data,index) => (
+          <li key={index}>
+            
+              <input
+                type="checkbox"
+                id={`custom-checkbox-${index}`}
+                name="tags"
+                checked={isChecked[index]}
+                value={data}
+                onChange={(e) => handleChange(e,index)}
+              />
+              
+            <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+
+              
           </li>
         ))}
     
