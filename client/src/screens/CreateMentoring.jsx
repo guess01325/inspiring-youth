@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
-import { getAllMentorings, postMentorings, deleteMentorings, getTagData } from "../services/Mentoring";
 import {
   Link,
   useParams,

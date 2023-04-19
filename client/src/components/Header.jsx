@@ -21,7 +21,7 @@ function Header(props) {
 
               <Link to="/events/eventsDetails"> Events</Link>
               <Link to="registrations/all">Registrations</Link>
-            
+              <Link to="/mentorings/all">Applicants</Link>
 
               <button onClick={handleLogout}>Logout</button>
             </div>
@@ -32,7 +32,7 @@ function Header(props) {
               <Link to="/sign-in">Sign In</Link>
               </div>
               <Link to="/">Home</Link>
-              <Link to="/mentorings/all">Register</Link>
+              <Link to="/mentorings/create">Register</Link>
               <Link to="volunteer-info">Volunteer</Link>
               <Link to="/events/displayEvents">Events</Link>
               <Link to="/donate">Donate</Link>

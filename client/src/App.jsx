@@ -28,6 +28,7 @@ import VolunteerInfo from "./screens/VolunteerInfo";
 import Sponsor from "./screens/Sponsor";
 import LevelUp from "./screens/LevelUp";
 import CreateMentorings from "./screens/CreateMentoring"
+import MentorInfo from "./screens/MentorInfo"
 import "../node_modules/video-react/dist/video-react.css";
 
 import {
@@ -116,8 +117,8 @@ function App() {
             <Route path="create" element={<CreateRegistration />} />
           </Route>
           <Route path="/mentorings" element={<MentoringsContainer/>}>
-            <Route path="all" element = {<CreateMentorings/>}/>
-            {/* <Route path="create" element/> */}
+            <Route path="create" element = {<CreateMentorings/>}/>
+            <Route path="all" element= {<MentorInfo/>}/>
           </Route>
 
           <Route path="/donate" element={<Donate />} />
