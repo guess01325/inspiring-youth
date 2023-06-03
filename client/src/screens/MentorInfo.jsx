@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import {Link, useParams, useNavigate, useOutletContext} from "react-router-dom"
@@ -11,6 +12,8 @@ export default function MentoringInfo(props) {
         handleCreateMentorings,
         handleDeleteMentorings,
       ] = useOutletContext();
+
+
 
 
       return (
@@ -45,6 +48,8 @@ export default function MentoringInfo(props) {
                     </h4>
                     <p>{mentors.tags}</p>
 
+                <button onClick={() => handleDeleteMentorings(mentors.id)}>
+                       Delete</button>
                 </div>
             ))}
         </div>
