@@ -1,8 +1,18 @@
 import React from "react";
 import { useState } from "react";
 
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography, 
+  Container
+} from "@mui/material";
 
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
+const defaultTheme = createTheme();
 
 export default function SignIn (props){
     const [formData, setFormData] = useState({
@@ -19,6 +29,9 @@ export default function SignIn (props){
       };
     
     return(
+     
+      <ThemeProvider theme={defaultTheme}>
+        <Container component="main" maxWidth="xs">
         <form
         className="login-form"
         onSubmit={(e) => {
@@ -60,5 +73,9 @@ export default function SignIn (props){
           <button className="sign-in-button">Sign In</button>
         </div>
       </form>
+
+        </Container>
+      </ThemeProvider>
+      
     )
 }

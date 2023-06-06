@@ -56,6 +56,7 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="name"
+            placeHolder="name"
             value={formData.name}
             onChange={handleChange}
           />
@@ -65,6 +66,7 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="place"
+            placeHolder="place"
             value={formData.place}
             onChange={handleChange}
           />
@@ -74,6 +76,7 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="date"
+            placeholder="date"
             value={formData.date}
             onChange={handleChange}
           />
@@ -83,6 +86,7 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="time"
+            placeholder="time"
             value={formData.time}
             onChange={handleChange}
           />

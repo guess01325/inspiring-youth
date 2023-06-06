@@ -38,6 +38,15 @@ import {
   removeToken,
 } from "./services/auth";
 
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography, 
+  Container
+} from "@mui/material";
+
 function App() {
   const params = useParams();
   const eventId = params;
@@ -80,6 +89,7 @@ function App() {
         handleLogout={handleLogout}
         event={event}
       >
+
         <Routes>
           <Route path="/" element={<Home />} />
 

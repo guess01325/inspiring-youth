@@ -39,7 +39,7 @@ export default function Volunteers(props) {
                   Update
                 </Link>
                 <Link to={`/event/${eventId}/volunteer/:id/create`}>New</Link>
-                <button onClick={() => handleDeleteVolunteer(volunteerItem.id)}>
+                <button  onClick={() => handleDeleteVolunteer(volunteerItem.id)} component="main" maxWidth="xs">
                   Delete
                 </button>
               </div>
@@ -47,7 +47,7 @@ export default function Volunteers(props) {
           </div>
         ) : (
           <div>
-            <button>Create</button>
+             <Link to={`/event/${eventId}/volunteer/:id/create`}>Create</Link>
           </div>
         )}
       </div>

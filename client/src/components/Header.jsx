@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "../screens/style/Layout.css";
 import {
   Toolbar,
   Button,
@@ -9,6 +8,7 @@ import {
   Typography
 } from "@mui/material";
 import Link2 from '@mui/material/Link'
+
 
 function Header(props) {
   const { currentUser, handleLogout, event, setEvent } = props;

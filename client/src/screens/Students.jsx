@@ -43,11 +43,11 @@ export default function Students(props) {
                   Delete
                 </button>
               </div>
-            ))}
+          ))}
           </div>
         ) : (
           <div>
-            <button>Create</button>
+            <Link to={`/event/${eventId}/student/:id/create`}>Create</Link>
           </div>
         )}
       </div>

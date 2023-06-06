@@ -1,8 +1,15 @@
 import {Link} from "react-router-dom";
-import "../screens/style/Layout.css"
+import {
+    Toolbar,
+    Button,
+    IconButton,
+    SearchIcon,
+    Typography
+  } from "@mui/material";
 
 export default function Footer(props) {
     return(
+<Toolbar>
         <div className="footer">
            <h2>call us</h2>
            <h2>find us</h2>
@@ -20,6 +27,8 @@ export default function Footer(props) {
 
            </a>
         </div>
+
+</Toolbar>
     
     )
 }
