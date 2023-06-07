@@ -7,7 +7,9 @@ import {
   IconButton,
   SearchIcon,
   Typography, 
-  Container
+  Container,
+  CssBaseline, 
+  Box
 } from "@mui/material";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
@@ -32,6 +34,16 @@ export default function SignIn (props){
      
       <ThemeProvider theme={defaultTheme}>
         <Container component="main" maxWidth="xs">
+          <CssBaseline/>
+          <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+
         <form
         className="login-form"
         onSubmit={(e) => {
@@ -73,6 +85,7 @@ export default function SignIn (props){
           <button className="sign-in-button">Sign In</button>
         </div>
       </form>
+      </Box>
 
         </Container>
       </ThemeProvider>
