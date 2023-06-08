@@ -11,7 +11,8 @@ import {
   CssBaseline, 
   Box,
   FormControlLabel,
-  Checkbox 
+  Checkbox, 
+  TextField
 } from "@mui/material";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
@@ -57,8 +58,17 @@ export default function SignIn (props){
        
         <div className="labels">
           
-          <label>
-            <input
+          <TextField
+           margin="normal"
+           required
+           fullWidth
+           id="userName"
+           label="userName"
+           name="userName"
+           value={formData.username}
+           autoComplete="email"
+           autoFocus>
+            {/* <input
               className="sign-in-inputs"
               id="username"
               type="text"
@@ -67,12 +77,21 @@ export default function SignIn (props){
               placeholder="Enter username"
               onChange={handleChange}
               
-            />
-          </label>
+            /> */}
+          </TextField>
   
           
-          <label>
-            <input
+          <TextField
+             margin="normal"
+             required
+             fullWidth
+             name="password"
+             label="Password"
+             type="password"
+             id="password"
+             value={formData.password}
+             autoComplete="current-password">
+            {/* <input
               className="sign-in-inputs"
               id="password"
               type="password"
@@ -80,8 +99,8 @@ export default function SignIn (props){
               value={formData.password}
               placeholder="Enter Password"
               onChange={handleChange}
-            />
-          </label>
+            /> */}
+          </TextField>
         </div>
         <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
