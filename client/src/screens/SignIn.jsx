@@ -55,6 +55,9 @@ export default function SignIn (props){
           props.handleLogin(formData);
         }} noValidate sx={{ mt: 1 }}>
 
+
+
+
        
         <div className="labels">
           
@@ -63,11 +66,14 @@ export default function SignIn (props){
            required
            fullWidth
            id="userName"
-           label="userName"
-           name="userName"
+           label="username"
+           name="username"
            value={formData.username}
-           autoComplete="email"
-           autoFocus>
+           autoComplete="username"
+           onChange={handleChange}
+          //  autoFocus
+           
+           >
             {/* <input
               className="sign-in-inputs"
               id="username"
@@ -90,7 +96,9 @@ export default function SignIn (props){
              type="password"
              id="password"
              value={formData.password}
-             autoComplete="current-password">
+             autoComplete="current-password"
+             onChange={handleChange}>
+              
             {/* <input
               className="sign-in-inputs"
               id="password"
