@@ -9,7 +9,9 @@ import {
   Typography, 
   Container,
   CssBaseline, 
-  Box
+  Box,
+  FormControlLabel,
+  Checkbox 
 } from "@mui/material";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
@@ -43,17 +45,18 @@ export default function SignIn (props){
             alignItems: 'center',
           }}
         >
-
-        <form
-        className="login-form"
-        onSubmit={(e) => {
+          
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+          <Box component="form" onSubmit= {(e) => {
           e.preventDefault();
           props.handleLogin(formData);
-        }}
-      >
-        <h3 className="login-title">Login</h3>
+        }} noValidate sx={{ mt: 1 }}>
+
+       
         <div className="labels">
-            Username:
+          
           <label>
             <input
               className="sign-in-inputs"
@@ -67,7 +70,7 @@ export default function SignIn (props){
             />
           </label>
   
-            Password:
+          
           <label>
             <input
               className="sign-in-inputs"
@@ -80,11 +83,19 @@ export default function SignIn (props){
             />
           </label>
         </div>
+        <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
   
         <div className="sign-in-div">
           <button className="sign-in-button">Sign In</button>
         </div>
-      </form>
+      
+
+
+          </Box>
+
       </Box>
 
         </Container>
