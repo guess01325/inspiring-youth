@@ -44,8 +44,14 @@ import {
   IconButton,
   SearchIcon,
   Typography, 
-  Container
+  Container,
+  ThemeProvider,
+  createTheme,
+  CssBaseline
+
 } from "@mui/material";
+
+const defaultTheme = createTheme();
 
 function App() {
   const params = useParams();
@@ -82,7 +88,12 @@ function App() {
   };
 
   return (
+    
     <div className="App">
+          <ThemeProvider theme={defaultTheme}>
+          <CssBaseline />
+
+          <Container maxWidth="lg">
       <Layout
         currentUser={currentUser}
         setEvent={setEvent}
@@ -145,6 +156,8 @@ function App() {
           />
         </Routes>
       </Layout>
+      </Container>
+      </ThemeProvider>
     </div>
   );
 }

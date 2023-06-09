@@ -116,7 +116,15 @@ export default function SignIn (props){
             />
   
         <div className="sign-in-div">
-          <button className="sign-in-button">Sign In</button>
+          {/* <button className="sign-in-button">Sign In</button> */}
+          <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt:  3, mb: 2 }}
+            >
+              Sign In
+            </Button>
         </div>
       
 
