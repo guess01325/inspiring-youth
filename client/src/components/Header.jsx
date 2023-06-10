@@ -24,20 +24,17 @@ function Header(props) {
 
   return (
     <div className="header">
-      <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
         <header>
       
 
-          <nav>
-        <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center"
 
-        }}>
+          
             {currentUser ? (
-              <div>
+               <Toolbar
+               component="nav"
+               variant="dense"
+               sx={{  justifyContent: 'space-between', overflowX: 'auto', color: "gray"}}
+             >
                 <p>{props.currentUser.username}</p>
 
                 <Link to="/events/eventsDetails"> Events</Link>
@@ -45,29 +42,50 @@ function Header(props) {
                 <Link to="/mentorings/all">Applicants</Link>
 
                 <button onClick={handleLogout}>Logout</button>
-              </div>
+                </ Toolbar>
+
             ) 
             :
-             (
-              <div className="nav-buttons">
-                <div>
-                  <Link to="/sign-in">Sign In</Link>
-                </div>
-                <Link to="/">Home</Link>
-                <Link to="/mentorings/create">Register</Link>
-                <Link to="volunteer-info">Volunteer</Link>
-                <Link to="/events/displayEvents">Events</Link>
-                <Link to="/donate">Donate</Link>
-                <Link to="/level-up">Level Up</Link>
-                <Link to="/about">About Us</Link>
-                {/* <Link to="/wish-list">Wish List</Link> */}
+             
+            
+            (
+              <div>
+
+              {/* <Box sx={{
+                display: "flex", flexDirection: "column"
+              }} > */}
+              <div>
+
+                <Link to="/sign-in">Sign In</Link>
               </div>
-            )}
-        </Box>
-          </nav>
+            
+            <Toolbar
+               component="nav"
+               variant="dense"
+               sx={{  justifyContent: 'space-between', overflowX: 'auto'}}
+             >
+
+              <Link to="/">Home</Link>
+              <Link to="/mentorings/create">Register</Link>
+              <Link to="volunteer-info">Volunteer</Link>
+              <Link to="/events/displayEvents">Events</Link>
+              <Link to="/donate">Donate</Link>
+              <Link to="/level-up">Level Up</Link>
+              <Link to="/about">About Us</Link>
+              {/* <Link to="/wish-list">Wish List</Link> */}
+            
+
+            {/* </Box> */}
+
+            
+                </ Toolbar>
+              </div>
+                
+                )}
+        
         </header>
 
-      </Toolbar>
+      
     </div>
   );
 }

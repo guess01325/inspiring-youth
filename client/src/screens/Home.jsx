@@ -28,12 +28,12 @@ export default function Home(props) {
 
       <Box
         sx={{
-          margin: 4,
+          margin: 1,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
         }}
-        >
+      >
       
         <Box
           sx={{
@@ -44,14 +44,18 @@ export default function Home(props) {
             alignItems: "center",
           }}
           >
-          <h1>Where Leaders Grow</h1>
+            <h1>Where Leaders Grow</h1>
+
+          <img
+          src= "https://res.cloudinary.com/otisg/image/upload/c_scale,w_105/v1686415466/well-being_uwu5bm.png"
+          alt="react logo">
+          </img>
           <p>
             We increase school success and improve overall well-being using
             sustainable mentoring practices.
           </p>
-          <Link to="/about">Learn More</Link>
 
-          </Box>  
+          <Link to="/about">Learn More</Link>
         </Box>
         <Box
           sx={{
@@ -61,7 +65,6 @@ export default function Home(props) {
             alignItems: "center",
           }}
         >
-          <Link to="registrations/create">Register</Link>
 
           <img
             src="https://res.cloudinary.com/otisg/image/upload/v1650296869/gives3_k7m97e.webp"
@@ -71,6 +74,7 @@ export default function Home(props) {
             We support curious and motivated youth and mentors through
             adventurous programs and a variety of services.
           </p>
+          <Link to="registrations/create">Register</Link>
         </Box>
         <Box
           sx={{
@@ -80,11 +84,14 @@ export default function Home(props) {
             alignItems: "center",
           }}
         >
-          <Link to="/donate">Donate</Link>
           <img
             src="https://res.cloudinary.com/otisg/image/upload/v1650295179/giveS1_hkjqmp.webp"
             alt="react logo"
           />
+          <Link to="/donate">Donate</Link>
+          <p>
+            Donate to our cause, make a impact for your youth
+          </p>
         </Box>
         <Box
           sx={{
@@ -94,17 +101,19 @@ export default function Home(props) {
             alignItems: "center",
           }}
         >
+      <img
+        src="https://res.cloudinary.com/otisg/image/upload/v1650296446/give2_kdwd0x.webp"
+        alt="react logo"
+      />
           <Link>Get Involved</Link>
           <p>
             Great things are done by a series of small things brought together 
             <br></br> 
             Vincent Van Gogh
-          </p>
-          
-          <p>
 
           </p>
         </Box>
+      </Box>  
       <Box
         sm={{
           margin: 4,
@@ -113,15 +122,11 @@ export default function Home(props) {
         
       
         <div className="video">
-          <Player 
-
+          <Player
             src="https://video.wixstatic.com/video/63347b_1108524e1cc34d2996d618c72e4b9433/480p/mp4/file.mp4"
             type="video/mp4"
             fluid={false}
-            
-            height={400}
-            
-
+            height={450}
           />
         </div>
 

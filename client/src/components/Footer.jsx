@@ -10,18 +10,28 @@ import {
     ThemeProvider,
     createTheme,
     CssBaseline,
-    Grid,
+    Grid
   } from "@mui/material";
+  
+
+  const useStyles = makeStyles(theme => ({
+    color: {
+    backgroundColor: 'black'
+    }
+    }))
+
 
 export default function Footer(props) {
+    const classes = useStyles();
     return(
-<Toolbar>
-    <Box
-    sx={{
-      
-    }}>
+<Toolbar
 
-        <div className="footer">
+>
+    <Box
+ className={classes.color}   
+    >
+
+        
            <h2>call us</h2>
            <h2>find us</h2>
            <Link to="/registrations/create">Register</Link>
@@ -37,7 +47,7 @@ export default function Footer(props) {
            <img src="https://res.cloudinary.com/otisg/image/upload/v1679059355/youtube_pnwyvc.webp"/>
 
            </a>
-        </div>
+    
     </Box>
 
 </Toolbar>
