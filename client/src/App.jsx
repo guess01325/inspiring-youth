@@ -39,6 +39,7 @@ import {
 } from "./services/auth";
 
 import {
+  Box,
   Toolbar,
   Button,
   IconButton,

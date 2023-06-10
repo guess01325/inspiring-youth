@@ -1,11 +1,17 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
+  Box,
   Toolbar,
   Button,
   IconButton,
   SearchIcon,
-  Typography
+  Typography, 
+  Container,
+  ThemeProvider,
+  createTheme,
+  CssBaseline
+
 } from "@mui/material";
 import Link2 from '@mui/material/Link'
 
@@ -20,10 +26,16 @@ function Header(props) {
     <div className="header">
       <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
         <header>
-          {/* <div className="home-link">
+      
 
-        </div> */}
           <nav>
+        <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center"
+
+        }}>
             {currentUser ? (
               <div>
                 <p>{props.currentUser.username}</p>
@@ -34,7 +46,9 @@ function Header(props) {
 
                 <button onClick={handleLogout}>Logout</button>
               </div>
-            ) : (
+            ) 
+            :
+             (
               <div className="nav-buttons">
                 <div>
                   <Link to="/sign-in">Sign In</Link>
@@ -49,8 +63,10 @@ function Header(props) {
                 {/* <Link to="/wish-list">Wish List</Link> */}
               </div>
             )}
+        </Box>
           </nav>
         </header>
+
       </Toolbar>
     </div>
   );
