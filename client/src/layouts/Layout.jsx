@@ -3,6 +3,22 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import "../assets/Layout.css"
 
+
+import {
+    Box,
+    Toolbar,
+    Button,
+    IconButton,
+    SearchIcon,
+    Typography,
+    Container,
+    ThemeProvider,
+    createTheme,
+    CssBaseline,
+    Grid,
+  } from "@mui/material";
+  
+
 export default function Layout(props) {
     return(
         <div>
@@ -10,7 +26,14 @@ export default function Layout(props) {
             currentUser = {props.currentUser}
             handleLogout = {props.handleLogout} setEvent ={props.setEvent} event={props.event}/>
             {props.children}
-            <Footer/>
+        
+                   
+                        <Footer ClassName="footer"
+                          
+                          />
+
+
+            
         </div>
     )
 }

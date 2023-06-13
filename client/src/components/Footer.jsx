@@ -12,45 +12,37 @@ import {
     CssBaseline,
     Grid
   } from "@mui/material";
-  
 
-  const useStyles = makeStyles(theme => ({
-    color: {
-    backgroundColor: 'black'
-    }
-    }))
+  import { css } from '@emotion/react';
+
+
 
 
 export default function Footer(props) {
-    const classes = useStyles();
+    
     return(
-<Toolbar
+<div className="footer">
 
->
-    <Box
- className={classes.color}   
-    >
+<h2>call us</h2>
+<h2>find us</h2>
+<Link to="/registrations/create">Register</Link>
+<div className="iconGroup">
 
-        
-           <h2>call us</h2>
-           <h2>find us</h2>
-           <Link to="/registrations/create">Register</Link>
-           <a href="https://www.instagram.com/iyam_inc2021/" target="_blank">
+<a href="https://www.instagram.com/iyam_inc2021/" target="_blank">
 
-           <img src="https://res.cloudinary.com/otisg/image/upload/v1679058719/instagram_dyciqe.webp"/>
-           </a>
-           <a href="https://twitter.com/IYAM_Inc" target="-blank">
-           <img src="https://res.cloudinary.com/otisg/image/upload/v1679059343/twitter_eeblzx.webp"/>
+<img className="icons" src="https://res.cloudinary.com/otisg/image/upload/v1679058719/instagram_dyciqe.webp"/>
+</a>
+<a href="https://twitter.com/IYAM_Inc" target="-blank">
+<img  className="icons" src="https://res.cloudinary.com/otisg/image/upload/v1679059343/twitter_eeblzx.webp"/>
 
-           </a>
-           <a href="https://www.youtube.com/user/Wix" target="-blank">
-           <img src="https://res.cloudinary.com/otisg/image/upload/v1679059355/youtube_pnwyvc.webp"/>
+</a>
+<a href="https://www.youtube.com/user/Wix" target="-blank">
+<img  className="icons" src="https://res.cloudinary.com/otisg/image/upload/v1679059355/youtube_pnwyvc.webp"/>
 
-           </a>
-    
-    </Box>
+</a>
+</div>
+</div>
 
-</Toolbar>
-    
+
     )
 }

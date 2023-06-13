@@ -1,0 +1,17 @@
+
+    .icons{
+        background-color: black;
+        display: "column";
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .iconGroup{
+        margin: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+   
