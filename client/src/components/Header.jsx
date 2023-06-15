@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import {
   Box,
@@ -51,13 +52,7 @@ function Header(props) {
             (
               <div>
 
-              {/* <Box sx={{
-                display: "flex", flexDirection: "column"
-              }} > */}
-              <div>
-
-                <Link to="/sign-in">Sign In</Link>
-              </div>
+         
             
             <Toolbar
                component="nav"
@@ -79,6 +74,10 @@ function Header(props) {
 
             
                 </ Toolbar>
+              <div>
+
+                <Link to="/sign-in">Sign In</Link>
+              </div>
               </div>
                 
                 )}

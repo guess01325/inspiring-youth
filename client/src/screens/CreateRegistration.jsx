@@ -6,6 +6,26 @@ import {
   useOutletContext,
 } from "react-router-dom";
 
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography, 
+  Container,
+  CssBaseline, 
+  Box,
+  FormControlLabel,
+  Checkbox, 
+  TextField
+} from "@mui/material";
+
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+
+const defaultTheme = createTheme();
+
+
 export default function CreateRegistration(props) {
   const [reg, handleCreateReg] = useOutletContext();
   const history = useNavigate();
@@ -31,7 +51,11 @@ export default function CreateRegistration(props) {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={defaultTheme}>
+        <Container component="main" maxWidth="xs">
+        <CssBaseline/>
+
+
     <h1> Mentoring
     Preregister Here</h1>
       <form onSubmit={handleSubmit}>
@@ -73,6 +97,7 @@ export default function CreateRegistration(props) {
         </label>
         <button type="submit">Submit</button>
       </form>
-    </div>
+      </Container>
+    </ThemeProvider>
   );
 }
