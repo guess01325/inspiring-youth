@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Player } from "video-react";
-import  "./style/Home.css"
+import  "../assets/Home.css"
 
 import {
   Box,

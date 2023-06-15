@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../assets/Mentor.css"
 import ReactDOM from "react-dom";
 import {
   Link,
@@ -155,27 +156,70 @@ export default function Mentorings(props) {
                 />
             </label>
                 </Box>
-            <div>
+
+
+
+                <Box 
+                sx={{
+                margin: 5,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-between"
+    
+    
+    
+                }}
+                >
+            <Box
+              sx={{
+                
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between"
+                
+  
+  
+              }}>
+                <Typography
+              variant="h6"
+                >
+
               How will you attend?
+                </Typography>
               {data.slice(0, 2).map((data, index) => (
-                <li key={index}>
+                <div key={index}>
+                   <Typography
+                variant="subtitle2">
+
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
                     name="tags"
                     checked={isChecked[index]}
-                    value={data}
+                    value={data}  
                     onChange={(e) => handleChange(e, index)}
                   />
 
                   <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                </li>
+                </Typography>
+                </div>
               ))}
-            </div>
-            <div>
+            </Box>
+            <Box>
+            <Typography
+              variant="h6"
+                >
+
+              
               Is this your child's first time being mentored?
+                </Typography>
               {data.slice(2, 4).map((data, index) => (
-                <li key={index}>
+                <div key={index}>
+                   <Typography
+                variant="subtitle2">
+
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
@@ -186,13 +230,23 @@ export default function Mentorings(props) {
                   />
 
                   <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                </li>
+                </Typography>
+                </div>
               ))}
-            </div>
-            <div>
+            </Box>
+            <Box>
+            <Typography
+              variant="h6"
+                >
+
               Program of interest
+              
+                </Typography>
               {data.slice(4, 7).map((data, index) => (
-                <li key={index}>
+                <div key={index}>
+                   <Typography
+                variant="subtitle2">
+
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
@@ -203,12 +257,24 @@ export default function Mentorings(props) {
                   />
 
                   <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                </li>
+                </Typography>
+                </div>
               ))}
-            </div>
+            </Box>
+            <Box>
+            <Typography
+              variant="h6"
+                >
             How did you hear about us?
+
+              
+                </Typography>
+
             {data.slice(7, 12).map((data, index) => (
-              <li key={index}>
+              <div key={index}>
+                <Typography
+                variant="subtitle2">
+
                 <input
                   type="checkbox"
                   id={`custom-checkbox-${index}`}
@@ -216,12 +282,19 @@ export default function Mentorings(props) {
                   checked={isChecked[index]}
                   value={data}
                   onChange={(e) => handleChange(e, index)}
-                />
+                  />
 
                 <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-              </li>
+                  </Typography>
+              </div>
             ))}
+            </Box>
+            <Box>
+              
             <button>Submit</button>
+            </Box>
+
+                </Box>
         </form>
       </Container>
     </ThemeProvider>
