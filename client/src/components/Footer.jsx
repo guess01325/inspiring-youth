@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "../assets/Footer.css"
 
 import { Link } from "react-router-dom";
 import {
@@ -33,22 +33,30 @@ export default function Footer(props) {
     <div>
         <div>
 
+      
+        <div className="about-reg-call-container">
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <h2>Call us</h2>
+        <Link className="call">
+        
+        <h2 >Call us</h2>
+        </Link>
       </div>
       {displayNumber && <span>Phone: 123-450-855</span>}
       
-        <div>
-
-      <Link to="/about">About Us</Link>
-        </div>
-        <div>
-      <Link to="/registrations/create">Register</Link>
+      <Link className="about" to="/about">About Us</Link>
+        
+      
+      <Link className="register" to="/registrations/create">Register</Link>
 
         </div>
+      
+
+
+
+        
         </div>
       <div className="iconGroup">
         <a href="https://www.instagram.com/iyam_inc2021/" target="_blank">
