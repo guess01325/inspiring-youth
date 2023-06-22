@@ -88,6 +88,7 @@ export default function Mentorings(props) {
 
         <form onSubmit={handleSubmit}>
           <Box
+          // onSubmit={handleSubmit}
             sx={{
               margin: 5,
               display: "flex",
@@ -98,63 +99,97 @@ export default function Mentorings(props) {
 
             }}
           >
-            <label>
-              <input
-                type="text"
+            <TextField
+              margin="normal"        
+              required
+              fullWidth
+              size="small"
+              id="firstName"
+              label="firstName"
                 name="first_name"
-                placeholder="name"
+
+              
                 value={formData.first_name}
                 onChange={handleChange}
-              />
-            </label>
-            
-            <label>
-              <input
-                type="text"
-                name="last_name"
-                placeholder="last_name"
+              >
+            </TextField>
+            <TextField
+              margin="normal"        
+              required
+              fullWidth
+              size="small"
+              id="lastName"
+              label="lastName"
+                name="last-Name"
+
+              
                 value={formData.last_name}
                 onChange={handleChange}
-              />
-            </label>
+              >
+            </TextField>
+
+
+           
             
-            <label>
-              <input
-                type="text"
+          
+            <TextField
+              margin="normal"        
+              required
+              fullWidth
+              size="small"
+              id="email"
+              label="email"
                 name="email"
-                placeholder="email"
+                
+              
                 value={formData.email}
                 onChange={handleChange}
-              />
-            </label>
-            
-            <label>
-              <input
-                type="text"
+              >
+            </TextField>
+            <TextField
+              margin="normal"        
+              required
+              fullWidth
+              size="small"
+              id="school_district"
+              label="school_district"
                 name="school_district"
-                placeholder="school_district"
+                
+              
                 value={formData.school_district}
                 onChange={handleChange}
-                />
-            </label>
-            <label>
-              <input
-                type="integer"
+              >
+            </TextField>
+            
+            <TextField
+              margin="normal"        
+              required
+              fullWidth
+              size="small"
+              id="phone"
+              label="phone"
                 name="phone"
-                placeholder="phone"
+                
+              
                 value={formData.phone}
                 onChange={handleChange}
-                />
-            </label>
-            <label>
-              <input
-                type="text"
+              >
+            </TextField>
+            <TextField
+              margin="normal"        
+              required
+              fullWidth
+              size="small"
+              id="how_many"
+              label="how_many"
                 name="how_many"
-                placeholder="how_many"
+                
+              
                 value={formData.how_many}
                 onChange={handleChange}
-                />
-            </label>
+              >
+            </TextField>
+         
                 </Box>
 
 

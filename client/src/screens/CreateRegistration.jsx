@@ -59,15 +59,20 @@ export default function CreateRegistration(props) {
     <h1> Mentoring
     Preregister Here</h1>
       <form onSubmit={handleSubmit}>
-        <label>
+        <TextField>
           <input
-            type="text"
+          margin="normal"
+          required
+          id="firstName"
+          label="firstName"
+          
             name="first_name"
-            placeholder="name"
+            
             value={formData.first_name}
+            
             onChange={handleChange}
           />
-        </label>
+        </TextField>
         <label>
           <input
             type="text"
