@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../assets/Mentor.css"
+import "../assets/Mentor.css";
 import ReactDOM from "react-dom";
 import {
   Link,
@@ -86,175 +86,148 @@ export default function Mentorings(props) {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
 
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}> */}
+<Box
+          onSubmit={handleSubmit}
+          sx={{
+            margin: 5,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            size="small"
+            id="firstName"
+            label="firstName"
+            name="first_name"
+            value={formData.first_name}
+            onChange={handleChange}
+          ></TextField>
+
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            size="small"
+            id="lastName"
+            label="lastName"
+            name="last_name"
+            value={formData.last_name}
+            onChange={handleChange}
+          ></TextField>
+
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            size="small"
+            id="email"
+            label="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          ></TextField>
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            size="small"
+            id="school_district"
+            label="school_district"
+            name="school_district"
+            value={formData.school_district}
+            onChange={handleChange}
+          ></TextField>
+
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            size="small"
+            id="phone"
+            label="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          ></TextField>
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            size="small"
+            id="how_many"
+            label="how_many"
+            name="how_many"
+            value={formData.how_many}
+            onChange={handleChange}
+          ></TextField>
+        
+{/* 
+        <Box
+          sx={{
+            margin: 5,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        > */}
           <Box
-          // onSubmit={handleSubmit}
             sx={{
-              margin: 5,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-
-
-
+              justifyContent: "space-between",
             }}
           >
-            <TextField
-              margin="normal"        
-              required
-              fullWidth
-              size="small"
-              id="firstName"
-              label="firstName"
-                name="first_name"
-
-              
-                value={formData.first_name}
-                onChange={handleChange}
-              >
-            </TextField>
-            <TextField
-              margin="normal"        
-              required
-              fullWidth
-              size="small"
-              id="lastName"
-              label="lastName"
-                name="last-Name"
-
-              
-                value={formData.last_name}
-                onChange={handleChange}
-              >
-            </TextField>
-
-
-           
-            
-          
-            <TextField
-              margin="normal"        
-              required
-              fullWidth
-              size="small"
-              id="email"
-              label="email"
-                name="email"
-                
-              
-                value={formData.email}
-                onChange={handleChange}
-              >
-            </TextField>
-            <TextField
-              margin="normal"        
-              required
-              fullWidth
-              size="small"
-              id="school_district"
-              label="school_district"
-                name="school_district"
-                
-              
-                value={formData.school_district}
-                onChange={handleChange}
-              >
-            </TextField>
-            
-            <TextField
-              margin="normal"        
-              required
-              fullWidth
-              size="small"
-              id="phone"
-              label="phone"
-                name="phone"
-                
-              
-                value={formData.phone}
-                onChange={handleChange}
-              >
-            </TextField>
-            <TextField
-              margin="normal"        
-              required
-              fullWidth
-              size="small"
-              id="how_many"
-              label="how_many"
-                name="how_many"
-                
-              
-                value={formData.how_many}
-                onChange={handleChange}
-              >
-            </TextField>
-         
-                </Box>
-
-
-
-                <Box 
-                sx={{
-                margin: 5,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "space-between"
-    
-    
-    
-                }}
-                >
-            <Box
-              sx={{
-                
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "space-between"
-                
-  
-  
-              }}>
-                <Typography
-              variant="h6"
-                >
-
-              How will you attend?
-                </Typography>
-              {data.slice(0, 2).map((data, index) => (
-                <div key={index}>
-                   <Typography
-                variant="subtitle2">
-
+            <Typography variant="h6">How will you attend?</Typography>
+            {data.slice(0, 2).map((data, index) => (
+              <div key={index}>
+                <Typography variant="subtitle2">
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
                     name="tags"
                     checked={isChecked[index]}
-                    value={data}  
+                    value={data}
                     onChange={(e) => handleChange(e, index)}
                   />
 
                   <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
                 </Typography>
-                </div>
-              ))}
-            </Box>
-            <Box>
-            <Typography
-              variant="h6"
-                >
-
-              
+              </div>
+            ))}
+          </Box>
+          <Box>
+            <Typography variant="h6">
               Is this your child's first time being mentored?
-                </Typography>
-              {data.slice(2, 4).map((data, index) => (
-                <div key={index}>
-                   <Typography
-                variant="subtitle2">
+            </Typography>
+            {data.slice(2, 4).map((data, index) => (
+              <div key={index}>
+                <Typography variant="subtitle2">
+                  <FormControlLabel
+                    type="checkbox"
+                    id={`custom-checkbox-${index}`}
+                    name="tags"
+                    checked={isChecked[index]}
+                    value={data}
+                    onChange={(e) => handleChange(e, index)}
+                  />
 
+                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+                </Typography>
+              </div>
+            ))}
+          </Box>
+          <Box>
+            <Typography variant="h6">Program of interest</Typography>
+            {data.slice(4, 7).map((data, index) => (
+              <div key={index}>
+                <Typography variant="subtitle2">
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
@@ -266,71 +239,41 @@ export default function Mentorings(props) {
 
                   <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
                 </Typography>
-                </div>
-              ))}
-            </Box>
-            <Box>
-            <Typography
-              variant="h6"
-                >
-
-              Program of interest
-              
-                </Typography>
-              {data.slice(4, 7).map((data, index) => (
-                <div key={index}>
-                   <Typography
-                variant="subtitle2">
-
-                  <input
-                    type="checkbox"
-                    id={`custom-checkbox-${index}`}
-                    name="tags"
-                    checked={isChecked[index]}
-                    value={data}
-                    onChange={(e) => handleChange(e, index)}
-                  />
-
-                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                </Typography>
-                </div>
-              ))}
-            </Box>
-            <Box>
-            <Typography
-              variant="h6"
-                >
-            How did you hear about us?
-
-              
-                </Typography>
+              </div>
+            ))}
+          </Box>
+          <Box>
+            <Typography variant="h6">How did you hear about us?</Typography>
 
             {data.slice(7, 12).map((data, index) => (
               <div key={index}>
-                <Typography
-                variant="subtitle2">
-
-                <input
-                  type="checkbox"
-                  id={`custom-checkbox-${index}`}
-                  name="tags"
-                  checked={isChecked[index]}
-                  value={data}
-                  onChange={(e) => handleChange(e, index)}
+                <Typography variant="subtitle2">
+                  <input
+                    type="checkbox"
+                    id={`custom-checkbox-${index}`}
+                    name="tags"
+                    checked={isChecked[index]}
+                    value={data}
+                    onChange={(e) => handleChange(e, index)}
                   />
 
-                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                  </Typography>
+                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+                </Typography>
               </div>
             ))}
-            </Box>
-            <Box>
-              
-            <button>Submit</button>
-            </Box>
+          </Box>
+          <Box>
+          <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Submit
+              </Button>
+          </Box>
+        </Box>
 
-                </Box>
-        </form>
       </Container>
     </ThemeProvider>
   );
