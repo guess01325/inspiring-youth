@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../assets/Mentor.css";
 import ReactDOM from "react-dom";
+
 import {
   Link,
   useParams,
@@ -20,6 +21,7 @@ import {
   FormControlLabel,
   Checkbox,
   TextField,
+  FormControl,
 } from "@mui/material";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -30,6 +32,7 @@ export default function Mentorings(props) {
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
+
   const [
     isLoaded,
     tagData,
@@ -37,11 +40,12 @@ export default function Mentorings(props) {
     handleCreateMentorings,
     handleDeleteMentorings,
   ] = useOutletContext();
+
   const data = tagData || [];
   const [isChecked, setIsChecked] = useState(
     new Array(data.length).fill(false)
   );
-  console.log(data);
+
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -86,8 +90,8 @@ export default function Mentorings(props) {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
 
-        {/* <form onSubmit={handleSubmit}> */}
-<Box
+      <FormControl>
+        <Box
           onSubmit={handleSubmit}
           sx={{
             margin: 5,
@@ -131,6 +135,7 @@ export default function Mentorings(props) {
             value={formData.email}
             onChange={handleChange}
           ></TextField>
+
           <TextField
             margin="normal"
             required
@@ -154,6 +159,7 @@ export default function Mentorings(props) {
             value={formData.phone}
             onChange={handleChange}
           ></TextField>
+
           <TextField
             margin="normal"
             required
@@ -165,17 +171,8 @@ export default function Mentorings(props) {
             value={formData.how_many}
             onChange={handleChange}
           ></TextField>
-        
-{/* 
-        <Box
-          sx={{
-            margin: 5,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        > */}
+
+
           <Box
             sx={{
               display: "flex",
@@ -183,9 +180,35 @@ export default function Mentorings(props) {
               alignItems: "center",
               justifyContent: "space-between",
             }}
-          >
+            >
+
             <Typography variant="h6">How will you attend?</Typography>
+
             {data.slice(0, 2).map((data, index) => (
+              <Typography variant="subtitle2">
+                <FormControlLabel
+                  key={index}
+                  control={
+                    <checkbox
+                      checked={isChecked[index]}
+                      id={`custom-checkbox-${index}`}
+                      name="tags"
+                      value={data}
+                      onChange={(e) => handleChange(e, index)}
+                    />
+                  }
+                />
+
+                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+              </Typography>
+            ))}
+          </Box>
+
+          <Box>
+            <Typography variant="h6">
+              Is this your child's first time being mentored?
+            </Typography>
+            {data.slice(2, 4).map((data, index) => (
               <div key={index}>
                 <Typography variant="subtitle2">
                   <input
@@ -200,29 +223,9 @@ export default function Mentorings(props) {
                   <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
                 </Typography>
               </div>
-            ))}
+            ))}{" "}
           </Box>
-          <Box>
-            <Typography variant="h6">
-              Is this your child's first time being mentored?
-            </Typography>
-            {data.slice(2, 4).map((data, index) => (
-              <div key={index}>
-                <Typography variant="subtitle2">
-                  <FormControlLabel
-                    type="checkbox"
-                    id={`custom-checkbox-${index}`}
-                    name="tags"
-                    checked={isChecked[index]}
-                    value={data}
-                    onChange={(e) => handleChange(e, index)}
-                  />
 
-                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                </Typography>
-              </div>
-            ))}
-          </Box>
           <Box>
             <Typography variant="h6">Program of interest</Typography>
             {data.slice(4, 7).map((data, index) => (
@@ -242,6 +245,7 @@ export default function Mentorings(props) {
               </div>
             ))}
           </Box>
+
           <Box>
             <Typography variant="h6">How did you hear about us?</Typography>
 
@@ -261,19 +265,24 @@ export default function Mentorings(props) {
                 </Typography>
               </div>
             ))}
+
           </Box>
+      
+
           <Box>
-          <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
               >
-                Submit
-              </Button>
+              Submit
+            </Button>
           </Box>
         </Box>
 
+
+      </FormControl>
       </Container>
     </ThemeProvider>
   );
