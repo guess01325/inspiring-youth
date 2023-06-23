@@ -1,8 +1,35 @@
+import {
+  Box,
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography,
+  Container,
+  ThemeProvider,
+  createTheme,
+  CssBaseline,
+  Grid,
+} from "@mui/material";
+
+
+
 export default function VolunteerInfo(props) {
   return (
+    <>
     <div>
       <h1>volunteer</h1>
-      <div>
+    </div>
+
+      <Box
+        sx={{
+          margin: 1,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+    
         <div>
           <h3>Volunteer Organizer</h3>
           <p>
@@ -12,6 +39,7 @@ export default function VolunteerInfo(props) {
             data base Some administrative experience preferred.
           </p>
         </div>
+    
         <div>
           <h3>Board Members</h3>
           <p>
@@ -21,10 +49,12 @@ export default function VolunteerInfo(props) {
             preferred
           </p>
         </div>
+    
         <div>
           <h3>Event Facilitators</h3>
           <p>We are always looking for volunteers for different events.</p>
         </div>
+    
         <div>
           <h3>Communications</h3>
           <p>
@@ -33,6 +63,7 @@ export default function VolunteerInfo(props) {
             to keep lines of communication open.
           </p>
         </div>
+    
         <div>
           <h3>Youth Organizer</h3>
           <p>
@@ -43,6 +74,7 @@ export default function VolunteerInfo(props) {
             make sure our activities and programs are relevant
           </p>
         </div>
+    
         <div>
           <h3>Mentor Organizer</h3>
           <p>
@@ -52,6 +84,7 @@ export default function VolunteerInfo(props) {
           </p>
           ​
         </div>
+    
         <div>
           <h1>Volunteer Sign up</h1>
           <p>
@@ -60,7 +93,8 @@ export default function VolunteerInfo(props) {
             Info@inspiringyouthandmentors.org
           </p>
         </div>
-      </div>
-    </div>
+    
+    </Box>
+  </>
   );
 }
