@@ -26,6 +26,9 @@ import {
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+
+
+
 export default function Mentorings(props) {
   const defaultTheme = createTheme();
   const params = useParams();
@@ -176,125 +179,116 @@ export default function Mentorings(props) {
             onChange={handleChange}
           ></TextField>
 
-
-
-          <Box
-              sx={{
-               border: 3,
-                borderRadius: "16px",
-                margin: 2,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center"
-
-
-
-              }}
+          <Box className="questions"
+            sx={{
+              border: 3,
+              borderRadius: "16px",
+              margin: 2,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-
-<Box>
-
-      
-            <Typography variant="h6">How will you attend?</Typography>
-            {data.slice(0, 2).map((data, index) => (
-              <Typography variant="subtitle2" key={index}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                    value={data}
-                      id={`custom-checkbox-${index}`}
-                      name="tags"
-                      checked={isChecked[index]}
-                      onChange={(e) => handleChange(e, index)}
+            <Box>
+              <Typography variant="h6">How will you attend?</Typography>
+              {data.slice(0, 2).map((data, index) => (
+                <Typography variant="subtitle2" key={index}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value={data}
+                        id={`custom-checkbox-${index}`}
+                        name="tags"
+                        checked={isChecked[index]}
+                        onChange={(e) => handleChange(e, index)}
                       />
-                  }
+                    }
                   />
 
-                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-              </Typography>
-            ))}
-          </Box>
+                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+                </Typography>
+              ))}
+            </Box>
 
-          <Box>
-            <Typography variant="h6">
-              Is this your child's first time being mentored?
-            </Typography>
-            {data.slice(2, 4).map((data, index) => (
-              <Typography variant="subtitle2" key={index}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                    value={data}
-                      id={`custom-checkbox-${index}`}
-                      name="tags"
-                      checked={isChecked[index]}
-                      onChange={(e) => handleChange(e, index)}
+            <Box>
+              <Typography variant="h6">
+                Is this your child's first time being mentored?
+              </Typography>
+              {data.slice(2, 4).map((data, index) => (
+                <Typography variant="subtitle2" key={index}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value={data}
+                        id={`custom-checkbox-${index}`}
+                        name="tags"
+                        checked={isChecked[index]}
+                        onChange={(e) => handleChange(e, index)}
                       />
                     }
-                />
+                  />
 
-                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-              </Typography>
-            ))}
-          </Box>
+                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+                </Typography>
+              ))}
+            </Box>
 
-          <Box>
-            <Typography variant="h6">Program of interest</Typography>
-            {data.slice(4, 7).map((data, index) => (
-              <Typography variant="subtitle2" key={index}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                    value={data}
-                    id={`custom-checkbox-${index}`}
-                    name="tags"
-                      checked={isChecked[index]}
-                      onChange={(e) => handleChange(e, index)}
+            <Box>
+              <Typography variant="h6">Program of interest</Typography>
+              {data.slice(4, 7).map((data, index) => (
+                <Typography variant="subtitle2" key={index}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value={data}
+                        id={`custom-checkbox-${index}`}
+                        name="tags"
+                        checked={isChecked[index]}
+                        onChange={(e) => handleChange(e, index)}
                       />
                     }
-                    />
+                  />
 
-                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-              </Typography>
-            ))}
+                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+                </Typography>
+              ))}
+            </Box>
+
+            <Box>
+              <Typography variant="h6">How did you hear about us?</Typography>
+
+              {data.slice(7, 12).map((data, index) => (
+                <Typography variant="subtitle2" key={index}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value={data}
+                        id={`custom-checkbox-${index}`}
+                        name="tags"
+                        checked={isChecked[index]}
+                        onChange={(e) => handleChange(e, index)}
+                      />
+                    }
+                  />
+
+                  <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+                </Typography>
+              ))}
+            </Box>
+
+            <Box>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Submit
+              </Button>
+            </Box>
           </Box>
-
-          <Box>
-            <Typography variant="h6">How did you hear about us?</Typography>
-
-            {data.slice(7, 12).map((data, index) => (
-              <Typography variant="subtitle2" key={index}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                    value={data}
-                    id={`custom-checkbox-${index}`}
-                    name="tags"
-                    checked={isChecked[index]}
-                    onChange={(e) => handleChange(e, index)}
-                    />
-                  }
-                />
-
-                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-              </Typography>
-            ))}
-          </Box>
-
-          <Box>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Submit
-            </Button>
-          </Box>
-                    </Box>
-              </Box>
-      
+        </Box>
       </Container>
     </ThemeProvider>
   );

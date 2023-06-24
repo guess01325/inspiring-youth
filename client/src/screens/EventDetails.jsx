@@ -4,7 +4,7 @@ export default function EventDetails(props) {
   const [events,setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext();
   return (
     <div>
-      <div>
+      <div >
         {events.map((event) => (
           <div className="events" key={event.id}>
             <p> {event.name}</p>

@@ -1,4 +1,23 @@
 import { Outlet, useOutletContext,Link } from "react-router-dom";
+import "../assets/EventD.css"
+
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography,
+  Container,
+  CssBaseline,
+  Box,
+  FormControlLabel,
+  Checkbox,
+  TextField,
+  FormControl,
+} from "@mui/material";
+
+
+
 export default function EventDisplay(props) {
   const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent] = useOutletContext();
   
@@ -8,9 +27,18 @@ export default function EventDisplay(props) {
   
   
   return (
-    <div>
+    <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center"
+
+    }}
+    >
+
       {events.map((event) => (
-        <div className="events" key={event.id}>
+        <div className="event-display" key={event.id}>
           <p> {event.name}</p>
           <p>{event.place}</p>
           <p> {event.date}</p>
@@ -19,6 +47,7 @@ export default function EventDisplay(props) {
 
       ))}
       <Link to>RSVP</Link>
-    </div>
+    
+          </Box>
   );
 }

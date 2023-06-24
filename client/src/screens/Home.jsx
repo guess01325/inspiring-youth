@@ -41,7 +41,7 @@ export default function Home(props) {
 
       <Box className="container">
         <Box
-          className="title"
+          className="home-title"
           sx={{
             margin: 4,
             padding: 2,
