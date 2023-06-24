@@ -17,16 +17,32 @@ import {
 } from "@mui/material";
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function Home(props) {
   return (
     <div>
-      <div>
+      
+      <Box>
         <h1>Inspiring Youth</h1>
-      </div>
+      </Box>
 
       <Box className="container">
-        
-        <Box className="title"    sx={{
+        <Box
+          className="title"
+          sx={{
             margin: 4,
             padding: 2,
             display: "flex",
@@ -35,10 +51,7 @@ export default function Home(props) {
           }}
         >
           <h1>Where Leaders Grow</h1>
-         <img
-         src="https://res.cloudinary.com/otisg/image/upload/v1686415466/well-being_uwu5bm.png">
-         
-         </img>
+          <img src="https://res.cloudinary.com/otisg/image/upload/v1686415466/well-being_uwu5bm.png"></img>
           <p>
             We increase school success and improve overall well-being using
             sustainable mentoring practices.
@@ -46,14 +59,15 @@ export default function Home(props) {
           <Link to="/about">Learn More</Link>
         </Box>
 
-
-        <Box className="elements"
-             sx={{
-              margin: 4,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}>
+        <Box
+          className="elements"
+          sx={{
+            margin: 4,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <img
             src="https://res.cloudinary.com/otisg/image/upload/v1650296869/gives3_k7m97e.webp"
             alt="react logo"
@@ -65,13 +79,13 @@ export default function Home(props) {
           <Link to="registrations/create">Register</Link>
         </Box>
         <Box
-        className="element"
-        sx={{
-          margin: 4,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+          className="element"
+          sx={{
+            margin: 4,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
         >
           <img
             src="https://res.cloudinary.com/otisg/image/upload/v1650295179/giveS1_hkjqmp.webp"
@@ -81,13 +95,13 @@ export default function Home(props) {
           <p>Donate to our cause, make a impact for your youth</p>
         </Box>
         <Box
-       className="element"
-       sx={{
-        margin: 4,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
+          className="element"
+          sx={{
+            margin: 4,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
         >
           <img
             src="https://res.cloudinary.com/otisg/image/upload/v1650296446/give2_kdwd0x.webp"
@@ -104,70 +118,96 @@ export default function Home(props) {
 
       
       
-      <Box
-        className="section-three"
-        sm={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: 4,
-        }}
-      >
-        <Box
-          className="video"
-          sm={{
-            margin: 10,
-          }}
-        >
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+   <div className="video">
+
           <Player
             src="https://video.wixstatic.com/video/63347b_1108524e1cc34d2996d618c72e4b9433/480p/mp4/file.mp4"
             type="video/mp4"
             fluid={false}
             height={450}
-          />
-        </Box>
-        <Box
+            />
+   </div>
+
+          
+        
+           
+
+
+
+
+
+
+
+
+
+
+        <Box className="section3"
           sx={{
             margin: 1,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            width: "auto",
+            
           }}
         >
+          <h1>Our Partners</h1>
           <Box
             sx={{
-              alignment: "center",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
               width: "100%",
               height: "100%",
             }}
           >
-            <h1>Our Partners</h1>
-          </Box>
-          <Box
-            sx={{
-              margin: 4,
-            }}
-          >
-            <img src="https://res.cloudinary.com/otisg/image/upload/c_scale,h_133,w_260/v1679057135/prevent-partner_jlwurc.webp" />
-          </Box>
-          <Box
-            sx={{
-              margin: 4,
-            }}
-          >
-            <img src="https://res.cloudinary.com/otisg/image/upload/v1679057153/community-level-up_dy7ah5.webp" />
-          </Box>
-          <Box
-            sx={{
-              margin: 4,
-            }}
-          >
-            <img src="https://res.cloudinary.com/otisg/image/upload/v1679057145/culture-coalition_fkpkaq.webp" />
-          </Box>
+            <Box
+              sx={{
+                margin: 4,
+              }}
+            >
+              <img src="https://res.cloudinary.com/otisg/image/upload/c_scale,h_133,w_260/v1679057135/prevent-partner_jlwurc.webp" />
+            </Box>
+            <Box
+              sx={{
+                margin: 4,
+              }}
+            >
+              <img src="https://res.cloudinary.com/otisg/image/upload/v1679057153/community-level-up_dy7ah5.webp" />
+            </Box>
+            <Box
+              sx={{
+                margin: 4,
+              }}
+            >
+              <img src="https://res.cloudinary.com/otisg/image/upload/v1679057145/culture-coalition_fkpkaq.webp" />
+            </Box>
+            </Box>
+        
+        
+        
+        
+        
+        
+        
+        
         </Box>
-      </Box>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../assets/Mentor.css";
+import "../assets/CMentor.css";
 import ReactDOM from "react-dom";
 
 import {
@@ -26,9 +26,8 @@ import {
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const defaultTheme = createTheme();
-
 export default function Mentorings(props) {
+  const defaultTheme = createTheme();
   const params = useParams();
   const { id } = params;
   const history = useNavigate();
@@ -89,7 +88,6 @@ export default function Mentorings(props) {
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-
         <Box
           component="form"
           onSubmit={handleSubmit}
@@ -101,6 +99,7 @@ export default function Mentorings(props) {
           }}
         >
           <TextField
+            sx={{ border: 3, borderRadius: "16px" }}
             margin="normal"
             required
             fullWidth
@@ -113,6 +112,7 @@ export default function Mentorings(props) {
           ></TextField>
 
           <TextField
+            sx={{ border: 3, borderRadius: "16px" }}
             margin="normal"
             required
             fullWidth
@@ -125,6 +125,7 @@ export default function Mentorings(props) {
           ></TextField>
 
           <TextField
+            sx={{ border: 3, borderRadius: "16px" }}
             margin="normal"
             required
             fullWidth
@@ -137,6 +138,7 @@ export default function Mentorings(props) {
           ></TextField>
 
           <TextField
+            sx={{ border: 3, borderRadius: "16px" }}
             margin="normal"
             required
             fullWidth
@@ -149,6 +151,7 @@ export default function Mentorings(props) {
           ></TextField>
 
           <TextField
+            sx={{ border: 3, borderRadius: "16px" }}
             margin="normal"
             required
             fullWidth
@@ -161,6 +164,7 @@ export default function Mentorings(props) {
           ></TextField>
 
           <TextField
+            sx={{ border: 3, borderRadius: "16px" }}
             margin="normal"
             required
             fullWidth
@@ -172,28 +176,40 @@ export default function Mentorings(props) {
             onChange={handleChange}
           ></TextField>
 
+
+
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
+              sx={{
+               border: 3,
+                borderRadius: "16px",
+                margin: 2,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center"
+
+
+
+              }}
           >
+
+<Box>
+
+      
             <Typography variant="h6">How will you attend?</Typography>
             {data.slice(0, 2).map((data, index) => (
               <Typography variant="subtitle2" key={index}>
                 <FormControlLabel
                   control={
                     <Checkbox
-                      value={data}
+                    value={data}
                       id={`custom-checkbox-${index}`}
                       name="tags"
                       checked={isChecked[index]}
                       onChange={(e) => handleChange(e, index)}
-                    />
+                      />
                   }
-                />
+                  />
 
                 <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
               </Typography>
@@ -209,13 +225,13 @@ export default function Mentorings(props) {
                 <FormControlLabel
                   control={
                     <Checkbox
-                      value={data}
+                    value={data}
                       id={`custom-checkbox-${index}`}
                       name="tags"
                       checked={isChecked[index]}
                       onChange={(e) => handleChange(e, index)}
-                    />
-                  }
+                      />
+                    }
                 />
 
                 <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
@@ -226,23 +242,21 @@ export default function Mentorings(props) {
           <Box>
             <Typography variant="h6">Program of interest</Typography>
             {data.slice(4, 7).map((data, index) => (
-                 <Typography variant="subtitle2" key={index}>
-                 <FormControlLabel
-                   control={
-                     <Checkbox
-                       value={data}
-                       id={`custom-checkbox-${index}`}
-                       name="tags"
-                       checked={isChecked[index]}
-                       onChange={(e) => handleChange(e, index)}
-                     />
-                   }
-                 />
- 
-                 <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-               </Typography>
-           
-              
+              <Typography variant="subtitle2" key={index}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                    value={data}
+                    id={`custom-checkbox-${index}`}
+                    name="tags"
+                      checked={isChecked[index]}
+                      onChange={(e) => handleChange(e, index)}
+                      />
+                    }
+                    />
+
+                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+              </Typography>
             ))}
           </Box>
 
@@ -250,21 +264,21 @@ export default function Mentorings(props) {
             <Typography variant="h6">How did you hear about us?</Typography>
 
             {data.slice(7, 12).map((data, index) => (
-                     <Typography variant="subtitle2" key={index}>
-                     <FormControlLabel
-                       control={
-                         <Checkbox
-                           value={data}
-                           id={`custom-checkbox-${index}`}
-                           name="tags"
-                           checked={isChecked[index]}
-                           onChange={(e) => handleChange(e, index)}
-                         />
-                       }
-                     />
-     
-                     <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
-                   </Typography>
+              <Typography variant="subtitle2" key={index}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                    value={data}
+                    id={`custom-checkbox-${index}`}
+                    name="tags"
+                    checked={isChecked[index]}
+                    onChange={(e) => handleChange(e, index)}
+                    />
+                  }
+                />
+
+                <label htmlFor={`custom-checkbox-${index}`}>{data}</label>
+              </Typography>
             ))}
           </Box>
 
@@ -278,7 +292,9 @@ export default function Mentorings(props) {
               Submit
             </Button>
           </Box>
-        </Box>
+                    </Box>
+              </Box>
+      
       </Container>
     </ThemeProvider>
   );
