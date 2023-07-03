@@ -1,12 +1,34 @@
 import { Link, useOutletContext } from "react-router-dom";
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography,
+  Container,
+  CssBaseline,
+  Box,
+  FormControlLabel,
+  Checkbox,
+  TextField,
+  FormControl,
+} from "@mui/material";
 
 export default function EventDetails(props) {
   const [events,setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext();
   return (
-    <div>
-      <div >
+    
+    <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center"
+
+    }}
+    >
         {events.map((event) => (
-          <div className="events" key={event.id}>
+          <div className="event-display" key={event.id}>
             <p> {event.name}</p>
             <p>{event.place}</p>
             <p> {event.date}</p>
@@ -23,7 +45,7 @@ export default function EventDetails(props) {
             </button>
           </div>
         ))}
-      </div>
-    </div>
+      </Box>
+    
   );
 }

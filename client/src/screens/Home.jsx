@@ -35,9 +35,9 @@ export default function Home(props) {
   return (
     <div>
       
-      <Box>
-        <h1>Inspiring Youth</h1>
-      </Box>
+      <div className="title">
+        <h1>Inspiring Youth & Mentors</h1>
+      </div>
 
       <Box className="container">
         <Box
@@ -166,7 +166,10 @@ export default function Home(props) {
             
           }}
         >
+          <div className="partners">
+
           <h1>Our Partners</h1>
+          </div>
           <Box
             sx={{
               display: "flex",

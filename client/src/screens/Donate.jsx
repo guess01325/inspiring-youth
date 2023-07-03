@@ -15,23 +15,37 @@ import {
 } from "@mui/material";
 
 import "../assets/Donations.css"
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 
 export default function Donate(props) {
-  return (
-    <>
+  const defaultTheme = createTheme();
 
-    <div>
-      <h1>SUPPORT US</h1>
-    </div>
+
+  return (
+    
+  <ThemeProvider theme={defaultTheme}>
+  <Container component="main" maxWidth="xs">
+    <CssBaseline />
 
       <Box
       sx={{
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center"
 
         
-      }} className="sub-div">
+      }} >
+
+    <div>
+      <Typography variant="h2" noWrap={true}
+      sx={{
+        margin: 5
+      }}>SUPPORT US</Typography>
+    </div>
+    
+
         <a className="donations"
           href="https://www.gofundme.com/f/inspiring-youth-and-mentors?utm_campaign=p_cp+share-sheet&utm_medium=copy_link_all&utm_source=customer"
           target="_blank"
@@ -39,16 +53,8 @@ export default function Donate(props) {
           GoFundMe
         </a>
         <Link className="donations" to="wish-list">Wish List</Link>
-      </Box>
-      
-      <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center"
-      }
-      }>
+    
+
 
       <div className="sub-div-2">
         <p>
@@ -80,14 +86,12 @@ export default function Donate(props) {
       </div>
       
       <div>
-        <h1> Thank you for your donation!</h1>
+        <Typography variant="h3"> Thank you for your donation!</Typography>
       </div>
-      </Box>
-      {/* <div>
+    
 
-<h1>We Welcome Your Donations</h1>
-      </div> */}
-
-    </>
+</Box>
+</Container>
+    </ThemeProvider>
   );
 }

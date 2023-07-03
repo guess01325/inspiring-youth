@@ -1,5 +1,5 @@
 import { Outlet, useOutletContext,Link } from "react-router-dom";
-import "../assets/EventD.css"
+import "../assets/Events.css"
 
 import {
   Toolbar,

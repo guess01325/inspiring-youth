@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import {
@@ -7,6 +7,22 @@ import {
   useNavigate,
   useOutletContext,
 } from "react-router-dom";
+
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography,
+  Container,
+  CssBaseline,
+  Box,
+  FormControlLabel,
+  Checkbox,
+  TextField,
+  FormControl,
+} from "@mui/material";
+
 
 export default function MentoringInfo(props) {
   const [
@@ -18,9 +34,18 @@ export default function MentoringInfo(props) {
   ] = useOutletContext();
 
   return (
-    <div>
+    
+      <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center"
+      
+      }}
+      >
       {mentorInfo.map((mentors) => (
-        <div key={mentors.id}>
+        <div className="event-display" key={mentors.id}>
           <h4>First Name</h4>
           <p>{mentors.first_name}</p>
           <h4>Last Name</h4>
@@ -42,6 +67,6 @@ export default function MentoringInfo(props) {
           </button>
         </div>
       ))}
-    </div>
+    </Box>
   );
 }

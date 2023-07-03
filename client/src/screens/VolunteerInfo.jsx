@@ -12,25 +12,43 @@ import {
   Grid,
 } from "@mui/material";
 
+import { StyledEngineProvider } from '@mui/material/styles';
+
+
+
+
 import "../assets/VolunteerInfo.css"
 
 
-export default function VolunteerInfo(props) {
-  return (
-    <>
-    <div>
-      <h1 className="v-title">volunteer</h1>
-    </div>
 
+export default function VolunteerInfo(props) {
+  const defaultTheme = createTheme();
+
+  return (
+
+    <ThemeProvider theme={defaultTheme}>
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+  
       <Box
         sx={{
-          margin: 1,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center"
         }}
       >
+    
+      <Typography variant="h1"  sx={{
+        margin: 5
+      }}>
+        Volunteer
+        Opportunities
+        
+        </Typography>
+        
+    
+
     
         <div className="sub-div">
           <h3 className="sub-title">Volunteer Organizer</h3>
@@ -89,7 +107,14 @@ export default function VolunteerInfo(props) {
     
     
         <div className="v-sign-up">
-          <h1 className="v-sign-up-title">Volunteer Sign up</h1>
+        <Typography variant="h1" noWrap={true} sx={{
+      
+      
+      }}>
+        Volunteer Sign up
+        
+        </Typography>
+          
           <p>
             Wanna be part of all the fun! Let's find a volunteer position that
             will work best for you. 
@@ -99,6 +124,9 @@ export default function VolunteerInfo(props) {
           </p>
         </div>
     </Box>
-  </>
+    </Container>
+  </ThemeProvider>
+  
+
   );
 }

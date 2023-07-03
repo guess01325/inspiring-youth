@@ -9,6 +9,21 @@ import {
   useOutletContext,
 } from "react-router-dom";
 
+import {
+  Toolbar,
+  Button,
+  IconButton,
+  SearchIcon,
+  Typography,
+  Container,
+  CssBaseline,
+  Box,
+  FormControlLabel,
+  Checkbox,
+  TextField,
+  FormControl,
+} from "@mui/material";
+
 export default function Students(props) {
   const params = useParams();
   const location = useLocation;
@@ -23,12 +38,20 @@ export default function Students(props) {
   console.log(students)
 
   return (
-    <div>
-      <div>
+    
+    <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center"
+    
+    }}
+    >
         {students.length ? (
           <div>
             {students.map((studentItem) => (
-              <div className="events" key={studentItem.id}>
+              <div className="event-display" key={studentItem.id}>
                 <p> {studentItem.name}</p>
                 <p>{studentItem.address}</p>
                 <p> {studentItem.contact}</p>
@@ -50,7 +73,7 @@ export default function Students(props) {
             <Link to={`/event/${eventId}/student/:id/create`}>Create</Link>
           </div>
         )}
-      </div>
-    </div>
+      </Box>
+    
   );
 }
