@@ -1,7 +1,10 @@
 // import { Link } from "react-router-dom";
+
 import YouTube from "react-youtube";
 import {
   Link,
+  Card,
+  CardMedia,
   Toolbar,
   Button,
   IconButton,
@@ -18,7 +21,7 @@ import {
   FormControl,
 } from "@mui/material";
 
-import Image from 'mui-image'
+import Image from "mui-image";
 
 import "../assets/LevelUp.css";
 
@@ -53,7 +56,7 @@ export default function LevelUp(props) {
             src="https://res.cloudinary.com/otisg/image/upload/v1679237394/clu1_aiiwgk.webp"
           />
 
-          <div>
+          <Box>
             <Link
               href="https://www.instagram.com/communitylevelupinc/?hl=en"
               target="_blank"
@@ -88,7 +91,8 @@ export default function LevelUp(props) {
             >
               <img src="https://res.cloudinary.com/otisg/image/upload/v1679591340/socail25_umezbc.webp" />
             </Link>
-          </div>
+          </Box>
+
           <Box
             sx={{
               margin: 5,
@@ -114,108 +118,84 @@ export default function LevelUp(props) {
             <YouTube videoId="ba4eiqETg_I" />
           </div>
 
-          {/* <div >
-        
-        <img className="size" src="https://res.cloudinary.com/otisg/image/upload/v1679238118/clu2_mhidty.webp" />
-        <Link sx={{
-          fontSize: 40
-        }}   href="https://www.facebook.com/CommunityLevelUp" target="_blank">
-          Facebook
-        </Link>
-      </div> */}
+          <CardMedia
+            component="img"
+            image={
+              "https://res.cloudinary.com/otisg/image/upload/v1679239011/clu3_bogspg.webp"
+            }
+            alt={"alt"}
+            title={"podcast"}
+            sx={{ padding: "1em 1em 0 1em", objectFit: "contain" }}
+          />
+          {/* </Card> */}
 
-          <Box
+          <Link
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
+              fontSize: 40,
             }}
+            href="https://podcasters.spotify.com/pod/show/communitylevelup?fbclid=IwAR2QetXzkyKWmJTpzx6Z3Svig0usOvsoCKf1p1f2FWWJ2rPEdtFF4-c9lOQ\"
+            target="_blank"
           >
-            <Box
-              sx={{
-                margin: 5,
-              }}
-            >
-              <Image  src="https://res.cloudinary.com/otisg/image/upload/v1679239011/clu3_bogspg.webp" />
-              <Link
-                sx={{
-                  fontSize: 40,
-                }}
-                href="https://podcasters.spotify.com/pod/show/communitylevelup?fbclid=IwAR2QetXzkyKWmJTpzx6Z3Svig0usOvsoCKf1p1f2FWWJ2rPEdtFF4-c9lOQ\"
-                target="_blank"
-              >
-                Podcast
-              </Link>
-            </Box>
-          </Box>
-          <Typography sx={{
-            height: 1,
-            width: 1
-
-        }} variant="h3">Contact Info</Typography>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              height: "50%",
-              width: "50%",
-              justifyContent: "center",
-              border: 2,
-              borderColor: "black",
-              borderRadius: 1,
-            }}
-          >
-           
-              <Link
-                href="https://www.facebook.com/CommunityLevelUp"
-                target="_blank"
-              >
-                <Image 
-                  className="c-image-1"
-                  src="https://res.cloudinary.com/otisg/image/upload/v1679239572/fb_like_udjpl6.png"
-                />
-              </Link>
-
-              <Link>
-                <Image
-                  className="c-image"
-                  src="https://res.cloudinary.com/otisg/image/upload/v1679239681/Naviage-Icon_dqsorx.png"
-                />
-
-                <h4>
-                  322 State Street, New London, CT <br></br> 06320
-                </h4>
-              </Link>
-
-              <Link
-                href="https://www.facebook.com/CommunityLevelUp"
-                target="_blank"
-              >
-                <Image
-                  className="c-image"
-                  src="https://res.cloudinary.com/otisg/image/upload/v1679241134/mail-2_xycmgg.png"
-                />
-              </Link>
-              <h4>mdaniels@cluinc.org</h4>
-
-              <Link
-                href="https://www.facebook.com/CommunityLevelUp"
-                target="_blank"
-              >
-                <Image
-                  className="c-image"
-                  src="https://res.cloudinary.com/otisg/image/upload/v1679240016/phone-icon2_zocawv.jpg"
-                />
-              </Link>
-
-              <h4>(860) 381-4228</h4>
-          
-          </Box>
+            Podcast
+          </Link>
         </Box>
       </Container>
+
+          <Typography
+            sx={{
+              margin: "40px"
+            }}
+            variant="h3"
+          >
+            Contact Info
+          </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          float: "center",
+          border: 2,
+          borderColor: "black",
+          borderRadius: 2,
+        }}
+      >
+        <Link href="https://www.facebook.com/CommunityLevelUp" target="_blank">
+          <Image
+            className="c-image-1"
+            src="https://res.cloudinary.com/otisg/image/upload/c_scale,h_80,w_80/v1679239572/fb_like_udjpl6.png"
+          />
+        </Link>
+
+        <Link
+        href="https://www.google.com/maps/place/322+State+St,+New+London,+CT+06320/@41.3548976,-72.0988937,17z/data=!3m1!4b1!4m6!3m5!1s0x89e60e6121100001:0xf07f5149eb77b56e!8m2!3d41.3548976!4d-72.0988937!16s%2Fg%2F11hbms8tx6?entry=ttu" target="_blank">
+          <Image
+            className="c-image"
+            src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679239681/Naviage-Icon_dqsorx.png"
+          />
+
+          <h4>
+            322 State Street, New London, CT <br></br> 06320
+          </h4>
+        </Link>
+
+        <Link target="_blank">
+          <Image
+            className="c-image"
+            src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679241134/mail-2_xycmgg.png"
+          />
+          <h4>mdaniels@cluinc.org</h4>
+        </Link>
+
+        <Link href="https://www.facebook.com/CommunityLevelUp" target="_blank">
+          <Image
+            className="c-image"
+            src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679240016/phone-icon2_zocawv.jpg"
+          />
+          <h4>(860) 381-4228</h4>
+        </Link>
+      </Box>
     </ThemeProvider>
   );
 }
