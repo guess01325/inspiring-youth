@@ -29,6 +29,7 @@ import Sponsor from "./screens/Sponsor";
 import LevelUp from "./screens/LevelUp";
 import CreateMentorings from "./screens/CreateMentoring";
 import MentorInfo from "./screens/MentorInfo";
+import Email from "./screens/Email"
 import "../node_modules/video-react/dist/video-react.css";
 
 import {
@@ -162,6 +163,8 @@ function App() {
                 path="/sign-in"
                 element={<SignIn handleLogin={handleLogin} />}
               />
+
+              <Route path="/email" element={<Email/>}></Route>
             </Routes>
           </Layout>
         </Container>

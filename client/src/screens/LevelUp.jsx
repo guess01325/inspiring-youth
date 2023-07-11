@@ -200,7 +200,7 @@ export default function LevelUp(props) {
           </h4>
         </Link>
 
-        <Link target="_blank">
+        <Link href="/email">
           <Image
             className="c-image"
             src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679241134/mail-2_xycmgg.png"
