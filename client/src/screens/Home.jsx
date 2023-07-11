@@ -76,7 +76,7 @@ export default function Home(props) {
             We support curious and motivated youth and mentors through
             adventurous programs and a variety of services.
           </p>
-          <Link to="registrations/create">Register</Link>
+          <Link to="mentorings/create">Register</Link>
         </Box>
         <Box
           className="element"

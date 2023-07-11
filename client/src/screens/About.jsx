@@ -40,7 +40,7 @@ export default function About(props) {
               <Typography sx={{
                 whiteSpace: "nowrap",
                 margin: 2 
-              }} variant="h2">Our Mission</Typography>
+              }} variant="h1">Our Mission</Typography>
               <Typography variant="subtitle1">
                 Inspiring Youth and Mentors Inc. is an up and coming non profit
                 whose mission is to support curious and motivated youth and
@@ -50,7 +50,7 @@ export default function About(props) {
 
             <Box>
 
-              <Typography variant="h2"  sx={{
+              <Typography variant="h1"  sx={{
                 margin: 5, 
                 whiteSpace: "nowrap"
               }}> Our Values</Typography>

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "../assets/Footer.css"
 
-import { Link } from "react-router-dom";
+
 import {
+  Link,
   Box,
   Toolbar,
   Button,
@@ -40,16 +41,18 @@ export default function Footer(props) {
         onMouseLeave={handleMouseLeave}
       >
         <Link className="call">
-        
+
         <h2 >Call us</h2>
         </Link>
       </div>
       {displayNumber && <span>Phone: 123-450-855</span>}
       
-      <Link className="about" to="/about">About Us</Link>
+      <Link className="about"      href="/about"
+           >About Us</Link>
         
       
-      <Link className="register" to="/registrations/create">Register</Link>
+      <Link className="register"      href="/mentorings/create"
+          >Register</Link>
 
         </div>
       

@@ -7,15 +7,13 @@ import {
   Button,
   IconButton,
   SearchIcon,
-  Typography, 
+  Typography,
   Container,
   ThemeProvider,
   createTheme,
-  CssBaseline
-
+  CssBaseline,
 } from "@mui/material";
-import Link2 from '@mui/material/Link'
-
+import Link2 from "@mui/material/Link";
 
 function Header(props) {
   const { currentUser, handleLogout, event, setEvent } = props;
@@ -25,41 +23,32 @@ function Header(props) {
 
   return (
     <div className="header">
-        <header>
-      
+      <header>
+        {currentUser ? (
+          <Toolbar
+            component="nav"
+            variant="dense"
+            sx={{
+              justifyContent: "space-between",
+              overflowX: "auto",
+              color: "gray",
+            }}
+          >
+            <p>{props.currentUser.username}</p>
 
+            <Link to="/events/eventsDetails"> Events</Link>
+            {/* <Link to="registrations/all">Registrations</Link> */}
+            <Link to="/mentorings/all">Applicants</Link>
 
-          
-            {currentUser ? (
-               <Toolbar
-               component="nav"
-               variant="dense"
-               sx={{  justifyContent: 'space-between', overflowX: 'auto', color: "gray"}}
-             >
-                <p>{props.currentUser.username}</p>
-
-                <Link to="/events/eventsDetails"> Events</Link>
-                <Link to="registrations/all">Registrations</Link>
-                <Link to="/mentorings/all">Applicants</Link>
-
-                <button onClick={handleLogout}>Logout</button>
-                </ Toolbar>
-
-            ) 
-            :
-             
-            
-            (
-              <div>
-
-         
-            
+            <button onClick={handleLogout}>Logout</button>
+          </Toolbar>
+        ) : (
+          <div>
             <Toolbar
-               component="nav"
-               variant="dense"
-               sx={{  justifyContent: 'space-between', overflowX: 'auto'}}
-             >
-
+              component="nav"
+              variant="dense"
+              sx={{ justifyContent: "space-between", overflowX: "auto" }}
+            >
               <Link to="/">Home</Link>
               <Link to="/mentorings/create">Register</Link>
               <Link to="volunteer-info">Volunteer</Link>
@@ -68,23 +57,15 @@ function Header(props) {
               <Link to="/level-up">Level Up</Link>
               <Link to="/about">About Us</Link>
               {/* <Link to="/wish-list">Wish List</Link> */}
-            
 
-            {/* </Box> */}
-
-            
-                </ Toolbar>
-              <div>
-
-                <Link to="/sign-in">Sign In</Link>
-              </div>
-              </div>
-                
-                )}
-        
-        </header>
-
-      
+              {/* </Box> */}
+            </Toolbar>
+            <div>
+              <Link to="/sign-in">Sign In</Link>
+            </div>
+          </div>
+        )}
+      </header>
     </div>
   );
 }

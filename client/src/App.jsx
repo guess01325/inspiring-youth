@@ -27,8 +27,8 @@ import Home from "./screens/Home";
 import VolunteerInfo from "./screens/VolunteerInfo";
 import Sponsor from "./screens/Sponsor";
 import LevelUp from "./screens/LevelUp";
-import CreateMentorings from "./screens/CreateMentoring"
-import MentorInfo from "./screens/MentorInfo"
+import CreateMentorings from "./screens/CreateMentoring";
+import MentorInfo from "./screens/MentorInfo";
 import "../node_modules/video-react/dist/video-react.css";
 
 import {
@@ -44,14 +44,12 @@ import {
   Button,
   IconButton,
   SearchIcon,
-  Typography, 
+  Typography,
   Container,
   ThemeProvider,
   createTheme,
-  CssBaseline
-
+  CssBaseline,
 } from "@mui/material";
-
 
 const defaultTheme = createTheme();
 
@@ -90,75 +88,83 @@ function App() {
   };
 
   return (
-    
     <div className="App">
-          <ThemeProvider theme={defaultTheme}>
-          <CssBaseline />
+      <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
 
-          <Container maxWidth="lg">
-      <Layout
-        currentUser={currentUser}
-        setEvent={setEvent}
-        handleLogout={handleLogout}
-        event={event}
-      >
+        <Container maxWidth="lg">
+          <Layout
+            currentUser={currentUser}
+            setEvent={setEvent}
+            handleLogout={handleLogout}
+            event={event}
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
+              <Route path="/" element={<MainContainer />}>
+                <Route />
 
-          <Route path="/" element={<MainContainer />}>
-            <Route />
+                <Route
+                  path="/events/eventsDetails"
+                  element={<EventDetails />}
+                />
+                <Route path="/events/:id/edit" element={<EditEvent />} />
 
-            <Route path="/events/eventsDetails" element={<EventDetails />} />
-            <Route path="/events/:id/edit" element={<EditEvent />} />
+                <Route path="events/:id/create" element={<CreateEvent />} />
+                <Route path="events/displayEvents" element={<EventDisplay />} />
 
-            <Route path="events/:id/create" element={<CreateEvent />} />
-            <Route path="events/displayEvents" element={<EventDisplay />} />
+                <Route
+                  path="event/:eventId/volunteer"
+                  element={<VolunteerContainer />}
+                >
+                  <Route path="all" element={<VolunteerDetails />} />
 
-            <Route
-              path="event/:eventId/volunteer"
-              element={<VolunteerContainer />}
-            >
-              <Route path="all" element={<VolunteerDetails />} />
+                  <Route path=":id/update" element={<EditVolunteer />} />
 
-              <Route path=":id/update" element={<EditVolunteer />} />
+                  <Route path=":id/create" element={<CreateVolunteer />} />
+                </Route>
 
-              <Route path=":id/create" element={<CreateVolunteer />} />
-            </Route>
+                <Route
+                  path="event/:eventId/student"
+                  element={<StudentContainer />}
+                >
+                  <Route path="all" element={<Student />} />
+                  <Route path=":id/update" element={<StudentEdit />} />
+                  <Route path=":id/create" element={<StudentCreate />} />
+                </Route>
+              </Route>
 
-            <Route path="event/:eventId/student" element={<StudentContainer />}>
-              <Route path="all" element={<Student />} />
-              <Route path=":id/update" element={<StudentEdit />} />
-              <Route path=":id/create" element={<StudentCreate />} />
-            </Route>
-          </Route>
-          <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About />} />
 
-          <Route path="registrations" element={<RegistrationContainer />}>
-            <Route path="all" element={<Registrations />} />
+              <Route path="registrations" element={<RegistrationContainer />}>
+                <Route path="all" element={<Registrations />} />
 
-            <Route path="create" element={<CreateRegistration />} />
-          </Route>
-          <Route path="/mentorings" element={<MentoringsContainer/>}>
-            <Route path="create" element = {<CreateMentorings/>}/>
-            <Route path="all" element= {<MentorInfo/>}/>
-          </Route>
+                <Route path="create" element={<CreateRegistration />} />
+              </Route>
 
-          <Route path="/donate" element={<Donate />} />
-          <Route path="wish-list" element={<WishList />} />
-          <Route path="volunteer-info" element={<VolunteerInfo />} />
+              <Route path="/mentorings" element={<MentoringsContainer />}>
+                <Route path="create" element={<CreateMentorings />} />
+                <Route path="all" element={<MentorInfo />} />
+              </Route>
 
-          <Route path="/sponsor" element={<Sponsor />} />
-          <Route path="/level-up" element={<LevelUp />} />
+              <Route path="/donate" element={<Donate />} />
 
+              <Route path="wish-list" element={<WishList />} />
 
-          <Route
-            path="/sign-in"
-            element={<SignIn handleLogin={handleLogin} />}
-          />
-        </Routes>
-      </Layout>
-      </Container>
+              <Route path="volunteer-info" element={<VolunteerInfo />} />
+
+              <Route path="/sponsor" element={<Sponsor />} />
+
+              <Route path="/level-up" element={<LevelUp />} />
+
+              <Route
+                path="/sign-in"
+                element={<SignIn handleLogin={handleLogin} />}
+              />
+            </Routes>
+          </Layout>
+        </Container>
       </ThemeProvider>
     </div>
   );

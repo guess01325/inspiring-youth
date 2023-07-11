@@ -33,7 +33,22 @@ export default function LevelUp(props) {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
 
-        <img src="https://res.cloudinary.com/otisg/image/upload/v1679236048/community-level-up_f1fymm.webp" />
+
+        <CardMedia
+            component="img"
+            image={
+              "https://res.cloudinary.com/otisg/image/upload/v1679236048/community-level-up_f1fymm.webp"
+            }
+            alt={"alt"}
+            title={"podcast"}
+            sx={{
+              height: "364px", padding: "1em 1em 0 1em", objectFit: "contain" }}
+          />
+
+        {/* <img 
+        sx={{
+          mt: 2
+        }} src="https://res.cloudinary.com/otisg/image/upload/v1679236048/community-level-up_f1fymm.webp" /> */}
         <Typography
           variant="h2"
           sx={{
@@ -156,16 +171,21 @@ export default function LevelUp(props) {
           alignItems: "center",
           justifyContent: "space-between",
           float: "center",
-          border: 2,
-          borderColor: "black",
-          borderRadius: 2,
+          // border: 2,
+          // borderColor: "black",
+          // borderRadius: 2,
         }}
       >
-        <Link href="https://www.facebook.com/CommunityLevelUp" target="_blank">
+        <Link
+        sx={{
+          height: "200px"
+        }} 
+         href="https://www.facebook.com/CommunityLevelUp" target="_blank">
           <Image
             className="c-image-1"
             src="https://res.cloudinary.com/otisg/image/upload/c_scale,h_80,w_80/v1679239572/fb_like_udjpl6.png"
           />
+          <h4>Facebook</h4>
         </Link>
 
         <Link
