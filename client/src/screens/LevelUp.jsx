@@ -26,13 +26,26 @@ import Image from "mui-image";
 import "../assets/LevelUp.css";
 
 export default function LevelUp(props) {
-  const defaultTheme = createTheme();
+  const theme = createTheme();
+
+  const styles = theme => ({
+    Card: {
+      width: 300,
+      margin: 'auto'
+    },
+    Media: {
+      height: '100%',
+      width: '100%'
+    }
+  });
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="sm">
         <CssBaseline />
 
+{/* Logo */}
+<Card>
 
         <CardMedia
             component="img"
@@ -42,8 +55,10 @@ export default function LevelUp(props) {
             alt={"alt"}
             title={"podcast"}
             sx={{
-              height: "364px", padding: "1em 1em 0 1em", objectFit: "contain" }}
+              mt: 14,
+              objectFit: "contain" }}
           />
+</Card>
 
         {/* <img 
         sx={{
@@ -52,12 +67,14 @@ export default function LevelUp(props) {
         <Typography
           variant="h2"
           sx={{
-            margin: 5,
+        mt: 2,
+        mb: 2
           }}
         >
           Community Level Up
         </Typography>
 
+{/* Pictures */}
         <Box
           sx={{
             display: "flex",
@@ -66,10 +83,23 @@ export default function LevelUp(props) {
             justifyContent: "center",
           }}
         >
-          <img
-            className="size"
-            src="https://res.cloudinary.com/otisg/image/upload/v1679237394/clu1_aiiwgk.webp"
-          />
+          <Card>
+
+              <CardMedia
+              component="img"
+              image={
+                "https://res.cloudinary.com/otisg/image/upload/v1679237394/clu1_aiiwgk.webp"
+              }
+              alt={"alt"}
+              title={"podcast"}
+              sx={{
+                mt: 2,
+                mb: 2,
+                objectFit: "contain"
+              }}
+            />
+          </Card>
+       
 
           <Box>
             <Link
@@ -113,10 +143,23 @@ export default function LevelUp(props) {
               margin: 5,
             }}
           >
-            <img
-              className="size"
-              src="https://res.cloudinary.com/otisg/image/upload/v1679237139/CLU_qvowiu.webp"
+
+            <Card>
+
+              <CardMedia
+              component="img"
+              image={
+                "https://res.cloudinary.com/otisg/image/upload/v1679237139/CLU_qvowiu.webp"
+              }
+              alt={"alt"}
+              title={"podcast"}
+              sx={{
+            
+                objectFit: "contain",
+              }}
             />
+            </Card>
+         
             <Link
               sx={{
                 fontSize: 40,
@@ -128,10 +171,13 @@ export default function LevelUp(props) {
             </Link>
           </Box>
 
-          <div>
+{/* Youtube */}
+       <Box>
             <YouTube videoId="Qelo6xWWoOo" />
             <YouTube videoId="ba4eiqETg_I" />
-          </div>
+
+       </Box>
+      
 
           <CardMedia
             component="img"
@@ -142,7 +188,7 @@ export default function LevelUp(props) {
             title={"podcast"}
             sx={{ padding: "1em 1em 0 1em", objectFit: "contain" }}
           />
-          {/* </Card> */}
+    
 
           <Link
             sx={{
@@ -154,8 +200,8 @@ export default function LevelUp(props) {
             Podcast
           </Link>
         </Box>
-      </Container>
 
+{/* Contact */}
           <Typography
             sx={{
               margin: "40px"
@@ -166,10 +212,10 @@ export default function LevelUp(props) {
           </Typography>
       <Box
         sx={{
+          mb: 4,
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "space-between",
           float: "center",
           // border: 2,
           // borderColor: "black",
@@ -178,44 +224,58 @@ export default function LevelUp(props) {
       >
         <Link
         sx={{
-          height: "200px"
+          height: "auto",
+          width: "auto"
         }} 
          href="https://www.facebook.com/CommunityLevelUp" target="_blank">
           <Image
             className="c-image-1"
             src="https://res.cloudinary.com/otisg/image/upload/c_scale,h_80,w_80/v1679239572/fb_like_udjpl6.png"
-          />
-          <h4>Facebook</h4>
+            />
+          <Typography variant="p">Facebook</Typography>
         </Link>
 
         <Link
+           sx={{
+            height: "auto",
+            width: "auto"
+          }}
         href="https://www.google.com/maps/place/322+State+St,+New+London,+CT+06320/@41.3548976,-72.0988937,17z/data=!3m1!4b1!4m6!3m5!1s0x89e60e6121100001:0xf07f5149eb77b56e!8m2!3d41.3548976!4d-72.0988937!16s%2Fg%2F11hbms8tx6?entry=ttu" target="_blank">
           <Image
             className="c-image"
             src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679239681/Naviage-Icon_dqsorx.png"
           />
 
-          <h4>
+          <Typography variant="p">
             322 State Street, New London, CT <br></br> 06320
-          </h4>
+          </Typography>
         </Link>
 
-        <Link href="/email">
+        <Link href="/email"
+           sx={{
+            height: "auto",
+            width: "auto"
+          }}>
           <Image
             className="c-image"
             src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679241134/mail-2_xycmgg.png"
           />
-          <h4>mdaniels@cluinc.org</h4>
+          <Typography variant="p">mdaniels@cluinc.org</Typography>
         </Link>
 
-        <Link href="https://www.facebook.com/CommunityLevelUp" target="_blank">
+        <Link
+           sx={{
+            height: "auto",
+            width: "auto"
+          }} href="https://www.facebook.com/CommunityLevelUp" target="_blank">
           <Image
             className="c-image"
             src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679240016/phone-icon2_zocawv.jpg"
-          />
-          <h4>(860) 381-4228</h4>
+            />
+          <Typography variant="p">(860) 381-4228</Typography>
         </Link>
       </Box>
+            </Container>
     </ThemeProvider>
   );
 }

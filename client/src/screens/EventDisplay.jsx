@@ -9,6 +9,8 @@ import {
   Typography,
   Container,
   CssBaseline,
+  createTheme,
+  ThemeProvider,
   Box,
   FormControlLabel,
   Checkbox,
@@ -19,6 +21,7 @@ import {
 
 
 export default function EventDisplay(props) {
+  const theme = createTheme();
   const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent] = useOutletContext();
   
   
@@ -27,8 +30,13 @@ export default function EventDisplay(props) {
   
   
   return (
+    <ThemeProvider theme={theme}>
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
     <Box
     sx={{
+      mt: 14,
+      mb: 7,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -49,5 +57,7 @@ export default function EventDisplay(props) {
       <Link to>RSVP</Link>
     
           </Box>
+          </Container>
+    </ThemeProvider>
   );
 }

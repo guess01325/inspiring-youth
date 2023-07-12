@@ -5,6 +5,7 @@ import "../assets/Footer.css"
 import {
   Link,
   Box,
+  BottomNavigation,
   Toolbar,
   Button,
   IconButton,
@@ -29,22 +30,23 @@ export default function Footer(props) {
         setDisplayNumber(false);
       };
   return (
-
-    
-    <div>
-        <div>
+<BottomNavigation        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        sx={{
+          justifyContent: "space-between"
+        }} >
+       
 
       
-        <div className="about-reg-call-container">
-      <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+
+      
+      
+   -
         <Link className="call">
 
-        <h2 >Call us</h2>
+        <Typography variant="h4" >Call us</Typography>
         </Link>
-      </div>
+     
       {displayNumber && <span>Phone: 123-450-855</span>}
       
       <Link className="about"      href="/about"
@@ -54,33 +56,36 @@ export default function Footer(props) {
       <Link className="register"      href="/mentorings/create"
           >Register</Link>
 
-        </div>
+      
       
 
 
 
         
-        </div>
-      <div className="iconGroup">
-        <a href="https://www.instagram.com/iyam_inc2021/" target="_blank">
+        
+      
+        <Link href="https://www.instagram.com/iyam_inc2021/" target="_blank">
           <img
             className="icons"
             src="https://res.cloudinary.com/otisg/image/upload/v1679058719/instagram_dyciqe.webp"
           />
-        </a>
-        <a href="https://twitter.com/IYAM_Inc" target="-blank">
+        </Link>
+        <Link href="https://twitter.com/IYAM_Inc" target="-blank">
           <img
             className="icons"
             src="https://res.cloudinary.com/otisg/image/upload/v1679059343/twitter_eeblzx.webp"
           />
-        </a>
-        <a href="https://www.youtube.com/user/Wix" target="-blank">
+        </Link>
+        <Link href="https://www.youtube.com/user/Wix" target="-blank">
           <img
             className="icons"
             src="https://res.cloudinary.com/otisg/image/upload/v1679059355/youtube_pnwyvc.webp"
           />
-        </a>
-      </div>
-    </div>
+        </Link>
+      
+
+</BottomNavigation>
+ 
+  
   );
 }

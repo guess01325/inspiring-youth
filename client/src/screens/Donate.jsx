@@ -23,7 +23,7 @@ export default function Donate(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="md">
         <CssBaseline />
 
         <Box
@@ -35,16 +35,16 @@ export default function Donate(props) {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h1"
             noWrap={true}
             sx={{
-              margin: 5,
+              margin: 14,
             }}
           >
             SUPPORT US
           </Typography>
 
-          <Typography variant="p">
+          <Typography variant="h4">
             Our strength is amplified with collective action. You can help
             make a difference with Inspiring Youth and Mentors right now! The
             support we receive is a huge driver for the good work we do in
@@ -52,24 +52,26 @@ export default function Donate(props) {
             and support our community in making a lasting impact!!!
           </Typography>
           ​
-          <Typography sx={{}} variant="p">
+          <Typography sx={{}} variant="h4">
             Our wish list shows exactly what material items we are looking to
             have donated for upcoming programs (things like pens, pencils,
             makeup tools, family style video games etc).
           </Typography>
 
           <Link href="wish-list" 
-          sx={{mb: 2}}
+          sx={{mb: 2,
+          fontSize: 40}}
           >
             Wish List
           </Link>
           
-          <Typography sx={{}}>
+          <Typography variant="h4" sx={{}}>
             If you'd like your monetary donation to go toward a specific
             program, please leave us a note. or Click the GoFundMe button
           </Typography>
           <Link
             sx={{
+              fontSize: 40,  
               mb: 2,
               color: "#1976d2",
             }}

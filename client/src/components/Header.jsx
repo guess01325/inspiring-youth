@@ -1,7 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 import {
+  AppBar,
+  Link,
   Box,
   Toolbar,
   Button,
@@ -22,9 +24,12 @@ function Header(props) {
   const { id } = params;
 
   return (
-    <div className="header">
+
       <header>
         {currentUser ? (
+          <AppBar
+          style={{ background: '#2E3B55' }}>
+
           <Toolbar
             component="nav"
             variant="dense"
@@ -36,37 +41,52 @@ function Header(props) {
           >
             <p>{props.currentUser.username}</p>
 
-            <Link to="/events/eventsDetails"> Events</Link>
+            <Link href="/events/eventsDetails" to="/events/eventsDetails"> Events</Link>
             {/* <Link to="registrations/all">Registrations</Link> */}
-            <Link to="/mentorings/all">Applicants</Link>
+            <Link href="/mentorings/all" to="/mentorings/all">Applicants</Link>
 
             <button onClick={handleLogout}>Logout</button>
           </Toolbar>
+          </AppBar>
+  
         ) : (
-          <div>
+          
+            <AppBar
+            style={{ background: '#2E3B55' }}>
+
             <Toolbar
               component="nav"
               variant="dense"
               sx={{ justifyContent: "space-between", overflowX: "auto" }}
             >
-              <Link to="/">Home</Link>
-              <Link to="/mentorings/create">Register</Link>
-              <Link to="volunteer-info">Volunteer</Link>
-              <Link to="/events/displayEvents">Events</Link>
-              <Link to="/donate">Donate</Link>
-              <Link to="/level-up">Level Up</Link>
-              <Link to="/about">About Us</Link>
+              <Link href="/" to="/">Home</Link>
+              <Link href="/mentorings/create">Register</Link>
+              <Link href="/volunteer-info">Volunteer</Link>
+              <Link href="/events/displayEvents">Events</Link>
+              <Link href="/donate">Donate</Link>
               {/* <Link to="/wish-list">Wish List</Link> */}
 
               {/* </Box> */}
             </Toolbar>
-            <div>
-              <Link to="/sign-in">Sign In</Link>
-            </div>
-          </div>
+        
+
+            <Toolbar     component="nav"
+              variant="dense"
+              sx={{ justifyContent: "space-between", overflowX: "auto" }}>
+                
+              <Link href="/level-up">Level Up</Link>
+              <Link href="/about">About Us</Link>
+              <Link href="/sign-in">Sign In</Link>
+              
+            </Toolbar>
+    
+            </AppBar>
+            
+            
+        
         )}
       </header>
-    </div>
+  
   );
 }
 

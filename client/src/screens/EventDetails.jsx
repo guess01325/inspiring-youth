@@ -20,6 +20,7 @@ export default function EventDetails(props) {
     
     <Box
     sx={{
+      mt: 6,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",

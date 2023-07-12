@@ -22,16 +22,37 @@ import "../assets/VolunteerInfo.css"
 
 
 export default function VolunteerInfo(props) {
-  const defaultTheme = createTheme();
+  const theme  = createTheme();
+
+  theme.typography.h3 = {
+    fontSize: '1.2rem',
+    '@media (min-width:600px)': {
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2.4rem',
+    },
+  };
+
+    theme.typography.h1 = {
+    fontSize: '3rem',
+    '@media (min-width:600px)': {
+      fontSize: '2rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '4rem',
+    },
+  };
 
   return (
 
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
     <Container component="main" maxWidth="xs">
       <CssBaseline />
   
       <Box
         sx={{
+          mt: 6,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -50,64 +71,57 @@ export default function VolunteerInfo(props) {
     
 
     
-        <div className="sub-div">
-          <h3 className="sub-title">Volunteer Organizer</h3>
-          <p>
+      
+          <Typography variant="h3">Volunteer Organizer</Typography>
+          <Typography variant="p">
             If you're great with people and have some experience with google
             sheets, this would be a great place for you to serve. You would keep
             volunteers up to date with the information they need and manage our
             data base Some administrative experience preferred.
-          </p>
-        </div>
-    
-        <div className="sub-div">
-          <h3 className="sub-title">Board Members</h3>
-          <p>
-            We're looking for a dedicated team of hands on board members who
+          </Typography>
+
+          <Typography variant="h3">Board Members</Typography>
+          <Typography variant="p">
+          We're looking for a dedicated team of hands on board members who
             want to lay down a great foundation for the future of our
             organization and our community. Non profit board experience
             preferred
-          </p>
-        </div>
-    
-        <div className="sub-div">
-          <h3 className="sub-title">Event Facilitators</h3>
-          <p>We are always looking for volunteers for different events.</p>
-        </div>
-    
-        <div className="sub-div">
-          <h3 className="sub-title">Communications</h3>
-          <p>
-            We're looking for a few people who can help us keep up with our
+          </Typography>
+
+<Typography variant="h3">Event Facilitators</Typography>
+          <Typography variant="p">
+          We are always looking for volunteers for different events
+          </Typography>
+
+<Typography variant="h3">Communications</Typography>
+          <Typography variant="p">
+          We're looking for a few people who can help us keep up with our
             social media and keep in touch with local non profits and businesses
             to keep lines of communication open.
-          </p>
-        </div>
-    
-        <div className="sub-div">
-          <h3 className="sub-title">Youth Organizer</h3>
-          <p>
-            If you're heavily involved in youth activities and have a heart for
+          </Typography>
+
+
+          <Typography variant="h3">Youth Organizer</Typography>
+          <Typography variant="p">
+          If you're heavily involved in youth activities and have a heart for
             the youth, this the best volunteer position for you. We are looking
             for someone to keep us in the know with what's going on with todays
             youth by reaching out and staying connected with them. We want to
             make sure our activities and programs are relevant
-          </p>
-        </div>
-    
-        <div className="sub-div">
-          <h3 className="sub-title">Mentor Organizer</h3>
-          <p>
-            This is a position for those interested in keeping in touch with our
+          </Typography>
+
+
+
+          <Typography variant="h3">Mentor Organizer</Typography>
+          <Typography variant="p">
+          This is a position for those interested in keeping in touch with our
             community leaders. You'd make sure we're hearing the voices of our
             mentors and finding different ways we can support them.
-          </p>
-          ​
-        </div>
-    
-    
-        <div className="v-sign-up">
-        <Typography variant="h1" noWrap={true} sx={{
+          </Typography>
+
+
+        <Typography variant="h1" 
+         sx={{
       
       
       }}>
@@ -122,7 +136,6 @@ export default function VolunteerInfo(props) {
             Please email us at
             Info@inspiringyouthandmentors.org
           </p>
-        </div>
     </Box>
     </Container>
   </ThemeProvider>

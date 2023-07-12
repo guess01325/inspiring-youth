@@ -89,13 +89,13 @@ export default function Mentorings(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="sm">
         <CssBaseline />
         <Box
           component="form"
           onSubmit={handleSubmit}
           sx={{
-            margin: 5,
+            mt: 16,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
