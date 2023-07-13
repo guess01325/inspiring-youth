@@ -93,7 +93,7 @@ function App() {
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
 
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Layout
             currentUser={currentUser}
             setEvent={setEvent}

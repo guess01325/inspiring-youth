@@ -41,7 +41,7 @@ export default function LevelUp(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="sm">
+      <Container component="main" maxWidth="md">
         <CssBaseline />
 
 {/* Logo */}
@@ -88,7 +88,7 @@ export default function LevelUp(props) {
               <CardMedia
               component="img"
               image={
-                "https://res.cloudinary.com/otisg/image/upload/v1679237394/clu1_aiiwgk.webp"
+                "https://res.cloudinary.com/otisg/image/upload/v1679237394/IYAM/clu1_aiiwgk.webp"
               }
               alt={"alt"}
               title={"podcast"}
@@ -149,7 +149,7 @@ export default function LevelUp(props) {
               <CardMedia
               component="img"
               image={
-                "https://res.cloudinary.com/otisg/image/upload/v1679237139/CLU_qvowiu.webp"
+                "https://res.cloudinary.com/otisg/image/upload/v1679237139/IYAM/CLU_qvowiu.webp"
               }
               alt={"alt"}
               title={"podcast"}
@@ -224,8 +224,7 @@ export default function LevelUp(props) {
       >
         <Link
         sx={{
-          height: "auto",
-          width: "auto"
+          width: "25%"
         }} 
          href="https://www.facebook.com/CommunityLevelUp" target="_blank">
           <Image
@@ -237,8 +236,7 @@ export default function LevelUp(props) {
 
         <Link
            sx={{
-            height: "auto",
-            width: "auto"
+            width: "25%"
           }}
         href="https://www.google.com/maps/place/322+State+St,+New+London,+CT+06320/@41.3548976,-72.0988937,17z/data=!3m1!4b1!4m6!3m5!1s0x89e60e6121100001:0xf07f5149eb77b56e!8m2!3d41.3548976!4d-72.0988937!16s%2Fg%2F11hbms8tx6?entry=ttu" target="_blank">
           <Image
@@ -253,8 +251,7 @@ export default function LevelUp(props) {
 
         <Link href="/email"
            sx={{
-            height: "auto",
-            width: "auto"
+          width: "25%"
           }}>
           <Image
             className="c-image"
@@ -265,8 +262,7 @@ export default function LevelUp(props) {
 
         <Link
            sx={{
-            height: "auto",
-            width: "auto"
+           width: "25%",
           }} href="https://www.facebook.com/CommunityLevelUp" target="_blank">
           <Image
             className="c-image"

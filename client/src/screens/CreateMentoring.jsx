@@ -89,7 +89,10 @@ export default function Mentorings(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="sm">
+      <Container component="main" maxWidth="sm"
+    sx={{
+      width: "750px"
+    }}>
         <CssBaseline />
         <Box
           component="form"
@@ -102,11 +105,11 @@ export default function Mentorings(props) {
           }}
         >
           <TextField
-            sx={{ border: 3, borderRadius: "16px" }}
+            sx={{ border: 3, borderRadius: "16px", }}
             margin="normal"
             required
             fullWidth
-            size="small"
+            size="medium"
             id="firstName"
             label="firstName"
             name="first_name"
@@ -119,7 +122,7 @@ export default function Mentorings(props) {
             margin="normal"
             required
             fullWidth
-            size="small"
+            size="medium"
             id="lastName"
             label="lastName"
             name="last_name"
@@ -132,7 +135,7 @@ export default function Mentorings(props) {
             margin="normal"
             required
             fullWidth
-            size="small"
+            size="medium"
             id="email"
             label="email"
             name="email"
@@ -145,7 +148,7 @@ export default function Mentorings(props) {
             margin="normal"
             required
             fullWidth
-            size="small"
+            size="medium"
             id="school_district"
             label="school_district"
             name="school_district"
@@ -158,7 +161,7 @@ export default function Mentorings(props) {
             margin="normal"
             required
             fullWidth
-            size="small"
+            size="medium"
             id="phone"
             label="phone"
             name="phone"
@@ -171,7 +174,7 @@ export default function Mentorings(props) {
             margin="normal"
             required
             fullWidth
-            size="small"
+            size="medium"
             id="how_many"
             label="how_many"
             name="how_many"

@@ -23,7 +23,7 @@ export default function About(props) {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
-        <Container component="main" maxWidth="xs">
+        <Container component="main" maxWidth="sm">
           <CssBaseline />
        <Box 
        sx={{
@@ -39,9 +39,10 @@ export default function About(props) {
             <Box> 
               <Typography sx={{
                 whiteSpace: "nowrap",
-                margin: 2 
+                mt: 10,
+                mb: 2
               }} variant="h1">Our Mission</Typography>
-              <Typography variant="subtitle1">
+              <Typography variant="h6">
                 Inspiring Youth and Mentors Inc. is an up and coming non profit
                 whose mission is to support curious and motivated youth and
                 mentors through adventurous programs and a variety of services.
@@ -51,7 +52,7 @@ export default function About(props) {
             <Box>
 
               <Typography variant="h1"  sx={{
-                margin: 5, 
+                mt: 5, 
                 whiteSpace: "nowrap"
               }}> Our Values</Typography>
              
@@ -63,15 +64,22 @@ export default function About(props) {
 
           
             <Box>
-            <Typography variant="h4">
+            <Typography
+            sx={{
+              mt: 2,
+              mb: 2
+            }} variant="h3">
               Community
             </Typography>
 
-            <p>
+            <Typography variant="h6"
+            sx={{
+            
+            }}>
               “We’re better together.” Everyone has their own strengths to bring
               to the table. When we work together to make a positive impact, we
               can move mountains or better yet, inspire millions.
-            </p>
+            </Typography>
             </Box>
 
           
@@ -79,49 +87,63 @@ export default function About(props) {
 
 <Box>
 
-          <Typography variant="h4">
+          <Typography
+          sx={{
+            margin: 2
+          }} variant="h3"
+>
             Integrity
           </Typography>
 
             {/* <Typography variant="h2">Our Vision</Typography> */}
-          <p>
+          <Typography variant="h6">
             We at IYAM will use ethical and transparent practices to ensure that
             our community always feels safe and welcome.
-          </p>
+          </Typography>
 
 </Box>
 <Box>
-          <Typography variant="h4">
+          <Typography
+          sx={{
+            margin: 2
+          }} variant="h3">
             Diversify and Equality
           </Typography>
-          <p>
+          <Typography variant="h6">
             IYAM will serve anyone no matter race, sex, gender, or creed.
-          </p>
+          </Typography>
           
 
 </Box>
 <Box>
-<Typography variant="h4">
+<Typography 
+  sx={{
+    margin: 2
+  }}
+variant="h3">
             Inspiration
           </Typography>
-          <p>
+          <Typography variant="h6">
             At IYAM we know that inspiration starts within. Not only within
             ourselves but also within our organization. We at IYAM will always
             be looking for ways to inspire those who sign up to carry out our
             mission.
-          </p>
+          </Typography>
 
 </Box>
 <Box>
 
-          <Typography variant="h4">
+          <Typography
+            sx={{
+              margin: 2
+            }} variant="h3">
             Innovation
           </Typography>
 
-          <p>
+          <Typography variant="h6">
             IYAM will always be on the lookout to find new ways to inspire the
             community.
-          </p>
+          </Typography>
 </Box>
           
           

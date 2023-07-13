@@ -41,9 +41,15 @@ function Header(props) {
           >
             <p>{props.currentUser.username}</p>
 
-            <Link href="/events/eventsDetails" to="/events/eventsDetails"> Events</Link>
+            <Link 
+              sx={{
+                fontSize: "30px"
+              }} href="/events/eventsDetails" to="/events/eventsDetails"> Events</Link>
             {/* <Link to="registrations/all">Registrations</Link> */}
-            <Link href="/mentorings/all" to="/mentorings/all">Applicants</Link>
+            <Link
+              sx={{
+                fontSize: "30px"
+              }} href="/mentorings/all" to="/mentorings/all">Applicants</Link>
 
             <button onClick={handleLogout}>Logout</button>
           </Toolbar>
@@ -59,12 +65,28 @@ function Header(props) {
               variant="dense"
               sx={{ justifyContent: "space-between", overflowX: "auto" }}
             >
-              <Link href="/" to="/">Home</Link>
-              <Link href="/mentorings/create">Register</Link>
-              <Link href="/volunteer-info">Volunteer</Link>
-              <Link href="/events/displayEvents">Events</Link>
-              <Link href="/donate">Donate</Link>
-              {/* <Link to="/wish-list">Wish List</Link> */}
+              <Link 
+              sx={{
+                fontSize: "30px"
+              }} href="/" to="/">Home</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }} href="/mentorings/create">Register</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }} href="/volunteer-info">Volunteer</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }}
+               href="/events/displayEvents">Events</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }} href="/donate">Donate</Link>
+              
 
               {/* </Box> */}
             </Toolbar>
@@ -74,9 +96,18 @@ function Header(props) {
               variant="dense"
               sx={{ justifyContent: "space-between", overflowX: "auto" }}>
                 
-              <Link href="/level-up">Level Up</Link>
-              <Link href="/about">About Us</Link>
-              <Link href="/sign-in">Sign In</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }} href="/level-up">Level Up</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }} href="/about">About Us</Link>
+              <Link
+                sx={{
+                  fontSize: "30px"
+                }} href="/sign-in">Sign In</Link>
               
             </Toolbar>
     

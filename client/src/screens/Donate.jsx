@@ -23,7 +23,7 @@ export default function Donate(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="md">
+      <Container component="main" maxWidth="sm">
         <CssBaseline />
 
         <Box
@@ -38,13 +38,17 @@ export default function Donate(props) {
             variant="h1"
             noWrap={true}
             sx={{
-              margin: 14,
+          mt: 14,
+          mb: 6
             }}
           >
-            SUPPORT US
+            Support Our Cause!!!
           </Typography>
 
-          <Typography variant="h4">
+          <Typography
+          sx={{
+            mb: 6
+          }} variant="h3">
             Our strength is amplified with collective action. You can help
             make a difference with Inspiring Youth and Mentors right now! The
             support we receive is a huge driver for the good work we do in
@@ -52,27 +56,29 @@ export default function Donate(props) {
             and support our community in making a lasting impact!!!
           </Typography>
           ​
-          <Typography sx={{}} variant="h4">
+          <Typography sx={{
+            mt: 6
+          }} variant="h3">
             Our wish list shows exactly what material items we are looking to
             have donated for upcoming programs (things like pens, pencils,
             makeup tools, family style video games etc).
           </Typography>
 
           <Link href="wish-list" 
-          sx={{mb: 2,
+          sx={{mb: 6,
           fontSize: 40}}
           >
             Wish List
           </Link>
           
-          <Typography variant="h4" sx={{}}>
+          <Typography variant="h3" sx={{}}>
             If you'd like your monetary donation to go toward a specific
             program, please leave us a note. or Click the GoFundMe button
           </Typography>
           <Link
             sx={{
               fontSize: 40,  
-              mb: 2,
+              mb: 6,
               color: "#1976d2",
             }}
             className="donations"
@@ -87,7 +93,7 @@ export default function Donate(props) {
         sx={{
           m: 2
         }} 
-        variant="h3"> Thank you for your donation!</Typography>
+        variant="h1"> Thank you for your donation!</Typography>
       </Container>
     </ThemeProvider>
   );
