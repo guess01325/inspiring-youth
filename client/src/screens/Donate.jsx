@@ -42,13 +42,13 @@ export default function Donate(props) {
           mb: 6
             }}
           >
-            Support Our Cause!!!
+            Support Us
           </Typography>
 
           <Typography
           sx={{
-            mb: 6
-          }} variant="h3">
+            mb: 4
+          }} variant="h6">
             Our strength is amplified with collective action. You can help
             make a difference with Inspiring Youth and Mentors right now! The
             support we receive is a huge driver for the good work we do in
@@ -57,21 +57,21 @@ export default function Donate(props) {
           </Typography>
           ​
           <Typography sx={{
-            mt: 6
-          }} variant="h3">
+            
+          }} variant="h6">
             Our wish list shows exactly what material items we are looking to
             have donated for upcoming programs (things like pens, pencils,
             makeup tools, family style video games etc).
           </Typography>
 
           <Link href="wish-list" 
-          sx={{mb: 6,
+          sx={{mb: 4,
           fontSize: 40}}
           >
             Wish List
           </Link>
           
-          <Typography variant="h3" sx={{}}>
+          <Typography variant="h6" sx={{}}>
             If you'd like your monetary donation to go toward a specific
             program, please leave us a note. or Click the GoFundMe button
           </Typography>
@@ -93,7 +93,7 @@ export default function Donate(props) {
         sx={{
           m: 2
         }} 
-        variant="h1"> Thank you for your donation!</Typography>
+        variant="h3"> Thank you for your donation!</Typography>
       </Container>
     </ThemeProvider>
   );

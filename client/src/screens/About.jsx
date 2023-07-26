@@ -23,7 +23,7 @@ export default function About(props) {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
-        <Container component="main" maxWidth="sm">
+        <Container component="main" maxWidth="md">
           <CssBaseline />
        <Box 
        sx={{
@@ -38,14 +38,15 @@ export default function About(props) {
 
             <Box> 
               <Typography sx={{
-                whiteSpace: "nowrap",
+                whiteSpace: "noWrap",
                 mt: 10,
                 mb: 2
               }} variant="h1">Our Mission</Typography>
-              <Typography variant="h6">
-                Inspiring Youth and Mentors Inc. is an up and coming non profit
+              <Typography variant="h3"
+              >
+                Inspiring Youth and Mentors Inc. is an up and coming Non Profit,
                 whose mission is to support curious and motivated youth and
-                mentors through adventurous programs and a variety of services.
+                mentors, through adventurous programs and a variety of services.
               </Typography>
             </Box>
 
@@ -67,12 +68,12 @@ export default function About(props) {
             <Typography
             sx={{
               mt: 2,
-              mb: 2
+          
             }} variant="h3">
               Community
             </Typography>
 
-            <Typography variant="h6"
+            <Typography variant="h4"
             sx={{
             
             }}>
@@ -89,14 +90,14 @@ export default function About(props) {
 
           <Typography
           sx={{
-            margin: 2
+            mt: 2
           }} variant="h3"
 >
             Integrity
           </Typography>
 
             {/* <Typography variant="h2">Our Vision</Typography> */}
-          <Typography variant="h6">
+          <Typography variant="h4">
             We at IYAM will use ethical and transparent practices to ensure that
             our community always feels safe and welcome.
           </Typography>
@@ -105,11 +106,11 @@ export default function About(props) {
 <Box>
           <Typography
           sx={{
-            margin: 2
+            mt: 2
           }} variant="h3">
             Diversify and Equality
           </Typography>
-          <Typography variant="h6">
+          <Typography variant="h4">
             IYAM will serve anyone no matter race, sex, gender, or creed.
           </Typography>
           
@@ -118,12 +119,12 @@ export default function About(props) {
 <Box>
 <Typography 
   sx={{
-    margin: 2
+    mt: 2
   }}
 variant="h3">
             Inspiration
           </Typography>
-          <Typography variant="h6">
+          <Typography variant="h4">
             At IYAM we know that inspiration starts within. Not only within
             ourselves but also within our organization. We at IYAM will always
             be looking for ways to inspire those who sign up to carry out our
@@ -135,12 +136,15 @@ variant="h3">
 
           <Typography
             sx={{
-              margin: 2
+              mt: 2
             }} variant="h3">
             Innovation
           </Typography>
 
-          <Typography variant="h6">
+          <Typography
+          sx={{
+          
+          }} variant="h4">
             IYAM will always be on the lookout to find new ways to inspire the
             community.
           </Typography>

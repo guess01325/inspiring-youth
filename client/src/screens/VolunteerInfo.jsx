@@ -72,7 +72,7 @@ export default function VolunteerInfo(props) {
            sx={{
             margin: 2
           }} 
-           variant="h2">Volunteer Organizer</Typography>
+           variant="h3">Volunteer Organizer</Typography>
           <Typography
             sx={{
               mb: 2,
@@ -94,7 +94,7 @@ export default function VolunteerInfo(props) {
            sx={{
             margin: 2
           }} 
-           variant="h2">Board Members</Typography>
+           variant="h3">Board Members</Typography>
           <Typography variant="h6">
             We're looking for a dedicated team of hands on board members who
             want to lay down a great foundation for the future of our
@@ -112,7 +112,7 @@ export default function VolunteerInfo(props) {
          sx={{
           margin: 2
         }} 
-         variant="h2">Event Facilitators</Typography>
+         variant="h3">Event Facilitators</Typography>
         <Typography variant="h6">
           We are always looking for volunteers for different events
         </Typography>
@@ -127,7 +127,7 @@ export default function VolunteerInfo(props) {
          sx={{
           margin: 2
         }} 
-         variant="h2">Communications</Typography>
+         variant="h3">Communications</Typography>
         <Typography variant="h6">
           We're looking for a few people who can help us keep up with our social
           media and keep in touch with local non profits and businesses to keep
@@ -143,7 +143,7 @@ export default function VolunteerInfo(props) {
          sx={{
           margin: 2
         }} 
-         variant="h2">Youth Organizer</Typography>
+         variant="h3">Youth Organizer</Typography>
         <Typography variant="h6">
           If you're heavily involved in youth activities and have a heart for
           the youth, this the best volunteer position for you. We are looking
@@ -160,7 +160,7 @@ export default function VolunteerInfo(props) {
         sx={{
           margin: 2
         }} 
-        variant="h2">Mentor Organizer</Typography>
+        variant="h3">Mentor Organizer</Typography>
         <Typography variant="h6">
           This is a position for those interested in keeping in touch with our
           community leaders. You'd make sure we're hearing the voices of our
@@ -173,7 +173,7 @@ export default function VolunteerInfo(props) {
         
 
         <Typography
-          variant="h2"
+          variant="h3"
           sx={{
             mt: 4,
           }}
