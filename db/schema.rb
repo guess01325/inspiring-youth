@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
+ActiveRecord::Schema.define(version: 2023_03_30_154332) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,8 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.string "date"
     t.string "time"
     t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -32,8 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.string "school_district"
     t.string "phone"
     t.integer "how_many"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "tags", default: ["In Person", "online", "yes", "no", "one OnOne", "Creative Foundation", "Video Games and Life Skills", "Facebook", "Instagram", "Word Of Mouth", "Event Invite", "Website"], array: true
   end
 
@@ -42,8 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.string "last_name"
     t.string "email"
     t.string "how_often"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "students", force: :cascade do |t|
@@ -52,8 +53,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.string "contact"
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_students_on_event_id"
     t.index ["user_id"], name: "index_students_on_user_id"
   end
@@ -63,8 +64,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "volunteers", force: :cascade do |t|
@@ -74,8 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_154332) do
     t.string "message"
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_volunteers_on_event_id"
     t.index ["user_id"], name: "index_volunteers_on_user_id"
   end

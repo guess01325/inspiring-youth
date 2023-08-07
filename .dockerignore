@@ -1,0 +1,83 @@
+# flyctl launch added from .gitignore
+# Ignore bundler config
+.bundle
+
+# Ignore node_modules directory
+node_modules
+
+# Ignore yarn.lock file
+yarn.lock
+
+# Ignore generated Rails artifacts
+db/*.sqlite3
+db/*.sqlite3-journal
+log/*
+tmp/*
+
+# Ignore yarn error logs
+**/npm-debug.log*
+
+# Ignore environment variables file (contains sensitive information)
+.env
+
+# Ignore compiled assets for Rails
+public/assets
+
+# Ignore public packs for Webpacker
+public/packs
+
+# Ignore coverage reports
+coverage
+
+# Ignore local development configuration files
+config/application.yml
+config/database.yml
+config/secrets.yml
+config/master.key
+
+# Ignore Mac OS X hidden files
+**/.DS_Store
+
+# Ignore IDE files
+**/*.sublime-project
+**/*.sublime-workspace
+**/*.vscode
+**/*.idea
+**/*.editorconfig
+**/*.yml
+**/*.iml
+
+# Ignore local development server pid file
+tmp/pids/*
+
+
+
+
+
+
+
+# flyctl launch added from client/.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+client/node_modules
+client/.pnp
+client/**/.pnp.js
+
+# testing
+client/coverage
+
+# production
+client/build
+
+# misc
+client/**/.DS_Store
+client/**/.env.local
+client/**/.env.development.local
+client/**/.env.test.local
+client/**/.env.production.local
+
+client/**/npm-debug.log*
+client/**/yarn-debug.log*
+client/**/yarn-error.log*
+fly.toml
