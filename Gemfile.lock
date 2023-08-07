@@ -154,7 +154,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.8.1)
-    spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -189,7 +188,6 @@ DEPENDENCIES
   rails (~> 6.1.7.4)
   rake (= 13.0.6)
   redis (~> 4.0)
-  spring
   tzinfo-data
 
 RUBY VERSION

@@ -2601,3 +2601,178 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "volunteers"[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mentorings"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "inspiring-youth_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "inspiring-youth_test"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_development" ENCODING = 'unicode'[0m
+  [1m[35m (31.1ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_development" ENCODING = 'unicode'[0m
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_test" ENCODING = 'unicode'[0m
+  [1m[35m (80.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "inspiring-youth_development"[0m
+  [1m[35m (14.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "inspiring-youth_test"[0m
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_development" ENCODING = 'unicode'[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "place" character varying, "date" character varying, "time" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentorings" CASCADE[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "mentorings" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "school_district" character varying, "phone" character varying, "how_many" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "tags" text[] DEFAULT '{"In Person",online,yes,no,"one OnOne","Creative Foundation","Video Games and Life Skills",Facebook,Instagram,"Word Of Mouth","Event Invite",Website}')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "registrations" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "registrations" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "how_often" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" character varying, "user_id" bigint NOT NULL, "event_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_students_on_event_id" ON "students" ("event_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_students_on_user_id" ON "students" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "volunteers" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "volunteers" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "message" character varying, "user_id" bigint NOT NULL, "event_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_volunteers_on_event_id" ON "volunteers" ("event_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE INDEX "index_volunteers_on_user_id" ON "volunteers" ("user_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "students" ADD CONSTRAINT "fk_rails_763bd8accb"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "students" ADD CONSTRAINT "fk_rails_148c9e88f4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "volunteers" ADD CONSTRAINT "fk_rails_9839dc3ad8"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "volunteers" ADD CONSTRAINT "fk_rails_a0ce868c0b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230330154332)[0m
+  [1m[35m (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220906061458),
+(20220906062309),
+(20220906062627),
+(20220906062808),
+(20220906064505),
+(20221027092252),
+(20221231000316),
+(20230306214447),
+(20230308203250),
+(20230330153856);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-08-07 07:02:11.286147"], ["updated_at", "2023-08-07 07:02:11.286147"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "e01aef965b6d5d535ddd05d9ae6d1fbb35969afc"], ["created_at", "2023-08-07 07:02:11.293275"], ["updated_at", "2023-08-07 07:02:11.293275"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "place" character varying, "date" character varying, "time" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentorings" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "mentorings" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "school_district" character varying, "phone" character varying, "how_many" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "tags" text[] DEFAULT '{"In Person",online,yes,no,"one OnOne","Creative Foundation","Video Games and Life Skills",Facebook,Instagram,"Word Of Mouth","Event Invite",Website}')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "registrations" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "registrations" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "how_often" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" character varying, "user_id" bigint NOT NULL, "event_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_students_on_event_id" ON "students" ("event_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE INDEX "index_students_on_user_id" ON "students" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "volunteers" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "volunteers" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "message" character varying, "user_id" bigint NOT NULL, "event_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE INDEX "index_volunteers_on_event_id" ON "volunteers" ("event_id")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_volunteers_on_user_id" ON "volunteers" ("user_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "students" ADD CONSTRAINT "fk_rails_763bd8accb"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "students" ADD CONSTRAINT "fk_rails_148c9e88f4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "volunteers" ADD CONSTRAINT "fk_rails_9839dc3ad8"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "volunteers" ADD CONSTRAINT "fk_rails_a0ce868c0b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230330154332)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220906061458),
+(20220906062309),
+(20220906062627),
+(20220906062808),
+(20220906064505),
+(20221027092252),
+(20221231000316),
+(20230306214447),
+(20230308203250),
+(20230330153856);
+
+[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-08-07 07:02:11.415889"], ["updated_at", "2023-08-07 07:02:11.415889"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-08-07 07:02:11.434505"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "e01aef965b6d5d535ddd05d9ae6d1fbb35969afc"], ["created_at", "2023-08-07 07:02:11.444128"], ["updated_at", "2023-08-07 07:02:11.444128"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMentoring Load (0.4ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mVolunteer Load (0.4ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers"[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMentoring Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "mentorings" WHERE "mentorings"."email" = $1 LIMIT $2[0m  [["email", "guess01325@gmail.com"], ["LIMIT", 1]]
+  [1m[36mMentoring Create (0.5ms)[0m  [1m[32mINSERT INTO "mentorings" ("first_name", "last_name", "email", "school_district", "how_many", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Otis"], ["last_name", "Guess"], ["email", "guess01325@gmail.com"], ["school_district", "New London"], ["how_many", 5], ["created_at", "2023-08-07 07:02:11.499691"], ["updated_at", "2023-08-07 07:02:11.499691"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guess01325@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "guess01325"], ["name", "Otis Guess"], ["email", "guess01325@gmail.com"], ["password_digest", "$2a$12$MuZ8OdzdY6xAhZ/rl588hOKPf7MKds7evXF23CVGKUJMXevBFi01u"], ["created_at", "2023-08-07 07:02:11.713358"], ["updated_at", "2023-08-07 07:02:11.713358"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "place", "date", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Robocop"], ["place", "library"], ["date", "10/81/1986"], ["time", "5:00pm"], ["user_id", 1], ["created_at", "2023-08-07 07:02:11.732777"], ["updated_at", "2023-08-07 07:02:11.732777"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVolunteer Create (0.6ms)[0m  [1m[32mINSERT INTO "volunteers" ("first_name", "last_name", "email", "message", "user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Otis"], ["last_name", "guess"], ["email", "guess01325@yahoo.com"], ["message", "Looking to volunteer sometimes"], ["user_id", 1], ["event_id", 1], ["created_at", "2023-08-07 07:02:11.748229"], ["updated_at", "2023-08-07 07:02:11.748229"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "address", "contact", "user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Otis Guess"], ["address", "195 Garfield ave"], ["contact", "860-303-0187"], ["user_id", 1], ["event_id", 1], ["created_at", "2023-08-07 07:02:11.758503"], ["updated_at", "2023-08-07 07:02:11.758503"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegistration Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "registrations" WHERE "registrations"."email" = $1 LIMIT $2[0m  [["email", "guess01325@gmail.com"], ["LIMIT", 1]]
+  [1m[36mRegistration Create (0.4ms)[0m  [1m[32mINSERT INTO "registrations" ("first_name", "last_name", "email", "how_often", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Otis"], ["last_name", "Guess"], ["email", "guess01325@gmail.com"], ["how_often", "sometimes"], ["created_at", "2023-08-07 07:02:11.771235"], ["updated_at", "2023-08-07 07:02:11.771235"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "registrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "volunteers"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mentorings"[0m
