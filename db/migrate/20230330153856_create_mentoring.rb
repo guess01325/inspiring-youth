@@ -1,4 +1,4 @@
-class CreateMentoring < ActiveRecord::Migration[7.0]
+class CreateMentoring < ActiveRecord::Migration[6.1]
   def change
     create_table :mentorings do |t|
       t.string :first_name

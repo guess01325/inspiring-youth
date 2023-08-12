@@ -1,4 +1,4 @@
-class CreateRegistrations < ActiveRecord::Migration[7.0]
+class CreateRegistrations < ActiveRecord::Migration[6.1]
   def change
     create_table :registrations do |t|
       t.string :first_name

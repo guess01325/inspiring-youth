@@ -1,4 +1,4 @@
-class ChangeNameColumnsOfVolunteer < ActiveRecord::Migration[7.0]
+class ChangeNameColumnsOfVolunteer < ActiveRecord::Migration[6.1]
   def change
     change_table(:volunteers) do |t|
       t.rename(:First_Name, :first_name)

@@ -1,4 +1,4 @@
-class RemovereferncesFromVolunteer < ActiveRecord::Migration[7.0]
+class RemovereferncesFromVolunteer < ActiveRecord::Migration[6.1]
   def change
   
   end

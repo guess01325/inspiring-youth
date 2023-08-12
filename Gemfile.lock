@@ -70,6 +70,8 @@ GEM
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
+    dockerfile-rails (1.5.2)
+      rails
     erubi (1.12.0)
     faker (3.2.0)
       i18n (>= 1.8.11, < 2)
@@ -154,6 +156,12 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.8.1)
+    sentry-rails (5.10.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.10.0)
+    sentry-ruby (5.10.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+    spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -178,6 +186,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.19)
   bootsnap (>= 1.16.0)
   byebug
+  dockerfile-rails (>= 1.5)
   faker
   jwt (~> 2.0)
   listen (~> 3.3)
@@ -188,6 +197,9 @@ DEPENDENCIES
   rails (~> 6.1.7.4)
   rake (= 13.0.6)
   redis (~> 4.0)
+  sentry-rails (~> 5.10)
+  sentry-ruby (~> 5.10)
+  spring
   tzinfo-data
 
 RUBY VERSION

@@ -34,18 +34,11 @@ import "../node_modules/video-react/dist/video-react.css";
 
 import {
   loginUser,
-  registerUser,
   verifyUser,
   removeToken,
 } from "./services/auth";
 
 import {
-  Box,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
-  Typography,
   Container,
   ThemeProvider,
   createTheme,
