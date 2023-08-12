@@ -3399,3 +3399,44 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 38ms (Views: 10.8ms | ActiveRecord: 6.1ms | Allocations: 11371)
 
 
+Shutting down background worker
+Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Shutting down background worker
+Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Shutting down background worker
+Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Shutting down background worker
+Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started POST "/auth/login" for ::1 at 2023-08-12 14:56:11 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 423ms (Views: 0.5ms | ActiveRecord: 6.5ms | Allocations: 10752)
+
+
+Started GET "/events" for ::1 at 2023-08-12 14:56:11 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 4.8ms | Allocations: 6510)
+
+
+Started GET "/events" for ::1 at 2023-08-12 14:56:17 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 870)
+
+
+Shutting down background worker
+Killing session flusher
