@@ -3456,3 +3456,25 @@ Initializing the background worker with 8 threads
 [Sessions] Sessions won't be captured without a valid release
 Shutting down background worker
 Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started POST "/auth/login" for ::1 at 2023-08-13 13:29:03 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 233ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 10760)
+
+
+Started GET "/events" for ::1 at 2023-08-13 13:29:03 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 2.3ms | Allocations: 6508)
+
+
+Shutting down background worker
+Killing session flusher
