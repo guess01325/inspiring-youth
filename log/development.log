@@ -3440,3 +3440,11 @@ Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 870)
 
 Shutting down background worker
 Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Shutting down background worker
+Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Shutting down background worker
+Killing session flusher
