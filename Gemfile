@@ -7,6 +7,7 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7.4'
 
+gem 'webpacker', '~> 5.0'
 
 
 # Use postgresql as the database for Active Record
