@@ -3651,3 +3651,7 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "mentorings"[0m
 Shutting down background worker
 Killing session flusher
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Shutting down background worker
+Killing session flusher
