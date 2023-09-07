@@ -21,7 +21,10 @@ Bundler.require(*Rails.groups)
 module AppName
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.initialize_on_precompile = false
     config.load_defaults 6.1
+
+
     
 
 
