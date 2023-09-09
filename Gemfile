@@ -43,7 +43,7 @@ gem "rack-cors"
 
 gem 'faker'
 
- 'webpacker'
+ 
 
 
 
