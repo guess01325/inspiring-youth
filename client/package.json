@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
-    "babel-loader": "^7.1.5"
+    "babel-loader": "^7.1.5",
+    "netlify-cli": "^17.0.0"
   }
 }
