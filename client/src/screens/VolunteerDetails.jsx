@@ -1,35 +1,17 @@
-import { useState, useEffect } from "react";
+
 import {
-  useNavigate,
   useParams,
-  Routes,
-  Route,
   Link,
-  useLocation,
   useOutletContext,
 } from "react-router-dom";
 
 import {
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
-  Typography,
-  Container,
-  CssBaseline,
   Box,
-  FormControlLabel,
-  Checkbox,
-  TextField,
-  FormControl,
 } from "@mui/material";
 
 export default function Volunteers(props) {
-  const location = useLocation;
   const [
     volunteers,
-    handleUpdateVolunteer,
-    handleCreateVolunteer,
     handleDeleteVolunteer,
   ] = useOutletContext();
   const params = useParams();

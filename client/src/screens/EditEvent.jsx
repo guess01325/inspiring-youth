@@ -1,6 +1,9 @@
-import { Link, useParams, useNavigate, useOutletContext } from "react-router-dom";
+import {  useParams, useNavigate, useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { putEvent } from "../services/event";
+import {
+  Box,
+} from "@mui/material";
+
 
 export default function EditEvent(props) {
   const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext()
@@ -49,14 +52,17 @@ export default function EditEvent(props) {
   };
 
   return (
-    <div>
+    <Box
+    sx={{
+      m: 10
+    }}>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
           <input
             type="text"
             name="name"
-            placeHolder="name"
+            placeholder="name"
             value={formData.name}
             onChange={handleChange}
           />
@@ -66,7 +72,7 @@ export default function EditEvent(props) {
           <input
             type="text"
             name="place"
-            placeHolder="place"
+            placeholder="place"
             value={formData.place}
             onChange={handleChange}
           />
@@ -93,6 +99,6 @@ export default function EditEvent(props) {
         </label>
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </Box>
   );
 }

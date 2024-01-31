@@ -1,16 +1,9 @@
 import {
-  Link,
-  Box,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
   Typography,
   Container,
   ThemeProvider,
   createTheme,
   CssBaseline,
-  Grid,
 } from "@mui/material";
 
 export default function WishList(props) {

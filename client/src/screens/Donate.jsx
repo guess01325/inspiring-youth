@@ -1,21 +1,13 @@
 // import { Link } from "react-rout er-dom";
 import {
   Link,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
   Typography,
   Container,
   CssBaseline,
   Box,
-  FormControlLabel,
-  Checkbox,
-  TextField,
-  FormControl,
 } from "@mui/material";
 
-import "../assets/Donations.css";
+import "../css/Donations.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export default function Donate(props) {

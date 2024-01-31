@@ -1,20 +1,15 @@
 import {
-  Route,
-  Routes,
   useParams,
   useNavigate,
-  Outlet,
-  Link,
+  Outlet
 } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 
 import {
   getAllEvents,
-  getOneEvent,
   postEvent,
   putEvent,
-  getUserEvent,
   deleteEvent,
 } from "../services/event.js";
 

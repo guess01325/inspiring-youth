@@ -2,21 +2,21 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import SignIn from "./screens/SignIn";
 import "./App.css";
-import Layout from "./layouts/Layout";
+import Layout from "./layout/Layout";
 import MainContainer from "./containers/MainContainer";
 import EventDetails from "./screens/EventDetails";
 import EditEvent from "./screens/EditEvent";
 import CreateEvent from "./screens/CreateEvent";
 import EventDisplay from "./screens/EventDisplay";
 import VolunteerContainer from "./containers/VolunteerContainer";
-import MentoringsContainer from "./containers/MentoringsContainer";
+import MentoringContainer from "./containers/MentoringContainer";
 import VolunteerDetails from "./screens/VolunteerDetails";
 import EditVolunteer from "./screens/EditVolunteer";
 import CreateVolunteer from "./screens/CreateVolunteer";
 import StudentContainer from "./containers/StudentContainer";
 import Student from "./screens/Students";
-import StudentEdit from "./screens/StudentEdit";
-import StudentCreate from "./screens/StudentCreate";
+import EditStudent from "./screens/EditStudent";
+import CreateStudent from "./screens/CreateStudent";
 import RegistrationContainer from "./containers/RegistrationContainer";
 import Registrations from "./screens/Registrations";
 import CreateRegistration from "./screens/CreateRegistration";
@@ -27,7 +27,7 @@ import Home from "./screens/Home";
 import VolunteerInfo from "./screens/VolunteerInfo";
 import Sponsor from "./screens/Sponsor";
 import LevelUp from "./screens/LevelUp";
-import CreateMentorings from "./screens/CreateMentoring";
+import CreateMentoring from "./screens/CreateMentoring";
 import MentorInfo from "./screens/MentorInfo";
 import Email from "./screens/Email"
 import "../node_modules/video-react/dist/video-react.css";
@@ -86,7 +86,9 @@ function App() {
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
 
-        <Container maxWidth="lg">
+        <Container  sx={{
+maxWidth: "lg"
+        }}>
           <Layout
             currentUser={currentUser}
             setEvent={setEvent}
@@ -124,8 +126,8 @@ function App() {
                   element={<StudentContainer />}
                 >
                   <Route path="all" element={<Student />} />
-                  <Route path=":id/update" element={<StudentEdit />} />
-                  <Route path=":id/create" element={<StudentCreate />} />
+                  <Route path=":id/update" element={<EditStudent />} />
+                  <Route path=":id/create" element={<CreateStudent />} />
                 </Route>
               </Route>
 
@@ -137,8 +139,8 @@ function App() {
                 <Route path="create" element={<CreateRegistration />} />
               </Route>
 
-              <Route path="/mentorings" element={<MentoringsContainer />}>
-                <Route path="create" element={<CreateMentorings />} />
+              <Route path="/mentorings" element={<MentoringContainer />}>
+                <Route path="create" element={<CreateMentoring />} />
                 <Route path="all" element={<MentorInfo />} />
               </Route>
 

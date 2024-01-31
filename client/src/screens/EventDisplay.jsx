@@ -1,21 +1,12 @@
 import { Outlet, useOutletContext,Link } from "react-router-dom";
-import "../assets/Events.css"
+import "../css/Events.css"
 
 import {
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
-  Typography,
   Container,
   CssBaseline,
   createTheme,
   ThemeProvider,
-  Box,
-  FormControlLabel,
-  Checkbox,
-  TextField,
-  FormControl,
+  Box
 } from "@mui/material";
 
 

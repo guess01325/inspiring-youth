@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import {
   useNavigate,
   useParams,
-  Routes,
-  Route,
+ 
   Outlet,
   useOutletContext
 } from "react-router-dom";
@@ -14,7 +13,6 @@ import {
 import {
   deleteVolunteer,
   getAllVolunteers,
-  getOneVolunteer,
   postVolunteer,
   putVolunteer,
 } from "../services/volunteers";

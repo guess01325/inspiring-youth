@@ -1,19 +1,15 @@
-import { useState, useEffect } from "react";
-import "../assets/CMentor.css";
+import { useState } from "react";
+import "../css/CMentor.css";
 import ReactDOM from "react-dom";
 
 import {
-  Link,
   useParams,
   useNavigate,
   useOutletContext,
 } from "react-router-dom";
 
 import {
-  Toolbar,
   Button,
-  IconButton,
-  SearchIcon,
   Typography,
   Container,
   CssBaseline,
@@ -21,7 +17,6 @@ import {
   FormControlLabel,
   Checkbox,
   TextField,
-  FormControl,
 } from "@mui/material";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -36,11 +31,8 @@ export default function Mentorings(props) {
   const history = useNavigate();
 
   const [
-    isLoaded,
     tagData,
-    mentorInfo,
     handleCreateMentorings,
-    handleDeleteMentorings,
   ] = useOutletContext();
 
   const data = tagData || [];

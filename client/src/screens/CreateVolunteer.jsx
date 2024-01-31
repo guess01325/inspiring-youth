@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
-  Link,
-  useParams,
-  useNavigate,
   useOutletContext,
 } from "react-router-dom";
+
+import {
+  Box
+} from "@mui/material";
 
 export default function CreateVolunteer(props) {
 
@@ -33,10 +34,16 @@ export default function CreateVolunteer(props) {
     }
   
     return (
-      <div className="add-pg">
+      <Box className="add-pg"
+      sx={{
+        m: 10
+      }}>
+
+
+
         <form
           onSubmit={handleSubmit}
-        >
+          >
           {/* <h1 id="add-gift-hOne">Add Gift</h1> */}
           <div className="add-form">
             <label>
@@ -46,7 +53,7 @@ export default function CreateVolunteer(props) {
                 placeholder="name"
                 value={formData.first_name}
                 onChange={handleChange}
-              />
+                />
             </label>
             <br />
             <label>
@@ -56,7 +63,7 @@ export default function CreateVolunteer(props) {
                 placeholder="last_name"
                 value={formData.last_name}
                 onChange={handleChange}
-              />
+                />
             </label>
             <br />
             <label>
@@ -66,7 +73,7 @@ export default function CreateVolunteer(props) {
                 placeholder="email"
                 value={formData.email}
                 onChange={handleChange}
-              />
+                />
             </label>
             <br />
             <label>
@@ -76,13 +83,14 @@ export default function CreateVolunteer(props) {
                 placeholder="message"
                 value={formData.message}
                 onChange={handleChange}
-              />
+                />
             </label>
             <br />
             <button>Submit</button>
           </div>
         </form>
-      </div>
+      
+                </Box>
     );
   }
   

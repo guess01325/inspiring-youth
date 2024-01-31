@@ -1,20 +1,11 @@
-import { useState, useEffect } from "react";
-import "../assets/Footer.css";
+import { useState } from "react";
+import "../css/Footer.css";
 
 import {
   Link,
   Box,
   BottomNavigation,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
   Typography,
-  Container,
-  ThemeProvider,
-  createTheme,
-  CssBaseline,
-  Grid,
 } from "@mui/material";
 
 export default function Footer(props) {
@@ -35,7 +26,6 @@ export default function Footer(props) {
         justifyContent: "space-between",
       }}
     >
-      -
       <Box
         sx={{
           mb: 2,
@@ -48,25 +38,27 @@ export default function Footer(props) {
         <Link
           sx={{
             margin: 4,
-            
           }}
           className="call"
         >
           <Box
             sx={{
               display: "flex",
-              flexDirection: "column",  
+              flexDirection: "column",
               margin: 2,
-            
             }}
           >
             <Typography
-            sx={{
-              bottom: "40px",
-              textDecoration: "underline",
-              fontSize: 30,
-              backgroundColor: "#fff",
-            }} variant="h4">Call us</Typography>
+              sx={{
+                bottom: "40px",
+                textDecoration: "underline",
+                fontSize: 30,
+                backgroundColor: "#fff",
+              }}
+              variant="h4"
+            >
+              Call us
+            </Typography>
             {displayNumber && <span>Tel: 123-450-855</span>}
           </Box>
         </Link>

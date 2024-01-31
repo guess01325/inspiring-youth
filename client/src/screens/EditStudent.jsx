@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import {
-  Link,
   useParams,
   useNavigate,
   useOutletContext,
 } from "react-router-dom";
+
+import {
+  Box,
+} from "@mui/material";
 
 export default function StudentEdit(props) {
   const params = useParams();
@@ -13,8 +16,6 @@ export default function StudentEdit(props) {
   const [
     students,
     handleUpdateStudent,
-    handleCreateStudent,
-    handleDeleteStudent,
   ] = useOutletContext();
 
   const [formData, setFormData] = useState({
@@ -52,6 +53,11 @@ if (students.length){
   }
 
   return (
+    <Box
+    sx={{
+      m: 10
+    }}>
+
  <form onSubmit = {handleSubmit} >
   <label>
     <input
@@ -77,5 +83,6 @@ if (students.length){
   <button type="submit">Submit</button>
 
  </form>
+    </Box>
   );
 }

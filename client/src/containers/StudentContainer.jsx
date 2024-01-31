@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, Routes, Route, Outlet, useOutletContext } from "react-router-dom";
-import Student from "../screens/Students"
-import StudentEdit from "../screens/StudentEdit"
-import StudentCreate from "../screens/StudentCreate"
+import { useNavigate, useParams, Outlet, useOutletContext } from "react-router-dom";
+
 import {
   getAllStudents,
-  getOneStudent,
   postStudent,
   putStudent,
   deleteStudent

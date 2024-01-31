@@ -5,25 +5,17 @@ import {
   Link,
   Card,
   CardMedia,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
   Typography,
   Container,
   CssBaseline,
   Box,
   ThemeProvider,
   createTheme,
-  FormControlLabel,
-  Checkbox,
-  TextField,
-  FormControl,
 } from "@mui/material";
 
 import Image from "mui-image";
 
-import "../assets/LevelUp.css";
+import "../css/LevelUp.css";
 
 export default function LevelUp(props) {
   const theme = createTheme();

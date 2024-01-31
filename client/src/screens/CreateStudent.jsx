@@ -1,18 +1,16 @@
 import { useState, useEffect } from "react";
 
 import {
-  Link,
-  useParams,
-  useNavigate,
   useOutletContext,
 } from "react-router-dom";
 
+import {
+  Box,
+} from "@mui/material";
+
 export default function StudentCreate(props) {
   const [
-    students,
-    handleUpdateStudent,
     handleCreateStudent,
-    handleDeleteStudent,
   ] = useOutletContext();
 
   const [formData, setFormData] = useState({
@@ -35,6 +33,11 @@ export default function StudentCreate(props) {
   };
 
   return (
+
+    <Box
+    sx={{
+      m: 10
+    }}>
     <form onSubmit={handleSubmit}>
       <label>
         <input
@@ -66,5 +69,6 @@ export default function StudentCreate(props) {
       </label>
       <button>Submit</button>
     </form>
+    </Box>
   );
 }

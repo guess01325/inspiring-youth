@@ -1,10 +1,12 @@
   import { useState, useEffect } from "react";
 import {
-  Link,
   useParams,
   useNavigate,
   useOutletContext,
 } from "react-router-dom";
+import {
+  Box,
+} from "@mui/material";
 
 export default function EditVolunteer(props) {
   const params = useParams();
@@ -51,6 +53,10 @@ export default function EditVolunteer(props) {
   };
 
   return (
+    <Box sx={{
+      m: 10
+    }}>
+
     <form onSubmit={ handleSubmit  }>
       <label>
         <input
@@ -58,7 +64,7 @@ export default function EditVolunteer(props) {
           name="first_name"
           value={formData.first_name}
           onChange={handleChange}
-        />
+          />
       </label>
  
       <label>
@@ -67,7 +73,7 @@ export default function EditVolunteer(props) {
           name="last_name"
           value={formData.last_name}
           onChange={handleChange}
-        />
+          />
       </label>
    
       <label>
@@ -76,7 +82,7 @@ export default function EditVolunteer(props) {
           name="email"
           value={formData.email}
           onChange={handleChange}
-        />
+          />
       </label>
   
       <label>
@@ -85,10 +91,11 @@ export default function EditVolunteer(props) {
           name="message"
           value={formData.message}
           onChange={handleChange}
-        />
+          />
       </label>
     
       <button type="submit">Submit</button>
     </form>
+          </Box>
   );
 }

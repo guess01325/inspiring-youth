@@ -1,22 +1,9 @@
-import React from "react"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import "../assets/Layout.css"
+  import React from "react"
+import Footer from "./Footer"
+import Header from "./Header"
+import "../css/Layout.css"
 
 
-import {
-    Box,
-    Toolbar,
-    Button,
-    IconButton,
-    SearchIcon,
-    Typography,
-    Container,
-    ThemeProvider,
-    createTheme,
-    CssBaseline,
-    Grid,
-  } from "@mui/material";
   
 
 export default function Layout(props) {

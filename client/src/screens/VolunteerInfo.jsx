@@ -1,20 +1,14 @@
 import {
   Box,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
   Typography,
   Container,
   ThemeProvider,
   createTheme,
   CssBaseline,
-  Grid,
 } from "@mui/material";
 
-import { StyledEngineProvider } from "@mui/material/styles";
 
-import "../assets/VolunteerInfo.css";
+import "../css/VolunteerInfo.css";
 
 export default function VolunteerInfo(props) {
   const theme = createTheme();

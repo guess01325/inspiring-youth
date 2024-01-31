@@ -1,21 +1,13 @@
-import { useState, useEffect } from "react";
+
 import {
-  useNavigate,
-  useParams,
-  Routes,
-  Route,
   useOutletContext,
 } from "react-router-dom";
 
 import {
   Box,
-  Toolbar,
-  Button,
-  IconButton,
-  SearchIcon,
-  Typography, 
   Container,
-  CssBaseline
+  CssBaseline,
+  Button
 
 } from "@mui/material";
 
@@ -24,7 +16,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 const defaultTheme = createTheme(); 
 
 export default function Registration(props) {
-  const [reg, handleCreateReg, handleDeleteRegistration] = useOutletContext();
+  const [reg, handleDeleteRegistration] = useOutletContext();
 
 
   return (

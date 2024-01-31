@@ -1,24 +1,19 @@
 // import { Link } from "react-router-dom";
 import { Player } from "video-react";
-import "../assets/Home.css";
+import "../css/Home.css";
 
 import {
   Box,
   Card,
   Link,
-  Toolbar,
-  cardMedia,
-  Button,
-  IconButton,
-  SearchIcon,
   Typography,
   Container,
   ThemeProvider,
   createTheme,
   CssBaseline,
-  Grid,
   CardMedia,
 } from "@mui/material";
+
 export default function Home(props) {
   const defaultTheme = createTheme();
 

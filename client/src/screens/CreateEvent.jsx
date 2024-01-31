@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import {
+  Box,
+} from "@mui/material";
+
 
 export default function CreateEvent(props) {
-  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext()
+  const [ handleCreateEvent ] = useOutletContext()
   const [formData, setFormData] = useState({
     name: "",
     place: "",
@@ -19,7 +23,9 @@ export default function CreateEvent(props) {
   };
 
   return (
-    <div className="add-pg">
+    <Box sx={{
+      m: 10
+      }} className="add-pg">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -71,6 +77,6 @@ export default function CreateEvent(props) {
           <button>Submit</button>
         </div>
       </form>
-    </div>
+    </Box>
   );
 }
