@@ -28,6 +28,7 @@ export default function Students(props) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        m: 8
       }}
     >
       {students.length ? (

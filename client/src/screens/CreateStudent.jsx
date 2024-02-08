@@ -9,8 +9,7 @@ import {
 } from "@mui/material";
 
 export default function StudentCreate(props) {
-  const [
-    handleCreateStudent,
+  const [ students,handleUpdateStudent,handleCreateStudent,handleDeleteStudent
   ] = useOutletContext();
 
   const [formData, setFormData] = useState({
@@ -28,8 +27,8 @@ export default function StudentCreate(props) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    handleCreateStudent(formData);
+    e.preventDefault()
+    handleCreateStudent(formData)
   };
 
   return (

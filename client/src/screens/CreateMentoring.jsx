@@ -81,9 +81,10 @@ export default function Mentorings(props) {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="sm"
+      <Container component="main"
     sx={{
-      width: "750px"
+      width: "750px",
+      maxWidth: "sm"
     }}>
         <CssBaseline />
         <Box

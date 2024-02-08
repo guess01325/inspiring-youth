@@ -9,7 +9,7 @@ import {
 } from "../services/students";
 
 export default function StudentContainer(props) {
-  const [events, setEvents, handleDeleteEvent, handleUpdateEvent, handleCreateEvent ] = useOutletContext();
+  const [events] = useOutletContext();
   const [students, setStudents] = useState([]);
   const [event, setEvent] = useState([]);
   const history = useNavigate()
@@ -34,7 +34,7 @@ export default function StudentContainer(props) {
   }, [event]);
 
   const handleCreateStudent = async (formData) => {
-    const student = await postStudent(event.id, formData);
+    const student = await postStudent(eventId, formData);
     setStudents((prevState) => [...prevState, student]);
     history(`all`);
   };

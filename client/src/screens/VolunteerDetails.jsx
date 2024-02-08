@@ -26,7 +26,8 @@ export default function Volunteers(props) {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
+      m: 8
     
     }}
     >

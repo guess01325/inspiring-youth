@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import {
-  Box,
-} from "@mui/material";
-
+import { Box } from "@mui/material";
 
 export default function CreateEvent(props) {
-  const [ handleCreateEvent ] = useOutletContext()
+  const [handleCreateEvent] = useOutletContext();
   const [formData, setFormData] = useState({
     name: "",
     place: "",
@@ -23,16 +20,18 @@ export default function CreateEvent(props) {
   };
 
   return (
-    <Box sx={{
-      m: 10
-      }} className="add-pg">
+    <Box
+      sx={{
+        m: 10,
+      }}
+      className="add-pg"
+    >
       <form
         onSubmit={(e) => {
           e.preventDefault();
           handleCreateEvent(formData);
         }}
       >
-        {/* <h1 id="add-gift-hOne">Add Gift</h1> */}
         <div className="add-form">
           <label>
             <input

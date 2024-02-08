@@ -17,13 +17,10 @@ import {
 export default function Home(props) {
   const defaultTheme = createTheme();
 
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="md">
         <CssBaseline />
-
-        {/* Title */}
 
         <Typography
           variant="h1"
@@ -34,7 +31,6 @@ export default function Home(props) {
           Inspiring Youth & Mentors
         </Typography>
 
-        {/* Section 2 */}
         <Box
           sx={{
             margin: 2,
@@ -63,7 +59,7 @@ export default function Home(props) {
                 margin: "0 auto",
                 padding: "0.1em",
                 border: "none",
-                boxShadow: "none"
+                boxShadow: "none",
               }}
             >
               <CardMedia
@@ -93,7 +89,7 @@ export default function Home(props) {
                 margin: "0 auto",
                 padding: "0.1em",
                 border: "none",
-                boxShadow: "none"
+                boxShadow: "none",
               }}
             >
               <CardMedia
@@ -126,8 +122,8 @@ export default function Home(props) {
                 margin: "0 auto",
                 padding: "0.1em",
                 border: "none",
-                boxShadow: "none"
-}}
+                boxShadow: "none",
+              }}
             >
               <CardMedia
                 component="img"
@@ -152,16 +148,17 @@ export default function Home(props) {
           </Box>
 
           <Box
-          sx={{
-            mb: 4
-          }}>
+            sx={{
+              mb: 4,
+            }}
+          >
             <Card
               sx={{
                 maxWidth: 350,
                 margin: "0 auto",
                 padding: "0.1em",
                 border: "none",
-                boxShadow: "none"
+                boxShadow: "none",
               }}
             >
               <CardMedia
@@ -194,9 +191,6 @@ export default function Home(props) {
           </Box>
         </Box>
 
-        {/* Video */}
-
-        {/* Secton 3 */}
         <Box
           sx={{
             margin: 1,
@@ -214,77 +208,72 @@ export default function Home(props) {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
-              width: "1000px"
+              width: "1000px",
             }}
           >
             <Card
-            
-            sx={{
-              width: "33.3%",
-              border: "none", 
-              boxShadow: "none"
-            }}
-            >
-
-            <CardMedia
-              component="img"
-              image={
-                "https://res.cloudinary.com/otisg/image/upload/c_scale,h_133,w_260/v1679057135/prevent-partner_jlwurc.webp"
-              }
-              alt={"alt"}
-              title={"podcast"}
               sx={{
-                height: "364px",
-                padding: "1em 1em 0 1em",
-                objectFit: "contain",
+                width: "33.3%",
+                border: "none",
+                boxShadow: "none",
               }}
+            >
+              <CardMedia
+                component="img"
+                image={
+                  "https://res.cloudinary.com/otisg/image/upload/c_scale,h_133,w_260/v1679057135/prevent-partner_jlwurc.webp"
+                }
+                alt={"alt"}
+                title={"podcast"}
+                sx={{
+                  height: "364px",
+                  padding: "1em 1em 0 1em",
+                  objectFit: "contain",
+                }}
               />
-              </Card>
-            <Card
-             sx={{
-              width: "33.3%",
-              border: "none", 
-              boxShadow: "none"
-            }}
-            >
-
-
-            <CardMedia
-              component="img"
-              image={
-                "https://res.cloudinary.com/otisg/image/upload/v1679057145/culture-coalition_fkpkaq.webp"
-              }
-              alt={"alt"}
-              title={"podcast"}
-              sx={{
-                height: "364px",
-                padding: "1em 1em 0 1em",
-                objectFit: "contain",
-              }}
-            />
             </Card>
-<Card
- sx={{
-  width: "33.3%",
-  border: "none",
-   boxShadow: "none"
-}}
->
-
-            <CardMedia
-              component="img"
-              image={
-                "https://res.cloudinary.com/otisg/image/upload/v1679236048/IYAM/community-level-up_f1fymm.webp"
-              }
-              alt={"alt"}
-              title={"podcast"}
+            <Card
               sx={{
-                height: "364px",
-                padding: "1em 1em 0 1em",
-                objectFit: "contain",
+                width: "33.3%",
+                border: "none",
+                boxShadow: "none",
               }}
-            />
-</Card>
+            >
+              <CardMedia
+                component="img"
+                image={
+                  "https://res.cloudinary.com/otisg/image/upload/v1679057145/culture-coalition_fkpkaq.webp"
+                }
+                alt={"alt"}
+                title={"podcast"}
+                sx={{
+                  height: "364px",
+                  padding: "1em 1em 0 1em",
+                  objectFit: "contain",
+                }}
+              />
+            </Card>
+            <Card
+              sx={{
+                width: "33.3%",
+                border: "none",
+                boxShadow: "none",
+              }}
+            >
+              <CardMedia
+                component="img"
+                image={
+                  "https://res.cloudinary.com/otisg/image/upload/v1679236048/IYAM/community-level-up_f1fymm.webp"
+                }
+                alt={"alt"}
+                title={"podcast"}
+                sx={{
+                  height: "364px",
+                  padding: "1em 1em 0 1em",
+                  objectFit: "contain",
+                }}
+              />
+            </Card>
           </Box>
         </Box>
       </Container>

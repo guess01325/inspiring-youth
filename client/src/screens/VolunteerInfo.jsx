@@ -48,7 +48,7 @@ export default function VolunteerInfo(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="sm">
+      <Container component="main" sx={{maxWidth: "sm"}}>
         <CssBaseline />
 
         <Typography
@@ -64,7 +64,7 @@ export default function VolunteerInfo(props) {
         <Box>
           <Typography
            sx={{
-            margin: 2
+            m: 4
           }} 
            variant="h3">Volunteer Organizer</Typography>
           <Typography

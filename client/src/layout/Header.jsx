@@ -1,11 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import {
-  AppBar,
-  Link,
-  Toolbar,
-
-} from "@mui/material";
+import { AppBar, Link, Toolbar } from "@mui/material";
 
 function Header(props) {
   const { currentUser, handleLogout, event, setEvent } = props;
@@ -24,7 +19,7 @@ function Header(props) {
               justifyContent: "space-between",
               overflowX: "auto",
               color: "gray",
-              m: "2"
+              m: "2",
             }}
           >
             <p>{props.currentUser.username}</p>
@@ -39,7 +34,7 @@ function Header(props) {
               {" "}
               Events
             </Link>
-            {/* <Link to="registrations/all">Registrations</Link> */}
+
             <Link
               sx={{
                 fontSize: "30px",
@@ -101,8 +96,6 @@ function Header(props) {
             >
               Donate
             </Link>
-
-            {/* </Box> */}
           </Toolbar>
 
           <Toolbar
