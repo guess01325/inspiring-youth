@@ -12,7 +12,10 @@ export default function EventDetails(props) {
 
   const [
     events,
+    setEvents,
     handleDeleteEvent,
+    handleUpdateEvent,
+    handleCreateEvent,
   ] = useOutletContext();
 
 
