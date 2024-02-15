@@ -3,7 +3,11 @@ import { useOutletContext } from "react-router-dom";
 import { Box } from "@mui/material";
 
 export default function CreateEvent(props) {
-  const [handleCreateEvent] = useOutletContext();
+  const [  events,
+    setEvents,
+    handleDeleteEvent,
+    handleUpdateEvent,
+    handleCreateEvent] = useOutletContext();
   const [formData, setFormData] = useState({
     name: "",
     place: "",
