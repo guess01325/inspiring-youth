@@ -12,6 +12,8 @@ import {
 export default function Volunteers(props) {
   const [
     volunteers,
+    handleUpdateVolunteer,
+    handleCreateVolunteer,
     handleDeleteVolunteer,
   ] = useOutletContext();
   const params = useParams();
