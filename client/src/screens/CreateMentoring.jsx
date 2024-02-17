@@ -31,8 +31,7 @@ export default function Mentorings(props) {
   const history = useNavigate();
 
   const [
-    tagData,
-    handleCreateMentorings,
+    isLoaded,tagData,mentorInfo,handleCreateMentorings, handleDeleteMentorings
   ] = useOutletContext();
 
   const data = tagData || [];

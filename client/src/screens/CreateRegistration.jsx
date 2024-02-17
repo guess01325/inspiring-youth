@@ -19,7 +19,7 @@ const defaultTheme = createTheme();
 
 
 export default function CreateRegistration(props) {
-  const [reg, handleCreateReg] = useOutletContext();
+  const [reg, handleCreateReg, handleDeleteRegistration] = useOutletContext();
   const history = useNavigate();
   const [formData, setFormData] = useState({
     first_name: "",

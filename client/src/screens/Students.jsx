@@ -14,8 +14,7 @@ export default function Students(props) {
   const params = useParams();
   const location = useLocation;
   const [
-    students,
-    handleDeleteStudent,
+    students,handleUpdateStudent,handleCreateStudent,handleDeleteStudent
   ] = useOutletContext();
   const { eventId } = params;
   const { id } = params;

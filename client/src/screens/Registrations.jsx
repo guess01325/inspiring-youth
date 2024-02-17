@@ -16,7 +16,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 const defaultTheme = createTheme(); 
 
 export default function Registration(props) {
-  const [reg, handleDeleteRegistration] = useOutletContext();
+  const [reg, handleCreateReg, handleDeleteRegistration] = useOutletContext();
 
 
   return (
