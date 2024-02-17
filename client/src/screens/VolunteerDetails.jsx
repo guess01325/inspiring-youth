@@ -25,11 +25,11 @@ export default function Volunteers(props) {
 
     <Box
     sx={{
-      display: "flex",
+display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      m: 8
+      m: 14
     
     }}
     >

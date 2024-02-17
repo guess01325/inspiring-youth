@@ -1,4 +1,4 @@
-import { Link, useOutletContext } from "react-router-dom";
+import { useParams, Link, useOutletContext } from "react-router-dom";
 import {
   createTheme,
   Container,
@@ -17,6 +17,8 @@ export default function EventDetails(props) {
     handleUpdateEvent,
     handleCreateEvent,
   ] = useOutletContext();
+  const params = useParams();
+  const {id} = params;
 
 
   return (
@@ -33,17 +35,22 @@ export default function EventDetails(props) {
             justifyContent: "center",
           }}
         >
+
+
+                     {events.length ? (
+<div>
+
           {events.map((event) => (
             <Box  key={event.id}
-              sx={{
-                margin: 1,
-                width: "200px",
-                alignItems: "center",
-                justifyContent: "center",
-                border: 3,
-                borderRadius: 6,
-                fontSize: "20px",
-              }}
+            sx={{
+              margin: 1,
+              width: "200px",
+              alignItems: "center",
+              justifyContent: "center",
+              border: 3,
+              borderRadius: 6,
+              fontSize: "20px",
+            }}
             >
               <div className="event-display">
                 <p> {event.name}</p>
@@ -62,8 +69,17 @@ export default function EventDetails(props) {
                 </button>
               </div>
             </Box>
-          ))}
+ ))}
+                   
+ </div>
+ 
+ ):(   
+<div>
+       <Link to={`/events/${id}/create`}>Create</Link>
+ </div>
+                     )}
         </Box>
+
       </Container>
     </ThemeProvider>
   );
