@@ -43,7 +43,7 @@ export default function LevelUp(props) {
       <Container component="main" maxWidth="md">
         <CssBaseline />
 
-        {/* Logo */}
+      
         <Box>
           <Card
             sx={{
@@ -55,14 +55,14 @@ export default function LevelUp(props) {
             }}
           >
             <CardMedia
-              component="img"
+                 component="img"
               image={
                 "https://res.cloudinary.com/otisg/image/upload/v1679236048/IYAM/community-level-up_f1fymm.webp"
               }
               alt={"alt"}
               title={"podcast"}
               sx={{
-                mt: 14,
+                mt: 20,
                 mb: 4,
                 objectFit: "contain",
               }}

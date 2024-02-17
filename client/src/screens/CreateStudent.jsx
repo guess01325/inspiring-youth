@@ -35,7 +35,7 @@ export default function StudentCreate(props) {
 
     <Box
     sx={{
-      m: 10
+      m: 16
     }}>
     <form onSubmit={handleSubmit}>
       <label>

@@ -53,7 +53,7 @@ export default function EditEvent(props) {
   return (
     <Box
     sx={{
-      m: 10
+      m: 14
     }}>
       <form onSubmit={handleSubmit}>
         <label>

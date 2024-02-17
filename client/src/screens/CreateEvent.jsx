@@ -26,7 +26,7 @@ export default function CreateEvent(props) {
   return (
     <Box
       sx={{
-        m: 10,
+        m: 14,
       }}
       className="add-pg"
     >

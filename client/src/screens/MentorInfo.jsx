@@ -17,7 +17,7 @@ export default function MentoringInfo(props) {
       sx={{
         mb: 4,
         width: "auto",
-        mt: 8,
+        mt: 14,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
