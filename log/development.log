@@ -3673,3 +3673,493 @@ Initializing the background worker with 8 threads
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Killing session flusher
 Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started GET "/auth/verify" for ::1 at 2024-03-06 17:19:10 -0500
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "inspiring-youth_development" does not exist
+):
+  
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.7) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+sentry-rails (5.16.1) lib/sentry/rails/rescued_exception_interceptor.rb:12:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:28:in `block (2 levels) in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:251:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:391:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:19:in `block in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:59:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:371:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2024-03-06 17:19:50 -0500
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "inspiring-youth_development" does not exist
+):
+  
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.7) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+sentry-rails (5.16.1) lib/sentry/rails/rescued_exception_interceptor.rb:12:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:28:in `block (2 levels) in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:251:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:391:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:19:in `block in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:59:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:371:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2024-03-06 17:19:54 -0500
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "inspiring-youth_development" does not exist
+):
+  
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.7) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+sentry-rails (5.16.1) lib/sentry/rails/rescued_exception_interceptor.rb:12:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:28:in `block (2 levels) in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:251:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:391:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:19:in `block in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:59:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:371:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/auth/login" for ::1 at 2024-03-06 17:20:04 -0500
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "inspiring-youth_development" does not exist
+):
+  
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.7) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+sentry-rails (5.16.1) lib/sentry/rails/rescued_exception_interceptor.rb:12:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:28:in `block (2 levels) in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:251:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:391:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:19:in `block in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:59:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:371:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/auth/login" for ::1 at 2024-03-06 17:20:14 -0500
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "inspiring-youth_development" does not exist
+):
+  
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.7.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.7.7) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.7.7) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.7.7) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+sentry-rails (5.16.1) lib/sentry/rails/rescued_exception_interceptor.rb:12:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:28:in `block (2 levels) in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:251:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:391:in `with_session_tracking'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:19:in `block in call'
+sentry-ruby (5.16.1) lib/sentry/hub.rb:59:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry-ruby.rb:371:in `with_scope'
+sentry-ruby (5.16.1) lib/sentry/rack/capture_exceptions.rb:18:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (6.1.7.7) lib/rails/engine.rb:539:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+  [1m[35m (243.0ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_development" ENCODING = 'unicode'[0m
+  [1m[35m (111.2ms)[0m  [1m[35mCREATE DATABASE "inspiring-youth_test" ENCODING = 'unicode'[0m
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6220687847190720120)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220906061458)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220906061458"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20220906062309)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "place" character varying, "date" integer, "time" integer, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220906062309"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVolunteers (20220906062627)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "volunteers" ("id" bigserial primary key, "First_Name" character varying, "Last_Name" character varying, "Email" character varying, "Message" character varying, "user_id" bigint NOT NULL, "event_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_a0ce868c0b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_9839dc3ad8"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_volunteers_on_user_id" ON "volunteers" ("user_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_volunteers_on_event_id" ON "volunteers" ("event_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220906062627"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStudents (20220906062808)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "name" character varying, "address" character varying, "contact" integer, "user_id" bigint NOT NULL, "event_id" bigint NOT NULL, "volunteer_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_148c9e88f4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_763bd8accb"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_942d8a6beb"
+FOREIGN KEY ("volunteer_id")
+  REFERENCES "volunteers" ("id")
+)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_students_on_user_id" ON "students" ("user_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_students_on_event_id" ON "students" ("event_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_students_on_volunteer_id" ON "students" ("volunteer_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220906062808"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemovereferncesFromVolunteer (20220906064505)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220906064505"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeColumn (20221027092252)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mALTER TABLE "events" ALTER COLUMN "date" TYPE character varying[0m
+  [1m[35m (15.3ms)[0m  [1m[35mALTER TABLE "events" ALTER COLUMN "time" TYPE character varying[0m
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE "students" ALTER COLUMN "contact" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221027092252"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeNameColumnsOfVolunteer (20221231000316)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "volunteers" RENAME COLUMN "First_Name" TO "first_name"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "volunteers" RENAME COLUMN "Last_Name" TO "last_name"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "volunteers" RENAME COLUMN "Email" TO "email"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "volunteers" RENAME COLUMN "Message" TO "message"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221231000316"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveVolunteerFromStudents (20230306214447)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "students" DROP CONSTRAINT "fk_rails_942d8a6beb"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" DROP COLUMN "volunteer_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230306214447"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRegistrations (20230308203250)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "registrations" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "how_often" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230308203250"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMentoring (20230330153856)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "mentorings" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "school_district" character varying, "phone" character varying, "how_many" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230330153856"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTagsToMentorings (20230330154332)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "mentorings" ADD "tags" text[] DEFAULT '{"In Person",online,yes,no,"one OnOne","Creative Foundation","Video Games and Life Skills",Facebook,Instagram,"Word Of Mouth","Event Invite",Website}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230330154332"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-03-06 22:23:14.352530"], ["updated_at", "2024-03-06 22:23:14.352530"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6220687847190720120)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMentoring Load (0.7ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mVolunteer Load (0.6ms)[0m  [1m[34mSELECT "volunteers".* FROM "volunteers"[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMentoring Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "mentorings" WHERE "mentorings"."email" = $1 LIMIT $2[0m  [["email", "guess01325@gmail.com"], ["LIMIT", 1]]
+  [1m[36mMentoring Create (0.6ms)[0m  [1m[32mINSERT INTO "mentorings" ("first_name", "last_name", "email", "school_district", "how_many", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Otis"], ["last_name", "Guess"], ["email", "guess01325@gmail.com"], ["school_district", "New London"], ["how_many", 5], ["created_at", "2024-03-06 22:23:27.344018"], ["updated_at", "2024-03-06 22:23:27.344018"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guess01325@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "guess01325"], ["name", "Otis Guess"], ["email", "guess01325@gmail.com"], ["password_digest", "$2a$12$vjF.yXc/MF93.KAyfnp5w.8cJdRoMP57645yu.VQxfXiJrLTWePE."], ["created_at", "2024-03-06 22:23:27.614040"], ["updated_at", "2024-03-06 22:23:27.614040"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "place", "date", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Robocop"], ["place", "library"], ["date", "10/81/1986"], ["time", "5:00pm"], ["user_id", 1], ["created_at", "2024-03-06 22:23:27.630963"], ["updated_at", "2024-03-06 22:23:27.630963"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVolunteer Create (1.5ms)[0m  [1m[32mINSERT INTO "volunteers" ("first_name", "last_name", "email", "message", "user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Otis"], ["last_name", "guess"], ["email", "guess01325@yahoo.com"], ["message", "Looking to volunteer sometimes"], ["user_id", 1], ["event_id", 1], ["created_at", "2024-03-06 22:23:27.644747"], ["updated_at", "2024-03-06 22:23:27.644747"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (1.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "address", "contact", "user_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Otis Guess"], ["address", "195 Garfield ave"], ["contact", "860-303-0187"], ["user_id", 1], ["event_id", 1], ["created_at", "2024-03-06 22:23:27.657365"], ["updated_at", "2024-03-06 22:23:27.657365"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegistration Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "registrations" WHERE "registrations"."email" = $1 LIMIT $2[0m  [["email", "guess01325@gmail.com"], ["LIMIT", 1]]
+  [1m[36mRegistration Create (0.5ms)[0m  [1m[32mINSERT INTO "registrations" ("first_name", "last_name", "email", "how_often", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Otis"], ["last_name", "Guess"], ["email", "guess01325@gmail.com"], ["how_often", "sometimes"], ["created_at", "2024-03-06 22:23:27.674801"], ["updated_at", "2024-03-06 22:23:27.674801"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "registrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "volunteers"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "mentorings"[0m
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started GET "/tags/data" for ::1 at 2024-03-06 17:24:41 -0500
+Started GET "/mentorings" for ::1 at 2024-03-06 17:24:41 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MentoringsController#default_values as HTML
+Processing by MentoringsController#index as HTML
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 3114)
+
+
+  [1m[36mMentoring Load (0.8ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 33.9ms | ActiveRecord: 22.2ms | Allocations: 12125)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-06 18:00:38 -0500
+Started GET "/mentorings" for ::1 at 2024-03-06 18:00:38 -0500
+Processing by MentoringsController#index as HTML
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 169)
+
+
+  [1m[36mMentoring Load (0.6ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 37.0ms | Allocations: 5646)
+
+
