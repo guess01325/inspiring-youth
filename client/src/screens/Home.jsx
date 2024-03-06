@@ -1,6 +1,4 @@
 // import { Link } from "react-router-dom";
-import React, { useMediaQuery } from 'react';
-
 import { Player } from "video-react";
 import "../css/Home.css";
 
@@ -18,15 +16,8 @@ import {
 
 export default function Home(props) {
   const defaultTheme = createTheme();
-  const VideoPlayer = () => {
-    const isMobile = useMediaQuery('(max-width: 576px)');
-  
-    if (isMobile) {
-      return <Player width="100%" />;
-    } else {
-      return <Player width="50%" />;
-    }
-  };
+
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
