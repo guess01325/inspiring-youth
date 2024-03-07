@@ -110,7 +110,7 @@ export default function LevelUp(props) {
             />
           </Card>
 
-          <Box>
+          {/* <Box>
             <Link
               href="https://www.instagram.com/communitylevelupinc/?hl=en"
               target="_blank"
@@ -145,7 +145,7 @@ export default function LevelUp(props) {
             >
               <img src="https://res.cloudinary.com/otisg/image/upload/v1679591340/socail25_umezbc.webp" />
             </Link>
-          </Box>
+          </Box> */}
 
           <Box
             sx={{

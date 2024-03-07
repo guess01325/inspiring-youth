@@ -52,7 +52,7 @@ export default function VolunteerInfo(props) {
         <CssBaseline />
 
         <Typography
-          variant="h1"
+          variant="h2"
           sx={{
             mt: 14,
             mb: 4
