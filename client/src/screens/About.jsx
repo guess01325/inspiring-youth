@@ -27,7 +27,6 @@ export default function About(props) {
             <Box>
               <Typography
                 sx={{
-                  whiteSpace: "noWrap",
                   mt: 10,
                   mb: 2,
                 }}
@@ -47,10 +46,8 @@ export default function About(props) {
                 variant="h1"
                 sx={{
                   mt: 5,
-                  whiteSpace: "nowrap",
                 }}
               >
-                {" "}
                 Our Values
               </Typography>
             </Box>

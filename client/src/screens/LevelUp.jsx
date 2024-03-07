@@ -22,8 +22,11 @@ export default function LevelUp(props) {
 
   const videoOptions = {
     // Set your desired options here
-    width: '500',
-    margin: 2
+
+    height: "400",
+    width: "800",
+    margin: 2,
+
   };
 
   const styles = (theme) => ({
@@ -42,7 +45,6 @@ export default function LevelUp(props) {
       <Container component="main" maxWidth="md">
         <CssBaseline />
 
-      
         <Box>
           <Card
             sx={{
@@ -54,7 +56,7 @@ export default function LevelUp(props) {
             }}
           >
             <CardMedia
-                 component="img"
+              component="img"
               image={
                 "https://res.cloudinary.com/otisg/image/upload/v1679236048/IYAM/community-level-up_f1fymm.webp"
               }
@@ -70,7 +72,7 @@ export default function LevelUp(props) {
         </Box>
 
         <Typography
-          variant="h1"
+          variant="h2"
           sx={{
             mt: 2,
             mb: 2,
@@ -179,55 +181,64 @@ export default function LevelUp(props) {
 
           {/* Youtube */}
           <Box
-          sx={{
-            margin: 2
-          }}>
+            sx={{
+              margin: 2,
+            }}
+          >
             <YouTube opts={videoOptions} videoId="Qelo6xWWoOo" />
-
           </Box>
           <Box
-          sx={{
-            margin: 2
-          }}>
+            sx={{
+              margin: 2,
+            }}
+          >
             <YouTube opts={videoOptions} videoId="ba4eiqETg_I" />
-
-      </Box>
-       
-
-
-          
-            <Box>
-              <CardMedia
-                sx={{
-                  maxHeight: "auto",
-                  width: "600px",
-                  margin: "auto",
-                  mt: 2,
-                  padding: "1em 1em 0 1em",
-                  objectFit: "contain",
-                }}
-                component="img"
-                image={
-                  "https://res.cloudinary.com/otisg/image/upload/v1679239011/IYAM/clu3_bogspg.webp"
-                }
-                alt={"alt"}
-                title={"podcast"}
-              />
-
-              <Link
-                sx={{
-                  fontSize: 40,
-                }}
-                href="https://podcasters.spotify.com/pod/show/communitylevelup?fbclid=IwAR2QetXzkyKWmJTpzx6Z3Svig0usOvsoCKf1p1f2FWWJ2rPEdtFF4-c9lOQ\"
-                target="_blank"
-              >
-                Podcast
-              </Link>
-            </Box>
           </Box>
-      
 
-        {/* Contact */}
+          <Box>
+            <CardMedia
+              sx={{
+                maxHeight: "auto",
+                width: "600px",
+                margin: "auto",
+                mt: 2,
+                padding: "1em 1em 0 1em",
+                objectFit: "contain",
+              }}
+              component="img"
+              image={
+                "https://res.cloudinary.com/otisg/image/upload/v1679239011/IYAM/clu3_bogspg.webp"
+              }
+              alt={"alt"}
+              title={"podcast"}
+            />
+
+            <Link
+              sx={{
+                fontSize: 40,
+              }}
+              href="https://podcasters.spotify.com/pod/show/communitylevelup?fbclid=IwAR2QetXzkyKWmJTpzx6Z3Svig0usOvsoCKf1p1f2FWWJ2rPEdtFF4-c9lOQ\"
+              target="_blank"
+            >
+              Podcast
+            </Link>
+          </Box>
+        </Box>
+        <Box
+        sx={{
+          m: 10,
+        }}>
+
+            <Typography
+              sx={{
+              }}
+              variant="h3"
+              >
+              Contact Info
+            </Typography>
+
+
+
         <Typography
           sx={{
             margin: "40px",
@@ -239,21 +250,75 @@ export default function LevelUp(props) {
 
         <Box
           sx={{
-            mb: 4,
             display: "flex",
             flexDirection: "row",
+            flexWrap: "wrap",
             alignItems: "center",
-            float: "center",
-            maxWidth: "800px"
+            justifyContent: 'center',
+            maxWidth: "1000px",
+            // border: 2,
+            // borderColor: "black",
+            // borderRadius: 2,
+         
           }}
-        >
-          <Link
-            sx={{
-              width: "25%",
-            }}
-            href="https://www.facebook.com/CommunityLevelUp"
-            target="_blank"
           >
+
+       
+            <Link
+              sx={{
+              }}
+              href="https://www.facebook.com/CommunityLevelUp"
+              target="_blank"
+              >
+              <img
+                className="facebook"
+                src="https://res.cloudinary.com/otisg/image/upload/v1679591321/IYAM/social22_wypiws.webp"
+                />
+            </Link>
+
+            <Link
+              sx={{
+                
+              }}
+              href="https://www.google.com/maps/place/322+State+St,+New+London,+CT+06320/@41.3548976,-72.0988937,17z/data=!3m1!4b1!4m6!3m5!1s0x89e60e6121100001:0xf07f5149eb77b56e!8m2!3d41.3548976!4d-72.0988937!16s%2Fg%2F11hbms8tx6?entry=ttu"
+              target="_blank"
+              >
+              <img
+                className="adress"
+                src="https://res-console.cloudinary.com/otisg/thumbnails/v1/image/upload/v1709794739/bWFwc194cGhtYWc=/template_primary/Y19wYWQsd18yMDA="
+                />
+            </Link>
+     
+       
+            <Link
+              href="/email"
+              sx={{
+                
+              }}
+              >
+              <img
+                className="email"
+                src="https://res.cloudinary.com/otisg/image/upload/v1709795099/email_ysr39y.webp"
+                />
+              {/* <Typography variant="p">mdaniels@cluinc.org</Typography> */}
+            </Link>
+
+            <Link
+              sx={{
+                
+              }}
+              href="https://www.facebook.com/CommunityLevelUp"
+              target="_blank"
+              >
+              <img
+                className="number"
+                src="https://res.cloudinary.com/otisg/image/upload/v1709795356/phone_qbx34u.svg"
+                />
+              {/* <Typography variant="p">(860) 381-4228</Typography> */}
+            </Link>
+                </Box>
+          </Box>
+    
             <Box>
 
             <img
