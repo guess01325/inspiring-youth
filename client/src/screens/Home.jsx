@@ -1,6 +1,4 @@
 // import { Link } from "react-router-dom";
-import React, { useMediaQuery } from 'react';
-
 import { Player } from "video-react";
 import "../css/Home.css";
 
@@ -18,15 +16,8 @@ import {
 
 export default function Home(props) {
   const defaultTheme = createTheme();
-  const VideoPlayer = () => {
-    const isMobile = useMediaQuery('(max-width: 576px)');
-  
-    if (isMobile) {
-      return <Player width="100%" />;
-    } else {
-      return <Player width="50%" />;
-    }
-  };
+
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -192,18 +183,22 @@ export default function Home(props) {
             </Typography>
             <Link>Get Involved</Link>
           </Box>
-
-          <Box>
+<Box
+          sx={{
+            display: 'flex',
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }} >
+      
             <Player
-            width={500}
-
+               width={500}
               src="https://video.wixstatic.com/video/63347b_1108524e1cc34d2996d618c72e4b9433/480p/mp4/file.mp4"
               type="video/mp4"
               fluid={false}
          
             />
           </Box>
-        </Box>
 
         <Box
           sx={{
@@ -222,7 +217,11 @@ export default function Home(props) {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
+
               maxWidth: "900px"
+
+              width: "500px",
+
             }}
           >
             <Card

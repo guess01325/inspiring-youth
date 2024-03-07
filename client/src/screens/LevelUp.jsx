@@ -22,9 +22,11 @@ export default function LevelUp(props) {
 
   const videoOptions = {
     // Set your desired options here
+
     height: "400",
     width: "800",
     margin: 2,
+
   };
 
   const styles = (theme) => ({
@@ -235,6 +237,17 @@ export default function LevelUp(props) {
               Contact Info
             </Typography>
 
+
+
+        <Typography
+          sx={{
+            margin: "40px",
+          }}
+          variant="h3"
+        >
+          Contact Info
+        </Typography>
+
         <Box
           sx={{
             display: "flex",
@@ -246,8 +259,10 @@ export default function LevelUp(props) {
             // border: 2,
             // borderColor: "black",
             // borderRadius: 2,
+         
           }}
           >
+
        
             <Link
               sx={{
@@ -304,6 +319,70 @@ export default function LevelUp(props) {
                 </Box>
           </Box>
     
+            <Box>
+
+            <img
+              className="facebook"
+              src="https://res.cloudinary.com/otisg/image/upload/v1651259270/facebook_gz6rvq.webp"
+              />
+              </Box>
+            <Typography variant="p">Facebook</Typography>
+          </Link>
+
+          <Link
+            sx={{
+              width: "25%",
+            }}
+            href="https://www.google.com/maps/place/322+State+St,+New+London,+CT+06320/@41.3548976,-72.0988937,17z/data=!3m1!4b1!4m6!3m5!1s0x89e60e6121100001:0xf07f5149eb77b56e!8m2!3d41.3548976!4d-72.0988937!16s%2Fg%2F11hbms8tx6?entry=ttu"
+            target="_blank"
+          >
+            <Box>
+
+            <img
+              className="maps"
+              src="https://res.cloudinary.com/otisg/image/upload/v1709794739/maps_xphmag.jpg"
+              
+              />
+              </Box>
+
+            <Typography  variant="p">
+              Adress
+            </Typography>
+          </Link>
+
+          <Link
+            href="/email"
+            sx={{
+              width: "25%",
+            }}
+          >
+            <Box>
+
+            <img
+              className="email"
+              src="https://res.cloudinary.com/otisg/image/upload/v1709795099/email_ysr39y.webp"
+              />
+              </Box>
+            <Typography variant="p">mdaniels@cluinc.org</Typography>
+          </Link>
+
+          <Link
+            sx={{
+              width: "25%",
+            }}
+            href="https://www.facebook.com/CommunityLevelUp"
+            target="_blank"
+          >
+            <Box>
+
+            <img
+              className="phone"
+              src="https://res.cloudinary.com/otisg/image/upload/v1709795356/phone_qbx34u.svg"
+              />
+              </Box>
+            <Typography variant="p">(860) 381-4228</Typography>
+          </Link>
+        </Box>
       </Container>
     </ThemeProvider>
   );
