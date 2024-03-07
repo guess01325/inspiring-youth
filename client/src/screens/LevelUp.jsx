@@ -22,8 +22,7 @@ export default function LevelUp(props) {
 
   const videoOptions = {
     // Set your desired options here
-    height: '400',
-    width: '800',
+    width: '500',
     margin: 2
   };
 
@@ -237,6 +236,7 @@ export default function LevelUp(props) {
         >
           Contact Info
         </Typography>
+
         <Box
           sx={{
             mb: 4,
@@ -244,9 +244,7 @@ export default function LevelUp(props) {
             flexDirection: "row",
             alignItems: "center",
             float: "center",
-            // border: 2,
-            // borderColor: "black",
-            // borderRadius: 2,
+            maxWidth: "800px"
           }}
         >
           <Link
@@ -256,10 +254,13 @@ export default function LevelUp(props) {
             href="https://www.facebook.com/CommunityLevelUp"
             target="_blank"
           >
-            <Image
-              className="c-image-1"
-              src="https://res.cloudinary.com/otisg/image/upload/c_scale,h_80,w_80/v1679239572/fb_like_udjpl6.png"
-            />
+            <Box>
+
+            <img
+              className="facebook"
+              src="https://res.cloudinary.com/otisg/image/upload/v1651259270/facebook_gz6rvq.webp"
+              />
+              </Box>
             <Typography variant="p">Facebook</Typography>
           </Link>
 
@@ -270,13 +271,17 @@ export default function LevelUp(props) {
             href="https://www.google.com/maps/place/322+State+St,+New+London,+CT+06320/@41.3548976,-72.0988937,17z/data=!3m1!4b1!4m6!3m5!1s0x89e60e6121100001:0xf07f5149eb77b56e!8m2!3d41.3548976!4d-72.0988937!16s%2Fg%2F11hbms8tx6?entry=ttu"
             target="_blank"
           >
-            <Image
-              className="c-image"
-              src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679239681/Naviage-Icon_dqsorx.png"
-            />
+            <Box>
 
-            <Typography variant="p">
-              322 State Street, New London, CT <br></br> 06320
+            <img
+              className="maps"
+              src="https://res.cloudinary.com/otisg/image/upload/v1709794739/maps_xphmag.jpg"
+              
+              />
+              </Box>
+
+            <Typography  variant="p">
+              Adress
             </Typography>
           </Link>
 
@@ -286,10 +291,13 @@ export default function LevelUp(props) {
               width: "25%",
             }}
           >
-            <Image
-              className="c-image"
-              src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679241134/mail-2_xycmgg.png"
-            />
+            <Box>
+
+            <img
+              className="email"
+              src="https://res.cloudinary.com/otisg/image/upload/v1709795099/email_ysr39y.webp"
+              />
+              </Box>
             <Typography variant="p">mdaniels@cluinc.org</Typography>
           </Link>
 
@@ -300,10 +308,13 @@ export default function LevelUp(props) {
             href="https://www.facebook.com/CommunityLevelUp"
             target="_blank"
           >
-            <Image
-              className="c-image"
-              src="https://res.cloudinary.com/otisg/image/upload/c_scale,w_80/v1679240016/phone-icon2_zocawv.jpg"
-            />
+            <Box>
+
+            <img
+              className="phone"
+              src="https://res.cloudinary.com/otisg/image/upload/v1709795356/phone_qbx34u.svg"
+              />
+              </Box>
             <Typography variant="p">(860) 381-4228</Typography>
           </Link>
         </Box>

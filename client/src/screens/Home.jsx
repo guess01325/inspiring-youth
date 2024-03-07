@@ -184,17 +184,24 @@ export default function Home(props) {
             <Link>Get Involved</Link>
           </Box>
 
-          <Box>
-            <Player
-                  aspectRatio="16:9"
+            </Box>
 
+          <Box
+          sx={{
+            display: 'flex',
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }} >
+      
+            <Player
+               width={500}
               src="https://video.wixstatic.com/video/63347b_1108524e1cc34d2996d618c72e4b9433/480p/mp4/file.mp4"
               type="video/mp4"
               fluid={false}
          
             />
           </Box>
-        </Box>
 
         <Box
           sx={{
@@ -213,7 +220,7 @@ export default function Home(props) {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
-              width: "1000px",
+              width: "500px",
             }}
           >
             <Card
