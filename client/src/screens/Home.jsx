@@ -183,10 +183,7 @@ export default function Home(props) {
             </Typography>
             <Link>Get Involved</Link>
           </Box>
-
-            </Box>
-
-          <Box
+<Box
           sx={{
             display: 'flex',
             flexDirection: "column",
@@ -205,11 +202,11 @@ export default function Home(props) {
 
         <Box
           sx={{
-            margin: 1,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            m: 6,
+            // margin: 1,
+            // display: "flex",
+            // flexDirection: "column",
+            // alignItems: "center",
+            // m: 6,
           }}
         >
           <Typography variant="h1">Our Partners</Typography>
@@ -220,7 +217,11 @@ export default function Home(props) {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
+
+              maxWidth: "900px"
+
               width: "500px",
+
             }}
           >
             <Card
@@ -238,7 +239,7 @@ export default function Home(props) {
                 alt={"alt"}
                 title={"podcast"}
                 sx={{
-                  height: "364px",
+                  // height: "364px",
                   padding: "1em 1em 0 1em",
                   objectFit: "contain",
                 }}
