@@ -81,10 +81,8 @@ export default function Mentorings(props) {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main"
-    sx={{
-      width: "750px",
-      maxWidth: "sm"
-    }}>
+      maxWidth="sm"
+  >
         <CssBaseline />
         <Box
           component="form"
@@ -94,6 +92,7 @@ export default function Mentorings(props) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            maxWidth: "900px"
           }}
         >
           <TextField

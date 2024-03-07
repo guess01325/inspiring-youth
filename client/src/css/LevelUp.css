@@ -1,28 +1,30 @@
 
 
-
-
-
-.maps{
-    background-color: black;
-    width: 25%;
-
-}
-
-.facebook{
-    background-color: black;
-    width: 25%;
-
-
-}
-
-.email {
-    width: 25%;
-
-}
-
-.phone{
-    width: 25%;
-
-}
-
+.number{
+    width: 100px;
+  margin: 5px;
+  }
+  
+  
+  
+  .adress{
+      width: 100px;
+      margin: 5px;
+  
+  
+  }
+  
+  .facebook{
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+  
+  
+  }
+  
+  .email{
+      width: 100px;
+     
+      margin: 5px;
+  
+  } 

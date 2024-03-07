@@ -4167,3 +4167,25 @@ Initializing the background worker with 8 threads
 [Sessions] Sessions won't be captured without a valid release
 Killing session flusher
 Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started GET "/tags/data" for ::1 at 2024-03-07 10:08:54 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 10:08:54 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MentoringsController#index as HTML
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 273)
+
+
+  [1m[36mMentoring Load (2.3ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 16.9ms | ActiveRecord: 21.8ms | Allocations: 11510)
+
+
+Started GET "/events" for ::1 at 2024-03-07 10:12:59 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 5.2ms | Allocations: 6748)
+
+

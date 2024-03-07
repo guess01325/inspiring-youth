@@ -28,7 +28,6 @@ export default function Donate(props) {
         >
           <Typography
             variant="h1"
-            noWrap={true}
             sx={{
           mt: 14,
           mb: 6
