@@ -4163,3 +4163,7 @@ Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 169)
 Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 37.0ms | Allocations: 5646)
 
 
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Killing session flusher
+Shutting down background worker
