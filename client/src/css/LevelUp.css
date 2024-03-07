@@ -1,26 +1,30 @@
-/* 
-.c-contacts{
-    margin: 20px;
+
+
+
+.number{
+  width: 100px;
+margin: 5px;
 }
 
-.c-info{
-    border: 2px solid black;
 
-}
-
-.c-image{
-    height: 100px;
+.adress{
     width: 100px;
+    margin: 5px;
+
 
 }
 
-.c-image-1{
-    height: 150px;
-    width: 200px;
+.facebook{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+
 
 }
 
-.size{
-    width: 100%;
-    height: auto;
-} */
+.email{
+    width: 100px;
+   
+    margin: 5px;
+
+} 

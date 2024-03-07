@@ -4163,3 +4163,242 @@ Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 169)
 Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 37.0ms | Allocations: 5646)
 
 
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started GET "/tags/data" for ::1 at 2024-03-07 01:20:38 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 01:20:38 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MentoringsController#index as HTML
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 273)
+
+
+  [1m[36mMentoring Load (1.9ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 11.0ms | ActiveRecord: 8.3ms | Allocations: 11510)
+
+
+Started GET "/events" for ::1 at 2024-03-07 01:20:46 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (5.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 6.2ms | ActiveRecord: 8.3ms | Allocations: 6749)
+
+
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Killing session flusher
+Shutting down background worker
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Started GET "/auth/verify" for ::1 at 2024-03-07 07:50:26 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 631)
+
+
+Started GET "/auth/verify" for ::1 at 2024-03-07 07:50:39 -0500
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 158)
+
+
+Started POST "/auth/login" for ::1 at 2024-03-07 07:50:50 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 401 Unauthorized in 304ms (Views: 0.3ms | ActiveRecord: 6.5ms | Allocations: 10924)
+
+
+Started POST "/auth/login" for ::1 at 2024-03-07 07:51:12 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"guess01325", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guess01325"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 260ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1055)
+
+
+Started GET "/events" for ::1 at 2024-03-07 07:51:13 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 8.6ms | ActiveRecord: 4.9ms | Allocations: 6526)
+
+
+Started GET "/events" for ::1 at 2024-03-07 07:51:23 -0500
+Started GET "/auth/verify" for ::1 at 2024-03-07 07:51:23 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.6ms | Allocations: 1066)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 938)
+
+
+Started GET "/events" for ::1 at 2024-03-07 07:51:28 -0500
+Started GET "/auth/verify" for ::1 at 2024-03-07 07:51:28 -0500
+Processing by AuthenticationController#verify as HTML
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2055)
+
+
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 7.5ms | Allocations: 5710)
+
+
+Started GET "/events" for ::1 at 2024-03-07 08:10:04 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 6.7ms | Allocations: 4774)
+
+
+Started GET "/mentorings" for ::1 at 2024-03-07 08:11:05 -0500
+Started GET "/tags/data" for ::1 at 2024-03-07 08:11:05 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (2.3ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 28.8ms | ActiveRecord: 9.4ms | Allocations: 6410)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-07 08:11:12 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 08:11:12 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 168)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (1.6ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 1.6ms | Allocations: 946)
+
+
+Started GET "/mentorings" for ::1 at 2024-03-07 08:12:00 -0500
+Started GET "/tags/data" for ::1 at 2024-03-07 08:12:00 -0500
+Processing by MentoringsController#index as HTML
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 166)
+
+
+  [1m[36mMentoring Load (0.8ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 1400)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-07 08:13:37 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 08:13:37 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 165)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (0.7ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 946)
+
+
+Started GET "/mentorings" for ::1 at 2024-03-07 08:13:47 -0500
+Started GET "/tags/data" for ::1 at 2024-03-07 08:13:47 -0500
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (1.0ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 1040)
+
+
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 165)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-07 08:16:49 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 08:16:49 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 165)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (0.8ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.8ms | Allocations: 946)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-07 08:17:03 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 08:17:03 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 166)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (0.5ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 946)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-07 08:18:35 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 08:18:35 -0500
+Processing by MentoringsController#index as HTML
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 166)
+
+
+  [1m[36mMentoring Load (8.1ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 8.1ms | Allocations: 1647)
+
+
+Started GET "/events" for ::1 at 2024-03-07 08:18:39 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 855)
+
+
+Started GET "/mentorings" for ::1 at 2024-03-07 09:33:55 -0500
+Started GET "/tags/data" for ::1 at 2024-03-07 09:33:55 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 166)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (5.0ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 42.9ms | ActiveRecord: 23.4ms | Allocations: 4988)
+
+
+Started GET "/tags/data" for ::1 at 2024-03-07 09:35:02 -0500
+Started GET "/mentorings" for ::1 at 2024-03-07 09:35:02 -0500
+Processing by MentoringsController#default_values as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 165)
+
+
+Processing by MentoringsController#index as HTML
+  [1m[36mMentoring Load (0.3ms)[0m  [1m[34mSELECT "mentorings".* FROM "mentorings"[0m
+  ↳ app/controllers/mentorings_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 946)
+
+
+Started GET "/events" for ::1 at 2024-03-07 09:35:21 -0500
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.3ms | Allocations: 853)
+
+
+Killing session flusher
+Shutting down background worker

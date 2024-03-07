@@ -195,7 +195,7 @@ export default function Home(props) {
 
           <Box>
             <Player
-                  aspectRatio="16:9"
+            width={500}
 
               src="https://video.wixstatic.com/video/63347b_1108524e1cc34d2996d618c72e4b9433/480p/mp4/file.mp4"
               type="video/mp4"
@@ -207,11 +207,11 @@ export default function Home(props) {
 
         <Box
           sx={{
-            margin: 1,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            m: 6,
+            // margin: 1,
+            // display: "flex",
+            // flexDirection: "column",
+            // alignItems: "center",
+            // m: 6,
           }}
         >
           <Typography variant="h1">Our Partners</Typography>
@@ -222,7 +222,7 @@ export default function Home(props) {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
-              width: "1000px",
+              maxWidth: "900px"
             }}
           >
             <Card
@@ -240,7 +240,7 @@ export default function Home(props) {
                 alt={"alt"}
                 title={"podcast"}
                 sx={{
-                  height: "364px",
+                  // height: "364px",
                   padding: "1em 1em 0 1em",
                   objectFit: "contain",
                 }}

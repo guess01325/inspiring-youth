@@ -1,12 +1,7 @@
 import { useState } from "react";
 import "../css/Footer.css";
 
-import {
-  Link,
-  Box,
-  BottomNavigation,
-  Typography,
-} from "@mui/material";
+import { Link, Box, BottomNavigation, Typography } from "@mui/material";
 
 export default function Footer(props) {
   const [displayNumber, setDisplayNumber] = useState(false);
@@ -22,31 +17,42 @@ export default function Footer(props) {
     <BottomNavigation
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      sx={{
-        justifyContent: "space-between",
-      }}
+      sx={
+        {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          m: 6,
+        
+
+        }
+      }
     >
       <Box
         sx={{
-          mb: 2,
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
+          maxWidth: "900px",
           // justifyContent: "space-between",
         }}
       >
         <Link
           sx={{
             margin: 4,
+            width: "33%",
           }}
           className="call"
         >
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              margin: 2,
-            }}
+            sx={
+              {
+                // display: "flex",
+                // flexDirection: "column",
+                // margin: 2,
+              }
+            }
           >
             <Typography
               sx={{
@@ -65,8 +71,9 @@ export default function Footer(props) {
 
         <Link
           sx={{
-            margin: 4,
+            margin: 1,
             fontSize: 30,
+            width: "33%",
           }}
           className="about"
           href="/about"
@@ -76,8 +83,9 @@ export default function Footer(props) {
 
         <Link
           sx={{
-            margin: 4,
+            margin: 1,
             fontSize: 30,
+            width: "33%",
           }}
           className="register"
           href="/mentorings/create"
@@ -85,11 +93,15 @@ export default function Footer(props) {
           Register
         </Link>
       </Box>
-      <Box>
-        <Link
+      <Box
           sx={{
-            margin: 4,
-          }}
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            maxWidth: '900px'
+          }}>
+        <Link
+          
           href="https://www.instagram.com/iyam_inc2021/"
           target="_blank"
         >
@@ -99,9 +111,9 @@ export default function Footer(props) {
           />
         </Link>
         <Link
-          sx={{
-            margin: 4,
-          }}
+          // sx={{
+          //   margin: 4,
+          // }}
           href="https://twitter.com/IYAM_Inc"
           target="-blank"
         >
@@ -111,9 +123,9 @@ export default function Footer(props) {
           />
         </Link>
         <Link
-          sx={{
-            margin: 4,
-          }}
+          // sx={{
+          //   margin: 4,
+          // }}
           href="https://www.youtube.com/user/Wix"
           target="-blank"
         >
