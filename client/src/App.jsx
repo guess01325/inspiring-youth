@@ -29,14 +29,10 @@ import Sponsor from "./screens/Sponsor";
 import LevelUp from "./screens/LevelUp";
 import CreateMentoring from "./screens/CreateMentoring";
 import MentorInfo from "./screens/MentorInfo";
-import Email from "./screens/Email"
+import Email from "./screens/Email";
 import "../node_modules/video-react/dist/video-react.css";
 
-import {
-  loginUser,
-  verifyUser,
-  removeToken,
-} from "./services/auth";
+import { loginUser, verifyUser, removeToken } from "./services/auth";
 
 import {
   Container,
@@ -86,9 +82,11 @@ function App() {
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
 
-        <Container  sx={{
-maxWidth: "lg"
-        }}>
+        <Container
+          sx={{
+            maxWidth: "lg",
+          }}
+        >
           <Layout
             currentUser={currentUser}
             setEvent={setEvent}
@@ -119,6 +117,7 @@ maxWidth: "lg"
                   <Route path=":id/update" element={<EditVolunteer />} />
 
                   <Route path=":id/create" element={<CreateVolunteer />} />
+
                 </Route>
 
                 <Route
@@ -129,6 +128,7 @@ maxWidth: "lg"
                   <Route path=":id/update" element={<EditStudent />} />
                   <Route path=":id/create" element={<CreateStudent />} />
                 </Route>
+
               </Route>
 
               <Route path="/about" element={<About />} />
@@ -142,6 +142,7 @@ maxWidth: "lg"
               <Route path="/mentorings" element={<MentoringContainer />}>
                 <Route path="create" element={<CreateMentoring />} />
                 <Route path="all" element={<MentorInfo />} />
+
               </Route>
 
               <Route path="/donate" element={<Donate />} />
@@ -159,7 +160,8 @@ maxWidth: "lg"
                 element={<SignIn handleLogin={handleLogin} />}
               />
 
-              <Route path="/email" element={<Email/>}></Route>
+              <Route path="/email" element={<Email />}></Route>
+              
             </Routes>
           </Layout>
         </Container>
