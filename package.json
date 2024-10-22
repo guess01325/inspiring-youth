@@ -44,5 +44,9 @@
     "@babel/preset-react": "^7.25.9",
     "babel-loader": "^8.0.5",
     "webpack-dev-server": "^3"
-  }
+  },
+  "resolutions": {
+  "babel-loader": "8.0.5"
+}
+
 }

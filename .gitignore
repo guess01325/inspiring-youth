@@ -17,7 +17,7 @@
 npm-debug.log*
 
 # Ignore environment variables file (contains sensitive information)
-/.env
+# /.env
 
 # Ignore compiled assets for Rails
 /public/assets
