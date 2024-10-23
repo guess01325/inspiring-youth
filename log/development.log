@@ -4428,3 +4428,11 @@ Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.3ms | Allocations: 853)
 Killing session flusher
 Shutting down background worker
 >>>>>>> 0336954fdcd1cee7f0084925d5be8865927e6391
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release
+[dotenv] Set [36mSECRET_KEY_BASE[0m and [36mRAILS_MASTER_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Initializing the background worker with 8 threads
+[Sessions] Sessions won't be captured without a valid release

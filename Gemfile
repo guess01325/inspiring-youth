@@ -43,6 +43,7 @@ gem "rack-cors"
 gem 'faker'
 
  
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 
