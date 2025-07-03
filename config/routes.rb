@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/ping', to: proc { [200, {}, ['pong']] }
+
   post '/auth/login', to: 'authentication#login'
   get 'auth/verify', to: 'authentication#verify'
   
