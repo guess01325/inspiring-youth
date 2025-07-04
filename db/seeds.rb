@@ -5,11 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Mentoring.destroy_all
-User.destroy_all
-Event.destroy_all
+Registration.destroy_all
 Volunteer.destroy_all
 Student.destroy_all
+Event.destroy_all
+Mentoring.destroy_all
+User.destroy_all
+
 
 @Mentoring1 = Mentoring.create!(first_name: "Otis", last_name: "Guess", email: "guess01325@gmail.com", how_many: 5, school_district: "New London")
 
